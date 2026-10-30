@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -94,10 +95,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               Need immediate assistance? Call us right now:
             </p>
             <a
-              href="tel:(647) 492-2636"
-              className="inline-block text-[#0fa958] font-bold text-2xl hover:underline"
+              href={SITE_CONFIG.phoneHref}
+              className="inline-block text-[#1cc76a] font-bold text-2xl hover:underline"
             >
-              (647) 492-2636
+              {SITE_CONFIG.phone}
             </a>
             <div className="pt-4">
               <button
@@ -204,10 +205,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <p className="text-gray-300 text-sm sm:text-base font-semibold">
                   Or Call Us At:{" "}
                   <a
-                    href="tel:(647) 492-2636"
+                    href={SITE_CONFIG.phoneHref}
                     className="text-[#1cc76a] font-bold hover:underline"
                   >
-                    (647) 492-2636
+                    {SITE_CONFIG.phone}
                   </a>
                 </p>
               </div>

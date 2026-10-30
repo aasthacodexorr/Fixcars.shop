@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import CtaButton from "./CtaButton";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface HeaderProps {
   onOpenQuote: () => void;
@@ -15,7 +17,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         <div className="flex items-center justify-center">
           <Image
             src="/images/3_imgi_1_Cardora-n.png"
-            alt="Cardora A Robinson Motor Company"
+            alt={`${SITE_CONFIG.companyName} ${SITE_CONFIG.companyTagline}`}
             width={240}
             height={60}
             priority
@@ -30,22 +32,16 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             <span>CALL US NOW AT:</span>
           </span>
           <a
-            href="tel:(647) 492-2636"
+            href={SITE_CONFIG.phoneHref}
             className="text-[#1cc76a] font-bold text-lg sm:text-2xl hover:underline whitespace-nowrap"
           >
-            (647) 492-2636
+            {SITE_CONFIG.phone}
           </a>
         </div>
 
         {/* Right: Get A Free Quote Button */}
         <div className="w-full md:w-auto flex justify-center">
-          <button
-            type="button"
-            onClick={onOpenQuote}
-            className="w-full max-w-[300px] md:w-auto h-[42px] px-7 bg-[#1cc76a] hover:bg-[#17a858] text-white font-poppins font-bold text-[14px] sm:text-[15px] rounded-full btn-pulse-glow btn-glimmer uppercase tracking-wider shadow-md transition cursor-pointer flex items-center justify-center select-none active:scale-[0.98]"
-          >
-            GET A FREE QUOTE
-          </button>
+          <CtaButton variant="header" onClick={onOpenQuote} />
         </div>
       </div>
     </header>

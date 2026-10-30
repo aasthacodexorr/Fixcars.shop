@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import CtaButton from "./CtaButton";
+import CallNowCta from "./CallNowCta";
 
 interface TestimonialsSectionProps {
   onOpenQuote: () => void;
@@ -312,17 +313,7 @@ export default function TestimonialsSection({
         {/* Green Bottom CTA Banner */}
         <div className="pt-6 pb-2 flex flex-col items-center space-y-3">
           <CtaButton onClick={onOpenQuote} />
-          <div className="w-full max-w-[430px] text-center pt-1">
-            <p className="text-2xl sm:text-[30px] font-bold text-black tracking-tight">
-              CALL NOW{" "}
-              <a
-                href="tel:(647) 492-2636"
-                className="text-[#1cc76a] font-bold hover:underline"
-              >
-                (647) 492-2636
-              </a>
-            </p>
-          </div>
+          <CallNowCta />
         </div>
       </div>
     </section>

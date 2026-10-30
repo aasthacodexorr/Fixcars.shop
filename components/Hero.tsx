@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import CtaButton from "./CtaButton";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface HeroProps {
   onOpenQuote: () => void;
@@ -18,7 +19,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
     >
       <div className="relative max-w-[1200px] mx-auto z-10">
         {/* Main H1 Headline */}
-        <div className="text-center lg:text-left max-w-[1400px] mx-auto mb-4 lg:mb-6">
+        <div className="text-center lg:text-left max-w-[1400px] mx-auto mb-4 lg:mb-0">
           <h1 className="font-anton text-3xl sm:text-5xl lg:text-[62px] leading-[1.08] tracking-wide uppercase text-black drop-shadow-sm">
             BRAMPTON’S MOST TRUSTED CAR<br className="hidden sm:inline" /> BRAKES REPAIR SHOP
           </h1>
@@ -39,7 +40,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
           </div>
 
           {/* Copy & CTAs: order-2 on mobile, order-1 on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left">
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left lg:-mt-32 -mt-0">
             <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed font-normal">
               The one-stop shop for all your brake repairs &amp; replacements!
             </p>
@@ -51,7 +52,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
             <div className="pt-1 sm:pt-2">
               <p className="text-base sm:text-2xl lg:text-[25px] font-bold text-black flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
                 <span>📍</span>
-                <span>Located at 8050 Dixie Rd, Brampton, ON L6T 4W6</span>
+                <span>Located at {SITE_CONFIG.address}</span>
               </p>
             </div>
 

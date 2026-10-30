@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function ThankYouPage() {
   return (
@@ -13,7 +15,7 @@ export default function ThankYouPage() {
           <Link href="/" className="inline-block transition hover:opacity-95">
             <Image
               src="/images/3_imgi_1_Cardora-n.png"
-              alt="Cardora A Robinson Motor Company"
+              alt={`${SITE_CONFIG.companyName} ${SITE_CONFIG.companyTagline}`}
               width={240}
               height={60}
               priority
@@ -47,79 +49,17 @@ export default function ThankYouPage() {
               If you have an urgent inquiry, please call us at:
             </p>
             <a
-              href="tel:(647) 492-2636"
+              href={SITE_CONFIG.phoneHref}
               className="font-poppins font-bold text-2xl sm:text-3xl lg:text-[38px] text-white hover:underline block drop-shadow-md"
             >
-              (647) 492-2636
+              {SITE_CONFIG.phone}
             </a>
           </div>
         </div>
       </main>
 
-      {/* White Footer matching Thank You page screenshot */}
-      <footer className="w-full bg-white text-gray-900 py-8 px-4 sm:px-8 border-t border-gray-100 text-[14px]">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
-          {/* Left: Operating Hours */}
-          <div className="space-y-1">
-            <p className="text-gray-900 font-normal">
-              Open: Mon - Fri: 08:00AM - 06:00PM
-            </p>
-            <p className="text-gray-900 font-normal">
-              Sat: 09:00AM - 04:00PM
-            </p>
-          </div>
-
-          {/* Center: Legal & Contact */}
-          <div className="space-y-1.5 text-center">
-            <div className="space-x-3 text-gray-900 font-bold">
-              <a
-                href="#privacy"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert(
-                    "Privacy Policy: Cardora respects your privacy. Any information submitted is strictly used for service quotation and scheduling."
-                  );
-                }}
-                className="text-gray-900 hover:underline transition"
-              >
-                Privacy Policy
-              </a>
-              <span className="text-gray-400">|</span>
-              <a
-                href="#terms"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert(
-                    "Terms of Service: Standard automotive repair terms and manufacturer warranty conditions apply."
-                  );
-                }}
-                className="text-gray-900 hover:underline transition"
-              >
-                Terms Of Service
-              </a>
-            </div>
-            <p className="text-gray-900">
-              Phone:{" "}
-              <a
-                href="tel:(647) 492-2636"
-                className="text-gray-900 font-medium hover:underline"
-              >
-                (647) 492-2636
-              </a>
-            </p>
-          </div>
-
-          {/* Right: Copyright */}
-          <div className="space-y-1 md:text-right">
-            <p className="text-gray-900 font-normal">
-              Copyright &copy; 2026 Cardora
-            </p>
-            <p className="text-gray-900 font-normal">
-              Landing Page by New Limits
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Reusable White Footer */}
+      <Footer theme="light" />
     </div>
   );
 }

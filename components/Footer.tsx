@@ -1,74 +1,75 @@
 "use client";
 
 import React from "react";
+import { SITE_CONFIG } from "@/lib/constants";
 
-export default function Footer() {
+interface FooterProps {
+  theme?: "dark" | "light";
+}
+
+export default function Footer({ theme = "dark" }: FooterProps) {
+  const isLight = theme === "light";
+  const bgClass = isLight ? "bg-white text-gray-900 border-gray-100" : "bg-[#121319] text-white border-neutral-800";
+  const textClass = isLight ? "text-gray-900" : "text-white";
+  const linkClass = isLight ? "text-gray-900 hover:underline" : "text-white hover:underline";
+  const dividerClass = isLight ? "text-gray-400" : "text-white/60";
+
   return (
-    <footer className="w-full bg-[#121319] text-white py-10 px-4 sm:px-8 border-t border-neutral-800 text-[14px]">
+    <footer className={`w-full py-8 sm:py-10 px-4 sm:px-8 border-t text-[14px] ${bgClass}`}>
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
         {/* Left: Operating Hours */}
         <div className="space-y-1">
-          <p className="text-white font-normal">
-            Open: Mon - Fri: 08:00AM - 06:00PM
+          <p className={`${textClass} font-normal`}>
+            Open: {SITE_CONFIG.hours.weekday}
           </p>
-          <p className="text-white font-normal">
-            Sat: 09:00AM - 04:00PM
+          <p className={`${textClass} font-normal`}>
+            {SITE_CONFIG.hours.saturday}
           </p>
         </div>
 
         {/* Center: Legal & Contact */}
-        <div className="space-y-2 text-center">
-          <div className="space-x-3 text-white font-bold">
+        <div className="space-y-1.5 text-center">
+          <div className="space-x-3 font-bold">
             <a
               href="#privacy"
               onClick={(e) => {
                 e.preventDefault();
-                alert(
-                  "Privacy Policy: Cardora respects your privacy. Any information submitted is strictly used for service quotation and scheduling."
-                );
+                alert(SITE_CONFIG.privacyNotice);
               }}
-              className="text-white hover:underline transition"
+              className={`${linkClass} transition`}
             >
               Privacy Policy
             </a>
-            <span className="text-white/60">|</span>
+            <span className={dividerClass}>|</span>
             <a
               href="#terms"
               onClick={(e) => {
                 e.preventDefault();
-                alert(
-                  "Terms of Service: Standard automotive repair terms and manufacturer warranty conditions apply."
-                );
+                alert(SITE_CONFIG.termsNotice);
               }}
-              className="text-white hover:underline transition"
+              className={`${linkClass} transition`}
             >
               Terms Of Service
             </a>
           </div>
-          <p className="text-white">
+          <p className={textClass}>
             Phone:{" "}
             <a
-              href="tel:(647) 492-2636"
-              className="text-white font-medium hover:underline"
+              href={SITE_CONFIG.phoneHref}
+              className={`${linkClass} font-medium`}
             >
-              (647) 492-2636
+              {SITE_CONFIG.phone}
             </a>
           </p>
         </div>
 
         {/* Right: Copyright */}
         <div className="space-y-1 md:text-right">
-          <p className="text-white">Copyright © 2026 Cardora</p>
-          <p className="text-white">
-            Landing Page by{" "}
-            <a
-              href="https://www.newlimits.com.au/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white font-bold hover:underline"
-            >
-              New Limits
-            </a>
+          <p className={`${textClass} font-normal`}>
+            Copyright &copy; {SITE_CONFIG.copyrightYear} {SITE_CONFIG.companyName}
+          </p>
+          <p className={`${textClass} font-normal`}>
+            Landing Page by {SITE_CONFIG.agencyName}
           </p>
         </div>
       </div>
