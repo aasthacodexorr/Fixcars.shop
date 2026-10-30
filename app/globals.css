@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-anton: 'Anton', Impact, sans-serif;
+    --font-lato: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: var(--font-lato);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-anton {
+  font-family: var(--font-anton), Impact, sans-serif;
+}
+
+.font-lato {
+  font-family: var(--font-lato), -apple-system, sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* Green CTA Button Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(28, 199, 106, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(28, 199, 106, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 199, 106, 0);
+  }
+}
+
+.btn-pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Button Shimmer Effect */
+.btn-glimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: glimmer 3.5s infinite;
+}
+
+@keyframes glimmer {
+  0% {
+    left: -70%;
+  }
+  40% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* Bounce Animation for modal arrow */
+@keyframes bounceArrow {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-bounce-arrow {
+  animation: bounceArrow 1.5s infinite;
+}
+
+/* Infinite Auto-Scrolling Marquee Ticker for Brake Services */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 22s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Hover effect on last section SEO / warranty image */
+.hover-lift-image {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+.hover-lift-image:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.04) contrast(1.02);
+}
+
+/* Testimonial card smooth transition */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+  touch-action: pan-y;
+}
+
+/* Hide Next.js dev indicator badge completely */
+nextjs-portal,
+[data-nextjs-dialog-overlay],
+[data-nextjs-toast],
+div[data-nextjs-dev-tools-button],
+#nextjs-dev-tools,
+button[aria-label="Next.js Dev Tools"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
