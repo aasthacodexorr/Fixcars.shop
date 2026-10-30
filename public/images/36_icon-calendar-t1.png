@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add to Calendar & Calendar Marketing Tools to Reduce No-Shows | AddEvent</title>
+    <meta name="description" content="Easily increase attendance and engagement by letting users add events to their calendars, embed calendars on your website, collect RSVPs, send reminders, and offer calendar subscriptions. Works with Google, Apple, Outlook, and more." />
+    <meta property="og:title" content="Add to Calendar & Calendar Marketing Tools to Reduce No-Shows | AddEvent" />
+    <meta property="og:description" content="Easily increase attendance and engagement by letting users add events to their calendars, embed calendars on your website, collect RSVPs, send reminders, and offer calendar subscriptions. Works with Google, Apple, Outlook, and more." />
+    <meta property="og:image" content="https://cdn.addevent.com/web/images/opengraph-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#125ef8" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://www.addevent.com" />
+    <link rel="llms" href="https://www.addevent.com/llms.txt" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AddEvent_Inc" />
+    <meta name="twitter:title" content="Add to Calendar & Calendar Marketing Tools to Reduce No-Shows | AddEvent" />
+    <meta name="twitter:description" content="Easily increase attendance and engagement by letting users add events to their calendars, embed calendars on your website, collect RSVPs, send reminders, and offer calendar subscriptions. Works with Google, Apple, Outlook, and more." />
+    <meta name="twitter:image" content="https://cdn.addevent.com/web/images/twitter-image.png" />
+
+    <link rel="preconnect" href="https://cdn.addevent.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Critical CSS -->
+    <style>.material-icons,[class^=icon-]{font-style:normal;text-transform:none;-webkit-font-smoothing:antialiased;font-weight:400}*{box-sizing:border-box}body,html{font-family:Circular-AddEvent,Arial,"Helvetica Neue",Helvetica,sans-serif}body,html,p{line-height:130%}a{text-decoration:none}a img{border:none}.overflow-x,body{overflow-x:hidden}body,html{height:100%;width:100%}.top,body,html{width:100%}.top{left:0;top:0}.top .menu-t1 ul{padding:0;margin:0}body,html{text-align:left}.material-icons{font-family:"Material Icons";font-size:"inherit";line-height:"inherit";display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga"}[class^=icon-]{font-family:icomoon!important;speak:never;font-variant:normal;line-height:1;-moz-osx-font-smoothing:grayscale}.icon-close:before{content:"\e94c";color:#125ef8}.icon-menu:before{content:"\e94d"}.icon-analytics:before{content:"\e900";color:#125ef8}.icon-automation_new:before{content:"\e901";color:#7e00e0}.icon-Chevron_Right:before{content:"\e904";color:#125ef8}.icon-document-2-2:before{content:"\e905";color:#125ef8}.icon-embedable_new:before{content:"\e906";color:#1ac67d}.icon-infinite-1:before{content:"\e907";color:#125ef8}.icon-RSVP:before{content:"\e90a";color:#e22e4e}.icon-share-event:before{content:"\e90b";color:#125ef8}.icon-subscription:before{content:"\e90c";color:#f0c322}.icon-Updates:before{content:"\e90d";color:#125ef8}body,html{margin:0;padding:0;background:#fff;font-size:16px;color:#1c212b;font-weight:400}a,p{font-size:1em;color:#1c212b}html{scroll-behavior:smooth}strong{font-weight:600}h1{margin:0;font-size:24px;line-height:135%;color:#1c212b;font-weight:700}::-webkit-input-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}:-moz-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}::-moz-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}:-ms-input-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}div::-webkit-scrollbar{background:0 0;overflow:visible;width:8px;height:8px}div::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.2);border-radius:10px}div::-webkit-scrollbar-track-piece{background-color:#fff}div::-webkit-scrollbar-corner{background:0 0}.top .menu-m .drop{right:6px;box-shadow:0 16px 24px 2px rgb(0 0 0 / 14%),0 6px 30px 5px rgb(0 0 0 / 12%),0 8px 10px -5px rgb(0 0 0 / 40%);left:6px}.top{height:76px;position:fixed;z-index:1000;background:#fffe8;border-bottom:1px solid #e8eefa}.top .pdt{padding:14px 30px 0}.top .flex{display:flex;justify-content:space-between;align-items:center}.top .logo-t1{display:flex;justify-content:center;align-items:center;max-width:168px;margin:-4px 0 0}.top .logo-t1 a{display:block;width:168px}.top .logo-t1 img{display:block;width:100%}.top .menu-m{display:none;justify-content:center;align-items:center}.top .menu-m .menu-m-btn{display:flex;justify-content:center;align-items:center;width:40px;height:40px;border:1px solid transparent!important;border-radius:50%}.top .menu-m .menu-m-btn .icon-menu:before{font-size:20px;font-weight:800}.top .menu-m .drop{flex-direction:column;position:fixed;top:6px;max-height:510px;transform:scale(1)!important;border-radius:6px;background-color:#fff;z-index:-1;opacity:0}.top .menu-m .drop .close{display:flex;justify-content:center;align-items:center;position:absolute;width:42px;height:42px;top:15px;right:17px;z-index:100;border-radius:50%}.top .menu-m .drop .close .icon-close:before{color:#000;font-size:22px;font-weight:700}.top .menu-m .drop .main{background-color:#fff;border-radius:8px;padding:22px 12px 16px;overflow-y:auto;max-height:calc(100vh - 130px)}.top .menu-m .drop .main .title{font-size:17px;line-height:1.5;font-weight:700;margin-bottom:16px;padding:0 0 0 14px}.top .menu-m .drop .main ul{list-style-type:none;padding:0;margin:0}.top .menu-m .drop .main .lst{padding-bottom:16px;border-bottom:1px solid #e5eaf3;margin-bottom:16px}.top .menu-m .drop .main .lst li:last-child a,.top .menu-m .drop .main .lst:last-child,p:last-child{margin-bottom:0}.top .menu-m .drop .main .lst li{margin:-3px 0 0}.top .menu-m .drop .main .lst li a{display:flex;position:relative;align-items:center;padding:10px 0 10px 52px;font-size:18px;line-height:1.6;border-radius:6px}.top .menu-m .drop .main .lst li a i{position:absolute;left:11px;top:11px;font-size:26px}.top .menu-m .drop .main .lst.lst-rest{padding-bottom:0;border-bottom:none}.top .menu-m .drop .main .lst.lst-rest li a{font-size:17px;line-height:1.4}.top .menu-m .drop .main .lst.lst-rest li.blk a{font-size:18px;line-height:1.6}.top .menu-m .drop .main ul li.blk{display:block}.top .menu-m .drop .main ul li.blk a{display:block;color:#000;font-size:18px;line-height:1.6}.top .menu-m .drop .ft{padding:0 8px 8px}.top .menu-m .drop .ft .btn{background:#e1e8f8;font-size:18px;line-height:1.7;font-weight:600}.top .menu-t1{padding-left:20px;padding-right:20px;margin:0 auto}.top .menu-t1 ul{display:flex;align-items:center;list-style-type:none}.top .menu-t1 ul li{position:relative;padding:0 25px}.top .menu-t1 ul li a{color:#1c212b;font-size:18px;line-height:1.6}.top .menu-t1 ul li.blk{padding:4px 6px;margin:0 0 0 24px;background-color:#1c212b;border-radius:3px}.top .menu-t1 ul li.blk a{display:block;color:#fff;font-size:12px;line-height:1.33;text-transform:uppercase}.top .menu-t1 ul li.exp a{display:flex}.top .menu-t1 ul li.exp .icon-Chevron_Right{display:block;transform:rotate(90deg);margin:2px 0 0 2px}.top .menu-t1 ul li.exp .icon-Chevron_Right::before{color:inherit}.top .drop{z-index:-1;visibility:hidden;position:absolute;max-width:1040px;left:-326px;opacity:0;transform:scale(.94);margin:-20px 0 0}.top .drop .drop-ctn{margin-top:20px;box-shadow:0 50px 100px rgb(50 50 93 / 10%),0 15px 35px rgb(50 50 93 / 15%),0 5px 15px rgb(0 0 0 / 10%);border-radius:5px;background-color:#fff}.top .drop .rl{position:relative}.top .drop .pad{padding:32px 32px 12px}.top .drop .pad .arr{position:absolute;left:380px;top:-9px;z-index:2;width:20px;height:20px;background:#fff;transform:rotate(45deg)}.top .drop .pad .hdr{color:#1c212b;font-size:22px;line-height:1.5;margin-bottom:20px;font-weight:500}.top .drop .pad .color-grid{margin-left:-12px;margin-right:-12px;gap:0}.top .drop .pad .color-grid .item{padding:20px 16px;min-width:198px;border-radius:8px;background-color:transparent}.top .drop .pad .color-grid .item .crc{background-color:#f3f7ff}.top .drop .ft .pf{padding:0 4px 4px}.top .drop .ft .pfi{padding:8px 16px 12px;border-radius:6px}.top .drop .ft .pfi ul{padding:0}.top .drop .ft .pfi ul li{margin:0;padding:0 15px 0 0}.top .drop .ft .pfi .right a,.top .drop .ft .pfi ul li a{display:flex;align-items:center;padding:8px 16px 8px 8px;border-radius:4px;background-color:transparent}.top .drop .ft .pfi .right a i,.top .drop .ft .pfi ul li a i{font-size:24px;margin-right:8px}.top .signinup{display:inline-block;font-size:15px;color:#a9acb4;padding:10px 30px;border:1px solid transparent;white-space:nowrap}.top .signinup .or{display:inline-block;padding:0 4px;font-style:italic}.top .signinup .signin{font-size:17px;font-weight:600;color:#000;font-style:normal}.top .signinup .signup{font-size:17px;font-weight:500;color:#fff;font-style:normal;margin:0 0 0 4px;padding:9px 16px 9px 15px;border:1px solid transparent;background:#125ef8;border-radius:5px}.bnr .bnr-cnt .s1 .btn-plc.-mobile{display:none}.color-grid .item.item-purple i:before{color:#7e00e0}.bnr .bnr-cnt .s1 .btn-plc .btn:last-of-type{margin-right:0}.btn-fs-bg{font-size:17px}.bnr{display:block;position:relative;width:100%;padding-top:122px;padding-bottom:70px}.bnr .bnr-cnt{display:flex;position:relative;justify-content:space-between;width:100%;max-width:1176px;margin:0 auto;padding:0 20px}.bnr.-homepage .bnr-cnt{max-width:1260px}.bnr .bnr-cnt .s1{padding-top:36px}.bnr.-homepage .bnr-cnt .s1{padding-left:42px}.bnr .bnr-cnt .s1.hp{max-width:560px}.bnr .bnr-cnt .s1 .subtitle{max-width:100%;font-size:18px;margin:0;padding-top:24px;padding-bottom:16px;line-height:1.5}.bnr .bnr-cnt .s1 .subtitle h1,.bnr .bnr-cnt .s1 .subtitle p{margin:0;display:inline;font-size:18px;line-height:1.5;font-weight:500}.bnr .bnr-cnt .s1 .btn-plc{padding-top:40px;display:flex}.bnr .bnr-cnt .s1 .btn-plc .btn{margin-right:16px}.bnr .bnr-cnt .s1 .coco{clear:both;padding:95px 0 0}.bnr .bnr-cnt .s1 .coco p{margin:0;font-size:16px;line-height:170%}.bnr .bnr-cnt .s1 .coco .sp1{display:inline-block;background:#eeeff2;border-radius:8px;padding:0 5px;line-height:170%;font-size:16px}.bnr .bnr-cnt .lgscnt{position:absolute;bottom:-5px;right:120px;width:400px}.bnr .bnr-cnt .lgscnt img{width:100%;display:block}.bnr .bnr-cnt .s2{width:100%;text-align:right;position:relative}.bnr .bnr-cnt .s2-564{max-width:564px}.bnr.-homepage .bnr-cnt .s2-564{max-width:594px}.bnr .bnr-cnt .s2 img{max-width:100%;object-fit:contain}.bnr .bnr-cnt .s2 #slideset{width:500px;height:460px;position:relative;clear:both;overflow:hidden;margin:-30px 0 0}.bnr .bnr-cnt .s2 #slideset>*{width:100%;height:100%;position:absolute;top:100%;left:0;z-index:1;animation:15s cubic-bezier(.25,.46,.45,.94) infinite autoplay;animation-delay:5s}.bnr .bnr-cnt .s2 #slideset .i1{background:url(https://cdn.addevent.com/web/images/homepage_hero_1_1.svg) 0 0/500px auto no-repeat}.bnr .bnr-cnt .s2 #slideset .i2{background:url(https://cdn.addevent.com/web/images/homepage_hero_2.svg) 0 0/500px auto no-repeat}.bnr .bnr-cnt .s2 #slideset .i3{background:url(https://cdn.addevent.com/web/images/homepage_hero_3.svg) 0 0/500px auto no-repeat}.bnr .bnr-cnt .s2 #slideset .i4{background:url(https://cdn.addevent.com/web/images/homepage_hero_4.svg) 0 0/500px auto no-repeat}.bnr .bnr-cnt .s2 #slideset .i5{background:url(https://cdn.addevent.com/web/images/homepage_hero_5.svg) 0 0/500px auto no-repeat}.bnr .bnr-cnt .s2 #ttipctn{width:300px;position:absolute;left:101px;z-index:30;padding:10px 15px;text-align:center;font-size:16px;line-height:145%;background:#ffff87;color:#282f08;bottom:50px;opacity:0;transform:scale(.92,.92)}.bnr .bnr-cnt .s2 #ttipctn .txi{width:29px;display:inline-block;position:relative;line-height:18px;height:20px}.bnr .bnr-cnt .s2 #ttipctn .txi i{font-size:22px;position:absolute;left:0;top:4px}.bnr .bnr-cnt .s2 #slideset>:first-child{animation-delay:0s}.bnr .bnr-cnt .s2 #slideset>:nth-child(2){animation-delay:3s}.bnr .bnr-cnt .s2 #slideset>:nth-child(3){animation-delay:6s}.bnr .bnr-cnt .s2 #slideset>:nth-child(4){animation-delay:9s}.bnr .bnr-cnt .s2 #slideset>:nth-child(5){animation-delay:12s}.miu{font-weight:400}.color-grid .item.item-red i:before{color:#e22e4e}.color-grid .item.item-yellow i:before{color:#f0c322}.btn,.color-grid .item.item-blue i:before{color:#125ef8}.btn{text-align:center}.btn{display:block;border:1px solid transparent;width:auto;max-height:64px;background-color:transparent;border-radius:6px;padding:12px 33px;font-size:16px;line-height:1.4;font-weight:400;white-space:nowrap}.btn-6-8{padding:6px 8px}.btn-20-40{padding:16px 30px}.btn-blue{background-color:#125ef8;color:#fff}.btn-br{border:1px solid #e1e8f8}.btn-arr-right{display:flex;align-items:center;justify-content:center}.btn-arr-right::after{content:"\e904";font-size:16px;margin-left:6px;color:inherit;font-family:Icomoon}.color-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:29px}.color-grid .item{display:flex;flex-direction:column;min-width:172px;color:#1c212b;position:relative}.color-grid .item .crc{display:flex;justify-content:center;align-items:center;background-color:#f3f7ff;width:64px;min-width:64px;height:64px;min-height:64px;border-radius:50%;margin-bottom:16px}.color-grid .item .crc.crc-48{width:48px;min-width:48px;height:48px;min-height:48px}.color-grid .item .crc i{font-size:32px;font-weight:500}.color-grid .item .title{font-size:18px;line-height:1.2;margin-bottom:8px;font-weight:600}.color-grid .item p{color:#585d69;font-size:14px;line-height:1.5;margin:0 0 16px;flex:1}.color-grid .item.item-green i:before{color:#1ac67d}.trs{display:block;width:100%;padding-bottom:30px}.trs .trs-cnt{display:block;position:relative;width:100%;max-width:900px;margin:0 auto;padding:0 20px}.trs .trs-cnt.xp{padding:0 0 35px}#homepage-half-circle-green{position:absolute;top:100%;right:100%}#homepage-shape-grey-desktop{position:absolute;top:calc(100% - 200px);left:calc(100% + 35px)}#homepage-shape-grey-mobile{display:none;position:absolute;top:-277px;left:85%;transform:translateX(-50%);-webkit-transform:translateX(-50%)}@media all and (max-width:1160px){.top .menu-t1 ul li.exp .drop{max-width:900px;left:-250px}.top .drop .pad .color-grid .item{min-width:172px}.top .drop .pad .arr{position:absolute;left:380px;top:-9px}.bnr .bnr-cnt .lgscnt{bottom:22px;right:60px;width:360px}.color-grid{gap:8px}.color-grid .item{min-width:150px}}@media all and (max-width:1020px){.top .menu-t1 ul li{position:relative;padding:0 15px}.top .menu-t1 ul li a{font-size:17px}}@media all and (max-width:920px){.bnr .bnr-cnt .lgscnt,.top .menu-t1,.top .signinup{display:none}#homepage-shape-grey-mobile{display:block}.top .pdt{padding:20px 24px}.top .logo-t1{max-width:172px}.top .menu-m{display:flex}#homepage-shape-grey-desktop{display:none}.color-grid .item p{font-size:16px}.color-grid .item .crc{background:0 0}.trs{padding-bottom:0}.bnr .bnr-cnt .s1{padding-left:0}.bnr{padding-top:90px;padding-bottom:80px}.bnr .bnr-cnt{flex-direction:column;justify-content:flex-start;padding:0 24px}.bnr .bnr-cnt .s1.hp{max-width:100%;padding-left:0}.bnr .bnr-cnt .s1 .btn-plc{padding-top:16px}.bnr .bnr-cnt .s2{padding-top:90px;text-align:center;margin:0 auto}.trs .trs-cnt{padding:0 24px}.bnr .bnr-cnt .s1 .btn-plc .btn{width:100%}#homepage-half-circle-green{position:absolute;top:100%;right:100%}}@media all and (max-width:640px){p:last-child{margin-bottom:0}.bnr .bnr-cnt .s1 .btn-plc.-desktop,.bnr .bnr-cnt .s2.hidden-on-mobile,.trs .trs-cnt .text.pd br{display:none}.btn{font-size:16px}.btn{line-height:1.5}.btn-6-8{padding:6px 8px}.mobile-12-33{padding:12px 33px}.btn-20-40{padding:12px 20px}.btn-arr-right::after{transform:translateY(1px)}.color-grid .item .title{font-weight:600}.bnr,.bnr .bnr-cnt .s1{padding-top:64px}.bnr{padding-bottom:64px}.bnr .bnr-cnt .s1 .subtitle{font-size:16px;line-height:1.6}.bnr .bnr-cnt .s1 .btn-plc{max-width:327px}.bnr .bnr-cnt .s1 .btn-plc.-mobile{display:flex;margin:0 auto;max-width:100%;justify-content:center}.bnr .bnr-cnt .s1 .subtitle h1,.bnr .bnr-cnt .s1 .subtitle p{display:inline}}@media all and (max-width:374px){.bnr .bnr-cnt .s1 .btn-plc.-mobile{flex-direction:column}.bnr .bnr-cnt .s1 .btn-plc.-mobile .btn{width:100%;margin-bottom:8px}.bnr .bnr-cnt .s1 .btn-plc.-mobile .btn:last-child{margin-bottom:0}}.lazyelm,.lazyitm{background:0 0!important}@media all{.material-icons{font-family:"Material Icons";font-weight:400;font-style:normal;font-size:"inherit";line-height:"inherit";text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:"liga";-webkit-font-smoothing:antialiased}[class^=icon-]{font-family:icomoon!important;speak:never;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-close:before{content:"\e94c";color:#125ef8}.icon-menu:before{content:"\e94d"}.icon-analytics:before{content:"\e900";color:#125ef8}.icon-automation_new:before{content:"\e901";color:#7e00e0}.icon-Chevron_Right:before{content:"\e904";color:#125ef8}.icon-document-2-2:before{content:"\e905";color:#125ef8}.icon-embedable_new:before{content:"\e906";color:#1ac67d}.icon-infinite-1:before{content:"\e907";color:#125ef8}.icon-RSVP:before{content:"\e90a";color:#e22e4e}.icon-share-event:before{content:"\e90b";color:#125ef8}.icon-subscription:before{content:"\e90c";color:#f0c322}.icon-Updates:before{content:"\e90d";color:#125ef8}body,html{margin:0;padding:0;width:100%;height:100%;background:#fff;font-family:Circular-AddEvent,Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:16px;line-height:130%;color:#1c212b;font-weight:400;text-align:left}*{box-sizing:border-box}html{scroll-behavior:smooth}body{overflow-x:hidden}input{font-family:Circular-AddEvent,Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:1em;line-height:130%;color:#1c212b;font-weight:600}button{font-family:Circular-AddEvent,Arial,"Helvetica Neue",Helvetica,sans-serif}p{font-size:1em;line-height:130%;color:#1c212b}strong{font-weight:600}a{font-size:1em;color:#1c212b;text-decoration:none}h1{margin:0;font-size:24px;line-height:135%;color:#1c212b;font-weight:700}h2,h4,h5{margin:0 0 3px 0;font-size:17px;line-height:135%;color:#1c212b;font-weight:600}form{margin:0;padding:0}a img{border:none}input{font-weight:400;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:0;border-radius:0;-webkit-appearance:none}::-webkit-input-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}:-moz-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}::-moz-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}:-ms-input-placeholder{color:#6f7b877d;font-weight:400;font-size:1em}input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}div::-webkit-scrollbar{background:0 0;overflow:visible;width:8px;height:8px}div::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.2);border-radius:10px}div::-webkit-scrollbar-track-piece{background-color:#fff}div::-webkit-scrollbar-corner{background:0 0}.overflow-x{overflow-x:hidden}.top{width:100%;height:76px;position:fixed;left:0;top:0;z-index:1000;background:#ffffffe8;border-bottom:1px solid #e8eefa}.top .pdt{padding:14px 30px 0 30px}.top .flex{display:flex;justify-content:space-between;align-items:center}.top .logo-t1{display:flex;justify-content:center;align-items:center;max-width:168px;margin:-4px 0 0 0}.top .logo-t1 a{display:block;width:168px}.top .logo-t1 img{display:block;width:100%}.top .menu-m{display:none;justify-content:center;align-items:center}.top .menu-m .menu-m-btn{display:flex;justify-content:center;align-items:center;width:40px;height:40px;border:1px solid transparent!important;border-radius:50%}.top .menu-m .menu-m-btn .icon-menu:before{font-size:20px;font-weight:800}.top .menu-m .drop{flex-direction:column;position:fixed;top:6px;left:6px;right:6px;max-height:510px;transform:scale(1)!important;box-shadow:0 16px 24px 2px rgb(0 0 0 / 14%),0 6px 30px 5px rgb(0 0 0 / 12%),0 8px 10px -5px rgb(0 0 0 / 40%);border-radius:6px;background-color:#fff}.top .menu-m .drop{z-index:-1;opacity:0}.top .menu-m .drop .close{display:flex;justify-content:center;align-items:center;position:absolute;width:42px;height:42px;top:15px;right:17px;z-index:100;border-radius:50%}.top .menu-m .drop .close .icon-close:before{color:#000;font-size:22px;font-weight:700}.top .menu-m .drop .main{background-color:#fff;border-radius:8px;padding:22px 12px 16px 12px;overflow-y:auto;max-height:calc(100vh - 130px)}.top .menu-m .drop .main .title{font-size:17px;line-height:1.5;font-weight:700;margin-bottom:16px;padding:0 0 0 14px}.top .menu-m .drop .main ul{list-style-type:none;padding:0;margin:0}.top .menu-m .drop .main .lst{padding-bottom:16px;border-bottom:1px solid #e5eaf3;margin-bottom:16px}.top .menu-m .drop .main .lst:last-child{margin-bottom:0}.top .menu-m .drop .main .lst li{margin:-3px 0 0 0}.top .menu-m .drop .main .lst li a{display:flex;position:relative;align-items:center;padding:10px 0 10px 52px;font-size:18px;line-height:1.6;border-radius:6px}.top .menu-m .drop .main .lst li:last-child a{margin-bottom:0}.top .menu-m .drop .main .lst li a i{position:absolute;left:11px;top:11px;font-size:26px}.top .menu-m .drop .main .lst.lst-rest{padding-bottom:0;border-bottom:none}.top .menu-m .drop .main .lst.lst-rest li a{font-size:17px;line-height:1.4}.top .menu-m .drop .main .lst.lst-rest li.blk a{font-size:18px;line-height:1.6}.top .menu-m .drop .main ul li.blk{display:block}.top .menu-m .drop .main ul li.blk a{display:block;color:#000;font-size:18px;line-height:1.6}.top .menu-m .drop .ft{padding:0 8px 8px}.top .menu-m .drop .ft .btn{background:#e1e8f8;font-size:18px;line-height:1.7;font-weight:600}.top .menu-t1{padding-left:20px;padding-right:20px;margin:0 auto}.top .menu-t1 ul{display:flex;align-items:center;list-style-type:none;padding:0;margin:0}.top .menu-t1 ul li{position:relative;padding:0 25px}.top .menu-t1 ul li a{color:#1c212b;font-size:18px;line-height:1.6}.top .menu-t1 ul li.blk{padding:4px 6px;margin:0 0 0 24px;background-color:#1c212b;border-radius:3px}.top .menu-t1 ul li.blk a{display:block;color:#fff;font-size:12px;line-height:1.33;text-transform:uppercase}.top .menu-t1 ul li.exp a{display:flex}.top .menu-t1 ul li.exp .icon-Chevron_Right{display:block;transform:rotate(90deg);margin:2px 0 0 2px}.top .menu-t1 ul li.exp .icon-Chevron_Right::before{color:inherit}.top .drop{opacity:0;z-index:-1;visibility:hidden;position:absolute;max-width:1040px;left:-326px}.top .drop .drop-ctn{margin-top:20px;box-shadow:0 50px 100px rgb(50 50 93 / 10%),0 15px 35px rgb(50 50 93 / 15%),0 5px 15px rgb(0 0 0 / 10%);border-radius:5px;background-color:#fff}.top .drop .rl{position:relative}.top .drop .pad{padding:32px 32px 12px 32px}.top .drop .pad .arr{position:absolute;left:380px;top:-9px;z-index:2;width:20px;height:20px;background:#fff;transform:rotate(45deg)}.top .drop .pad .hdr{color:#1c212b;font-size:22px;line-height:1.5;margin-bottom:20px;font-weight:500}.top .drop .pad .color-grid{margin-left:-12px;margin-right:-12px;gap:0}.top .drop .pad .color-grid .item{padding:20px 16px;min-width:198px;border-radius:8px;background-color:transparent}.top .drop .pad .color-grid .item .crc{background-color:#f3f7ff}.top .drop .ft .pf{padding:0 4px 4px 4px}.top .drop .ft .pfi{padding:8px 16px 12px 16px;border-radius:6px}.top .drop .ft .pfi ul{padding:0}.top .drop .ft .pfi ul li{margin:0;padding:0 15px 0 0}.top .drop .ft .pfi ul li a{display:flex;align-items:center;padding:8px 16px 8px 8px;border-radius:4px;background-color:transparent}.top .drop .ft .pfi ul li a i{font-size:24px;margin-right:8px}.top .drop .ft .pfi .right a{display:flex;align-items:center;padding:8px 16px 8px 8px;border-radius:4px;background-color:transparent}.top .drop .ft .pfi .right a i{font-size:24px;margin-right:8px}.top .drop{opacity:0;transform:scale(.94);margin:-20px 0 0 0}.top .signinup{display:inline-block;font-size:15px;color:#a9acb4;padding:10px 30px;border:1px solid transparent;white-space:nowrap}.top .signinup .or{display:inline-block;padding:0 4px;font-style:italic}.top .signinup .signin{font-size:17px;font-weight:600;color:#000;font-style:normal}.top .signinup .signup{font-size:17px;font-weight:500;color:#fff;font-style:normal;margin:0 0 0 4px;padding:9px 16px 9px 15px;border:1px solid transparent;background:#125ef8;border-radius:5px}h4:last-child,p:last-child{margin-bottom:0}.contact .contact-cnt .right .form .input-place .input:not(:placeholder-shown)+.label{top:0;transform:none;font-size:13px;line-height:1.54}.bnr{display:block;position:relative;width:100%;padding-top:122px;padding-bottom:70px}.bnr .bnr-cnt{display:flex;position:relative;justify-content:space-between;width:100%;max-width:1176px;margin:0 auto;padding:0 20px}.bnr.-homepage .bnr-cnt{max-width:1260px}.bnr .bnr-cnt .s1{padding-top:36px}.bnr.-homepage .bnr-cnt .s1{padding-left:42px}.bnr .bnr-cnt .s1.hp{max-width:560px}.bnr .bnr-cnt .s1 .hdtxt{clear:both;padding:0 0 10px 0}.bnr .bnr-cnt .s1 .hdtxt .r1{clear:both}.bnr .bnr-cnt .s1 .hdtxt .r1 p{margin:0;font-size:38px;color:#000;font-weight:600;line-height:46px;letter-spacing:-1px}.bnr .bnr-cnt .s1 .hdtxt .r1 .cc{display:inline-block;height:46px;overflow:hidden;position:relative;margin:0 0 -10px 3px;padding:0 3px 0 0}.bnr .bnr-cnt .s1 .hdtxt .r1 .cc .ul{height:228px;display:inline-block;text-align:left;backface-visibility:hidden}.bnr .bnr-cnt .s1 .hdtxt .r1 .cc .ul .lbl{display:block;height:46px;line-height:46px;white-space:nowrap;color:#125ef8}.bnr .bnr-cnt .s1 .hdtxt .r1 .x0{transform:translate3d(0,0,0)}.bnr .bnr-cnt .s1 .subtitle{max-width:100%;font-size:18px;margin:0;padding-top:24px;padding-bottom:16px;line-height:1.5}.bnr .bnr-cnt .s1 .subtitle h1{margin:0;display:inline;font-size:18px;line-height:1.5;font-weight:500}.bnr .bnr-cnt .s1 .subtitle p{margin:0;display:inline;font-size:18px;line-height:1.5;font-weight:500}.bnr .bnr-cnt .s1 .btn-plc{padding-top:40px;display:flex}.bnr .bnr-cnt .s1 .btn-plc.-mobile{display:none}.bnr .bnr-cnt .s1 .btn-plc .btn{margin-right:16px}.bnr .bnr-cnt .s1 .btn-plc .btn:last-of-type{margin-right:0}.bnr .bnr-cnt .s1 .coco{clear:both;padding:95px 0 0 0}.bnr .bnr-cnt .s1 .coco p{margin:0;font-size:16px;line-height:170%}.bnr .bnr-cnt .s1 .coco .sp1{display:inline-block;background:#eeeff2;border-radius:8px;padding:0 5px;line-height:170%;font-size:16px}.bnr .bnr-cnt .lgscnt{position:absolute;bottom:-5px;right:120px;width:400px}.bnr .bnr-cnt .lgscnt img{width:100%;display:block}.bnr .bnr-cnt .s2{width:100%;text-align:right;position:relative}.bnr .bnr-cnt .s2-564{max-width:564px}.bnr.-homepage .bnr-cnt .s2-564{max-width:594px}.bnr .bnr-cnt .s2 img{max-width:100%;object-fit:contain}.bnr .bnr-cnt .s2 #slideset{width:500px;height:460px;position:relative;clear:both;overflow:hidden;margin:-30px 0 0 0}.bnr .bnr-cnt .s2 #slideset>*{width:100%;height:100%;position:absolute;top:100%;left:0;z-index:1;animation:21s autoplay infinite cubic-bezier(.25,.46,.45,.94);animation-delay:3s}.bnr .bnr-cnt .s2 #slideset .i1{background:url(https://cdn.addevent.com/web/images/homepage_hero_events_on_attendees_calendar_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i2{background:url(https://cdn.addevent.com/web/images/homepage_hero_webinar_on_clients_calendar_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i3{background:url(https://cdn.addevent.com/web/images/homepage_hero_community_activities_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i4{background:url(https://cdn.addevent.com/web/images/homepage_hero_game_schedule_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i5{background:url(https://cdn.addevent.com/web/images/homepage_hero_school_schedule_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i6{background:url(https://cdn.addevent.com/web/images/homepage_hero_appointment_on_patients_calendar_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #slideset .i7{background:url(https://cdn.addevent.com/web/images/homepage_hero_booking_on_customers_calendars_t1.svg) no-repeat 0 0;background-size:500px auto}.bnr .bnr-cnt .s2 #ttipctn{width:300px;position:absolute;left:101px;bottom:100px;z-index:30;padding:10px 15px;text-align:center;font-size:16px;line-height:145%;background:#ffff87;color:#282f08}.bnr .bnr-cnt .s2 #ttipctn .txi{width:29px;display:inline-block;position:relative;line-height:18px;height:20px}.bnr .bnr-cnt .s2 #ttipctn .txi i{font-size:22px;position:absolute;left:0;top:4px}.bnr .bnr-cnt .s2 #ttipctn{bottom:50px;opacity:0;transform:scale(.92,.92)}.bnr .bnr-cnt .s2 #slideset>:first-child{animation-delay:0s}.bnr .bnr-cnt .s2 #slideset>:nth-child(2){animation-delay:3s}.bnr .bnr-cnt .s2 #slideset>:nth-child(3){animation-delay:6s}.bnr .bnr-cnt .s2 #slideset>:nth-child(4){animation-delay:9s}.bnr .bnr-cnt .s2 #slideset>:nth-child(5){animation-delay:12s}.bnr .bnr-cnt .s2 #slideset>:nth-child(6){animation-delay:15s}.bnr .bnr-cnt .s2 #slideset>:nth-child(7){animation-delay:18s}@keyframes autoplay{0%{top:100%;transform:scale(.6) rotate(-35deg)}5%{top:0;transform:scale(1) rotate(0);z-index:10}15%{top:0}18%{top:-100%}100%{top:-100%}}.use-case{display:block;width:100%;padding-bottom:120px}.use-case .use-case-cnt{display:block;position:relative;width:100%;max-width:1176px;margin:0 auto;padding:0 20px}.use-case .use-case-cnt .title{font-weight:600;font-size:45px;line-height:1.17;letter-spacing:-1px;color:#1c212b;padding-bottom:64px;margin:0;text-align:center}.use-case .use-case-cnt .nav{display:flex;width:100%;max-width:100%;align-items:flex-end;justify-content:center;border-bottom:1px solid #e2e5ea}.use-case .use-case-cnt .nav.-mobile{display:none}.use-case .use-case-cnt .nav .item{padding:0 0 12px 0;font-weight:600;margin:0 15px;font-size:17px;line-height:1.6;color:#1c212b;border-bottom:3px solid transparent}.use-case .use-case-cnt .nav .item.selected{color:#05f;border-color:#05f}.use-case .use-case-cnt .box{overflow:hidden;position:relative}.use-case .use-case-cnt .box .inn{display:flex;position:relative;left:0;top:0;padding-top:42px}.use-case .use-case-cnt .box .inn.hidden{height:0!important;width:0;left:100%;top:0;overflow:hidden;padding:0}.use-case .use-case-cnt .box .inn .s1{width:50%}.use-case .use-case-cnt .box .inn .s1 picture{max-width:100%}.use-case .use-case-cnt .box .inn .s1 picture img{max-width:100%}.use-case .use-case-cnt .box .inn .s2{width:50%;padding-top:40px;padding-left:9%}.use-case .use-case-cnt .box .inn .s2 .inn-title{font-weight:500;font-size:17px;line-height:1.4;color:#1c212b;padding-bottom:32px;margin:0}.use-case .use-case-cnt .box .inn .s2 a{color:#05f;font-weight:600}.use-case .use-case-cnt .box .inn .s2 ul{list-style-image:url(https://cdn.addevent.com/web/images/list-icon-blue.svg);list-style-position:outside;margin:0;padding:0 0 0 30px}.use-case .use-case-cnt .box .inn .s2 ul li{color:#585d69;font-size:17px;line-height:1.5;padding:0 0 22px 8px}.use-case .use-case-cnt .box .inn .s2 ul li:last-child{padding-bottom:0}.engage{display:block;width:100%;margin-bottom:120px}.engage .engage-cnt{display:block;width:100%;max-width:1176px;margin:0 auto;padding:0 20px;position:relative;z-index:1}.engage .hdr{font-size:42px;line-height:1.2;color:#1c212b;font-weight:600;text-align:center;max-width:620px;margin:0 auto 64px;letter-spacing:-1px}.engage .color-grid{gap:20px}.engage .color-grid .item.item-bdr{border:none}.engage .ftrs{display:block;background-color:#f9f9fa;padding-top:154px;margin-top:-138px;overflow:hidden;position:relative}.engage .ftrs .ftrs-cnt{display:block;width:100%;max-width:1176px;margin:0 auto;padding:18px 20px 0 20px}.engage .ftrs .cards{min-height:58px;border-bottom:1px solid #e2e5ea}.engage .ftrs .cards .lst{position:absolute;display:flex;margin:0;padding:0;min-height:57px;list-style-type:none;list-style-position:outside;counter-reset:color-list-counter;opacity:0;z-index:5}.engage .ftrs .cards .lst.active{opacity:1;z-index:6}.engage .ftrs .cards .lst li{display:flex;color:#1c212b;font-size:16px;line-height:1.6;margin-right:48px;border-bottom:3px solid transparent;counter-increment:color-list-counter}.engage .ftrs .cards .lst li:last-child{margin-right:0}.engage .ftrs .cards .lst li:before{content:counter(color-list-counter) ".";margin-right:8px}.engage .ftrs .cards .lst li .text{display:flex;flex-direction:column;margin-bottom:16px}.engage .ftrs .cards .lst li span{display:block;text-transform:uppercase;font-size:10px;line-height:1.4;letter-spacing:1.2px}.engage .ftrs .content{display:flex;justify-content:space-between;padding:56px 97px;position:relative}.engage .ftrs .content .lst{display:flex;align-items:center;position:absolute;margin:0;padding:0;opacity:0;list-style-type:none;width:calc(100% - 194px);z-index:5}.engage .ftrs .content .lst.active{opacity:1;z-index:6}.engage .ftrs .content .lst .slide{width:100%;position:absolute;opacity:0;z-index:5}.engage .ftrs .content .lst .slide.active{opacity:1;z-index:6}.engage .ftrs .content .lst .box{display:grid;justify-items:center;align-items:center;grid-template-columns:368px 1fr;gap:110px}.engage .ftrs .content .lst .box .left,.engage .ftrs .content .lst .box .right{display:flex;flex-direction:column;align-items:flex-start}.engage .ftrs .content .lst .box .left{max-width:368px}.engage .ftrs .content .lst .box .right{display:flex;flex-direction:column;justify-content:center;align-items:center;max-width:396px;width:100%}.engage .ftrs .content .lst .box .right img{width:100%!important;height:auto!important}.engage .ftrs .content .lst .box .right .imglbl{clear:both;padding:15px 0 0 0}.engage .ftrs .content .lst .box .right .imglbl p{margin:0;font-size:15px;color:#222;line-height:130%}.engage .ftrs .content .lst .box .title{font-size:19px;line-height:1.3;margin-bottom:22px;font-weight:600}.engage .ftrs .content .lst .box .text{margin:0;font-size:16px;line-height:1.6;margin-bottom:30px}.engage .ftrs .content .lst .box ul{list-style-type:disc;margin-bottom:26px;padding-left:20px}.engage .ftrs .content .lst .box ul li{font-size:16px;line-height:1.6;margin:0 0 12px 0}.engage .ftrs .cards .lst.lst-blue li.active{color:#05f;border-bottom:3px solid #05f}.engage .ftrs .cards .lst.lst-red li.active{color:#e22e4e;border-bottom:3px solid #e22e4e}.engage .ftrs .cards .lst.lst-yellow li.active{color:#f0c322;border-bottom:3px solid #f0c322}.engage .ftrs .cards .lst.lst-purple li.active{color:#7e00e0;border-bottom:3px solid #7e00e0}.engage-m{display:none;width:100%;margin-bottom:64px}.engage-m .engage-m-cnt{display:block;width:100%;margin:0 auto}.engage-m .hdr{max-width:500px;font-size:32px;line-height:1.2;color:#1c212b;text-align:center;margin:0 auto 58px;letter-spacing:0;padding:0 24px}.engage-m .cards{flex-direction:column;align-items:flex-start}.engage-m .cards img{max-width:100%;margin-bottom:20px}.engage-m .cards .lst{position:relative;width:100%;counter-reset:color-list-counter}.engage-m .cards .lst:after{content:"";position:absolute;top:8px;right:16px;height:calc(100% - 16px);width:1px;background-color:#eeeff2}.engage-m .cards .lst li{display:flex;justify-content:space-between;align-items:center;font-size:17px;line-height:1.4;margin-bottom:32px;counter-increment:color-list-counter}.engage-m .cards .lst li:last-child{margin-bottom:0}.engage-m .cards .lst li:after{display:flex;justify-content:center;align-items:center;content:counter(color-list-counter);width:32px;height:32px;background:#fff;border:1px solid #eeeff2;border-radius:50%;z-index:2}.engage-m .cards .lst li .text{display:flex;flex-direction:column}.engage-m .cards .lst li span{display:block;text-transform:uppercase;font-size:13px;font-weight:600;line-height:1.5;opacity:.5}.engage-m .cards .lst.lst-blue li:after{color:#125ef8}.engage-m .cards .lst.lst-red li:after{color:#e22e4e}.engage-m .cards .lst.lst-yellow li:after{color:#f0c322}.engage-m .cards .lst.lst-purple li:after{color:#7e00e0}.connect{display:block;width:100%;padding-bottom:160px}.connect .connect-cnt{display:grid;grid-template-columns:1fr 638px;grid-column-gap:26px;align-items:flex-start;width:100%;max-width:1176px;margin:0 auto;padding:0 20px}.connect .connect-cnt .left{display:flex;flex-direction:column;align-items:flex-start;width:100%;padding:0 40px 0 0}.connect .connect-cnt .left .title{font-weight:600;font-size:38px;line-height:1.17;letter-spacing:-1px;color:#1c212b;margin:0;padding-bottom:38px}.connect .connect-cnt .left .subtitle{font-weight:600;font-size:17px;line-height:1.4;color:#1c212b;margin:0;padding-bottom:24px}.connect .connect-cnt .left .item{display:flex;align-items:flex-start;padding-bottom:16px}.connect .connect-cnt .left .item:last-of-type{padding-bottom:40px}.connect .connect-cnt .left .item img{max-width:30px;object-fit:contain;margin-right:17px}.connect .connect-cnt .left .item .text{margin:0;font-weight:400;font-size:16px;line-height:1.6;color:#585d69}.connect .connect-cnt .left .item .text a{color:#125ef8}.connect .connect-cnt .left .btn.-mobile{display:none}.connect .connect-cnt .right{display:grid;grid-template-columns:1fr 1fr;grid-column-gap:32px}.connect .connect-cnt .right .item{display:flex;flex-direction:column;justify-content:space-between;background:#f9fafb;border-radius:16px;padding:52px 32px 37px 32px}.connect .connect-cnt .right .item img{display:block;max-width:26px;object-fit:contain;margin-bottom:36px}.connect .connect-cnt .right .item .title{font-weight:600;font-size:22px;line-height:1.45;color:#1c212b;margin:0;padding-bottom:16px}.connect .connect-cnt .right .item .text{font-size:16px;line-height:1.6;color:#585d69;margin:0;padding-bottom:24px}.connect .connect-cnt .right .item .btn{justify-content:flex-start;padding:0;margin-bottom:26px}.connect .connect-cnt .right .item .logos-place{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #dfe5eb80;width:calc(100% + 64px);margin-left:-32px;min-height:67px;padding:30px 32px 0 32px}.connect .connect-cnt .right .item .logos-place .logo{padding:0}.connect .connect-cnt .right .item .logos-place img{padding:0;width:100%;max-width:100%;object-fit:contain}.validate-info{display:none;position:absolute;font-style:normal;white-space:nowrap;font-weight:600;font-size:16px;line-height:1.6;top:calc(100% + 15px);left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);color:#1c212b;padding:8px 16px;background:#fff;border:1px solid #e5eaf3;box-shadow:0 1px 15px rgba(0,0,0,.1);border-radius:4px;z-index:4}.validate-info img{display:inline-block;max-width:16px;margin-right:8px}.validate-info:before{display:block;position:absolute;width:12px;height:12px;content:" ";top:-7px;left:50%;background:#fff;border-radius:0 2px;border-left:1px solid #e5eaf3;border-top:1px solid #e5eaf3;transform:translateX(-50%) rotate(45deg);-webkit-transform:translateX(-50%) rotate(45deg)}.pricing .grid .border-to-last{position:absolute;top:0;bottom:0;left:0;right:0;grid-area:1/6/10/6;border:2px solid #585d69;z-index:10;border-radius:8px}.btn{display:block;border:1px solid transparent;width:auto;max-height:64px;background-color:transparent;border-radius:6px;padding:12px 33px;color:#125ef8;font-size:16px;line-height:1.4;font-weight:400;white-space:nowrap;text-align:center}.btn-fs-bg{font-size:17px}.btn-ls-bg{line-height:1.6}.btn-6-8{padding:6px 8px}.btn-12-24{padding:12px 24px}.btn-20-40{padding:16px 30px}.btn-17-30{padding:17px 30px}.btn-blue{background-color:#125ef8;color:#fff}.btn-br{border:1px solid #e1e8f8}.btn-arr-right{display:flex;align-items:center;justify-content:center}.btn-arr-right::after{content:"\e904";font-size:16px;margin-left:6px;color:inherit;font-family:Icomoon}.nws{display:block;width:100%;position:relative;margin:45px 0 100px 0}.nws .nws-cnt{width:100%;max-width:984px;box-sizing:border-box;margin:0 auto;padding:0 20px;position:relative}.nws .nws-cnt .nws-t{font-size:29px;font-weight:600;line-height:1.2;color:#1c212b;padding-bottom:40px;margin:0}.nws .nws-cnt .nws-t span{font-family:Arial;font-weight:700}.nws .nws-cnt .nws-fr{display:flex;position:relative;width:100%}.nws .nws-cnt .nws-fr .nws-inp{background-color:#f8f8f9;max-width:100%;width:501px;padding:16px 18px;margin-right:16px;border-radius:6px;font-size:19px;line-height:1.7;color:#000;border:2px solid transparent;outline:0}.dem-fra-t2{width:396px;clear:both;box-shadow:10px 50px 114px rgb(91 58 25 / 8%)}.dem-fra-t2 .topi{width:100%;height:100px;clear:both;overflow:hidden;background:url(https://cdn.addevent.com/web/images/main-grid/share-events-1-new.svg) no-repeat 50% top;background-size:100% auto}.dem-fra-t2 .midi{clear:both;padding:10px 0 46px 0;text-align:center;background:#fff}.dem-fra-t2 .midi p{margin:0;font-size:30px;line-height:110%;color:#111;font-weight:600}.dem-fra-t2 .midi .fx{clear:both;padding:50px 0 0 0}.dem-fra-t2 .midi .tryit{clear:both;height:50px;margin:40px 0 -40px 0;background:url(https://cdn.addevent.com/web/images/tryitnow-v2.svg) no-repeat 62% 0;background-size:50% auto}.dem-fra-t2 .boti{width:100%;height:30px;clear:both;overflow:hidden;background:#fff}.color-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:29px}.color-grid .item{display:flex;flex-direction:column;min-width:172px;color:#1c212b;position:relative}.color-grid .item .item-cover{position:absolute;top:0;bottom:0;left:0;right:0;border-radius:8px;background-color:transparent;opacity:0;border:2px solid transparent}.color-grid .item.active .item-cover{opacity:1}.color-grid .item .item-cover:after{content:"";width:36px;height:2px;background-color:#fff;position:absolute;bottom:-2px;left:50%;transform:translateX(-50%)}.color-grid .item .item-ol{position:absolute;top:0;bottom:0;left:0;right:0;margin:-5px;z-index:-1;border-radius:8px;background-color:transparent}.color-grid .item .lrn{display:inline-block;position:relative;background:0 0;padding:0 25px 0 0;border:0;outline:0;text-align:left;flex-direction:row;align-items:center;font-size:17px;line-height:1.4}.color-grid .item .lrn.lrn-fs-13{font-size:15px;line-height:1.8}.color-grid .item .lrn:after{position:absolute;top:2px;right:0;font-family:Icomoon;content:"\e904"}.color-grid .item .crc{display:flex;justify-content:center;align-items:center;background-color:#f3f7ff;width:64px;min-width:64px;height:64px;min-height:64px;border-radius:50%;margin-bottom:16px}.color-grid .item .crc.crc-48{width:48px;min-width:48px;height:48px;min-height:48px}.color-grid .item .crc.crc-32{width:32px;min-width:32px;height:32px;min-height:32px}.color-grid .item .crc i{font-size:32px;font-weight:500}.color-grid .item .main{display:flex;flex-direction:column;width:100%}.color-grid .item .main-top{display:flex;justify-content:space-between;align-items:flex-start;padding-top:4px}.color-grid .item .main-top .arr{display:flex;justify-content:center;align-items:center;transform:rotate(90deg)}.color-grid .item .main-top .arr i:before{color:#1c212b}.color-grid .item .title{font-size:18px;line-height:1.2;margin-bottom:8px;font-weight:600}.color-grid .item p{color:#585d69;font-size:14px;line-height:1.5;margin:0 0 16px 0;flex:1}.color-grid .item .arrow{opacity:0;position:absolute;z-index:2;bottom:-9px;left:50%;width:38px;height:11px;transform:translate(-50%)}.color-grid .item.active .arrow{opacity:1}.color-grid .box .cards{display:none;padding:80px 24px 33px 24px;margin-top:-48px;margin-bottom:31px;background-color:#f9f9fa}.color-grid .box .cards .lst{display:flex;flex-direction:column}.color-grid.color-grid-vert{grid-template-columns:1fr}.color-grid.color-grid-vert .item{flex-direction:row;padding:24px;background:#fff;border:1px solid #eeeff2;border-radius:8px;box-shadow:0 0 0 1px rgb(50 50 93 / 5%),0 2px 5px 0 rgb(50 50 93 / 10%),0 1px 1px 0 rgb(0 0 0 / 15%);margin:0 24px 8px;position:relative;z-index:2}.color-grid.color-grid-vert .item .crc{margin-right:16px}.color-grid.color-grid-vert .item p{margin-bottom:0}.color-grid .item.item-bdr{position:relative;background:#fff;border:2px solid #eeeff2;box-shadow:0 0 0 1px rgb(50 50 93 / 5%),0 2px 5px 0 rgb(50 50 93 / 10%),0 1px 1px 0 rgb(0 0 0 / 15%);border-radius:8px;padding:24px 24px 16px 24px}.color-grid .item.item-bdr.active .item-ol{display:block}.color-grid .item.item-bdr.active{box-shadow:0 10px 40px rgba(35,38,45,.1)}.color-grid .item.item-blue .lrn,.color-grid .item.item-blue i:before{color:#125ef8}.color-grid .item.item-blue.active i:before{color:#125ef8}.color-grid .item.item-blue.item-bdr.active .item-ol{background-color:#e8effe}.color-grid .item.item-blue.item-bdr.active .item-cover{border:2px solid #125ef8}.color-grid .item.item-red i:before{color:#e22e4e}.color-grid .item.item-red .lrn{color:#d22c4a}.color-grid .item.item-yellow i:before{color:#f0c322}.color-grid .item.item-yellow .lrn{color:#8e7210}.color-grid .item.item-green i:before{color:#1ac67d}.color-grid .item.item-green .lrn{color:#338400}.color-grid .item.item-purple i:before{color:#7e00e0}.color-grid .item.item-purple .lrn{color:#7e00e0}.color-grid .item .lrn.lrn-na:after{display:none}.trs{display:block;width:100%;padding-bottom:30px}.trs.bg-t1{background:linear-gradient(180deg,#f9f9fa 0,rgba(249,249,250,0) 25%)}.trs.pd-bg{padding-bottom:160px}.trs .trs-cnt{display:block;position:relative;width:100%;max-width:900px;margin:0 auto;padding:0 20px}.trs .trs-cnt.xp{padding:0 0 35px 0}.trs .trs-cnt .title{margin:0;font-weight:600;font-size:45px;line-height:1.17;text-align:center;letter-spacing:-1px;color:#1c212b;padding-top:120px;padding-bottom:16px}.trs .trs-cnt .list{display:flex;align-items:center;justify-content:space-evenly;flex-wrap:wrap;padding:10px 0 20px 0}.trs .trs-cnt .list .list-item{display:flex;align-items:center;font-weight:600;font-size:16px;line-height:1.6;color:#1c212b;margin:0;padding:0 10px 10px 10px}.trs .trs-cnt .list .list-item a{text-decoration:none;color:#1c212b}.trs .trs-cnt .list .list-item:before{display:block;content:" ";background-color:#f3f6ff;background-image:url(https://cdn.addevent.com/web/images/check-blue.svg);background-size:16px 16px;background-repeat:no-repeat;background-position:center center;border-radius:50%;width:34px;min-width:34px;min-height:34px;margin-right:16px;margin-top:-3px}.trs .trs-cnt .text{width:100%;margin:0;font-size:16px;line-height:1.6;color:#1c212b;text-align:center}.trs .trs-cnt .text.fs-bg{font-size:19px;line-height:1.65;color:#585d69}.trs .trs-cnt .text.pd{padding-bottom:34px}.trs .trs-cnt .opinion{width:100%;display:block;padding-top:20px}.trs .trs-cnt .opinion .box{width:220px;min-height:320px;float:left;position:relative;background:#fff;border:1px solid #eeeff2;box-shadow:0 0 0 1px rgb(50 50 93 / 5%),0 2px 5px 0 rgb(50 50 93 / 10%),0 1px 1px 0 rgb(0 0 0 / 15%);border-radius:6px}.trs .trs-cnt .opinion .box .pox{clear:both;padding:24px 30px}.trs .trs-cnt .opinion .box .pox .hg{height:62px;clear:both;position:relative}.trs .trs-cnt .opinion .box .pox .hg .img{width:70px;height:70px;position:absolute;left:0;top:0}.trs .trs-cnt .opinion .box .pox .hg .img img{width:56px;height:56px;display:block;border-radius:50%}.trs .trs-cnt .opinion .box .pox .hg .tx{position:absolute;left:75px;right:0;top:1px}.trs .trs-cnt .opinion .box .pox .hg .tx .nam{clear:both;margin:0 0 5px 0}.trs .trs-cnt .opinion .box .pox .hg .tx .nam p{margin:0;font-size:16px;font-weight:600;color:#000;line-height:100%}.trs .trs-cnt .opinion .box .pox .hg .tx .loc{display:block;color:#acafb8;font-size:12px;font-weight:500}.trs .trs-cnt .opinion .box .pox .hg .tx .strs{height:30px;clear:both}.trs .trs-cnt .opinion .box .pox .hg .tx .strs img{height:16px}.trs .trs-cnt .opinion .box .pox .tix{clear:both;padding:10px 0 0 0}.trs .trs-cnt .opinion .box .pox .tix .ds{margin:0;font-size:16px;line-height:140%;color:#4b4b4b;font-weight:400;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}.trs .trs-cnt .opinion .box .rew-t1{position:absolute;left:15px;right:15px;bottom:10px;border-top:1px solid #eee;border-radius:0 0 6px 6px}.trs .trs-cnt .opinion .box .rew-t1 .hx{height:66px;clear:both;margin:0 15px 10px 15px;position:relative}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx{width:180px;height:55px;position:absolute;left:0;top:13px}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .no{height:24px;clear:both}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .no p{margin:0;font-size:12px;line-height:20px;color:#8d8d8d}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .no p span{font-weight:500}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .lora{height:30px;clear:both}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .lora .st{height:24px;float:left;padding:0 12px 0 0}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .lora .st img{height:24px}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .lora .rn{height:24px;float:left}.trs .trs-cnt .opinion .box .rew-t1 .hx .nx .lora .rn p{margin:0;font-size:15px;line-height:24px;color:#8d8d8d;font-weight:500}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t1{width:120px;height:30px;position:absolute;top:34px;right:0;background:url(https://cdn.addevent.com/web/images/logo-trustpilot-t1.svg) no-repeat right 0;background-size:auto 26px}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t2{width:120px;height:34px;position:absolute;top:32px;right:0;background:url(https://cdn.addevent.com/web/images/logo-g2-t1.svg) no-repeat right 0;background-size:auto 34px}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t3{width:120px;height:34px;position:absolute;top:38px;right:0;background:url(https://cdn.addevent.com/web/images/logo-capterra-t1.svg) no-repeat right 0;background-size:auto 24px}.frtrefslist .logo-carousel{max-height:120px;overflow:hidden}.frtrefslist .slide div{width:180px;height:80px;float:left;visibility:hidden}.frtrefslist .slrow{overflow:hidden}.frtrefslist .rf18{background:url(https://cdn.addevent.com/web/images/calx-ref-18.png) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf25{background:url(https://cdn.addevent.com/web/images/calx-ref-25.png) no-repeat 50% 50%;background-size:58% auto}.frtrefslist .rf33{background:url(https://cdn.addevent.com/web/images/calx-ref-33.png) no-repeat 50% 50%;background-size:70% auto}.frtrefslist .rf5{background:url(https://cdn.addevent.com/web/images/calx-ref-5.png) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf41{background:url(https://cdn.addevent.com/web/images/calx-ref-41.svg) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf30{background:url(https://cdn.addevent.com/web/images/calx-ref-30.png) no-repeat 50% 50%;background-size:58% auto}.frtrefslist .rf29{background:url(https://cdn.addevent.com/web/images/calx-ref-29.png) no-repeat 50% 50%;background-size:58% auto}.frtrefslist .rf27{background:url(https://cdn.addevent.com/web/images/calx-ref-27.png) no-repeat 50% 50%;background-size:54% auto}.frtrefslist .rf28{background:url(https://cdn.addevent.com/web/images/calx-ref-28.png) no-repeat 50% 50%;background-size:60% auto}.frtrefslist .rf8{background:url(https://cdn.addevent.com/web/images/calx-ref-8.png) no-repeat 50% 50%;background-size:38% auto}.frtrefslist .rf38{background:url(https://cdn.addevent.com/web/images/calx-ref-38.png) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf37{background:url(https://cdn.addevent.com/web/images/calx-ref-22.svg) no-repeat 50% 50%;background-size:68% auto}.frtrefslist .rf22{background:url(https://cdn.addevent.com/web/images/calx-ref-22.png) no-repeat 50% 50%;background-size:46% auto}.frtrefslist .rf13{background:url(https://cdn.addevent.com/web/images/calx-ref-13.png) no-repeat 50% 50%;background-size:53% auto}.frtrefslist .rf34{background:url(https://cdn.addevent.com/web/images/calx-ref-34.png) no-repeat 50% 55%;background-size:50% auto}.frtrefslist .rf19{background:url(https://cdn.addevent.com/web/images/calx-ref-19.png) no-repeat 50% 50%;background-size:60% auto}.frtrefslist .rf20{background:url(https://cdn.addevent.com/web/images/calx-ref-20.png) no-repeat 50% 50%;background-size:55% auto}.frtrefslist .rf6{background:url(https://cdn.addevent.com/web/images/calx-ref-6.png) no-repeat 50% 50%;background-size:38% auto}.frtrefslist .rf17{background:url(https://cdn.addevent.com/web/images/calx-ref-17.png) no-repeat 50% 50%;background-size:38% auto}.frtrefslist .rf10{background:url(https://cdn.addevent.com/web/images/calx-ref-10.png) no-repeat 50% 50%;background-size:60% auto}.frtrefslist .rf3{background:url(https://cdn.addevent.com/web/images/calx-ref-3.png) no-repeat 50% 50%;background-size:36% auto}.frtrefslist .rf21{background:url(https://cdn.addevent.com/web/images/calx-ref-21.png) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf26{background:url(https://cdn.addevent.com/web/images/calx-ref-26.png) no-repeat 50% 50%;background-size:44% auto}.frtrefslist .rf16{background:url(https://cdn.addevent.com/web/images/calx-ref-16.png) no-repeat 50% 50%;background-size:53% auto}.frtrefslist .rf24{background:url(https://cdn.addevent.com/web/images/calx-ref-24.png) no-repeat 50% 50%;background-size:50% auto}.frtrefslist .rf11{background:url(https://cdn.addevent.com/web/images/calx-ref-11.png) no-repeat 50% 50%;background-size:60% auto}.frtrefslist .rf9{background:url(https://cdn.addevent.com/web/images/calx-ref-9.png) no-repeat 50% 50%;background-size:45% auto}.frtrefslist .rf35{background:url(https://cdn.addevent.com/web/images/calx-ref-35.png) no-repeat 50% 50%;background-size:38% auto}.frtrefslist .rf14{background:url(https://cdn.addevent.com/web/images/calx-ref-14.png) no-repeat 50% 50%;background-size:66% auto}.frtrefslist .rf15{background:url(https://cdn.addevent.com/web/images/calx-ref-15.png) no-repeat 50% 50%;background-size:48% auto}.frtrefslist .rf12{background:url(https://cdn.addevent.com/web/images/calx-ref-12.png) no-repeat 50% 50%;background-size:42% auto}.frtrefslist .rf23{background:url(https://cdn.addevent.com/web/images/calx-ref-23.png) no-repeat 50% 50%;background-size:48% auto}.frtrefslist .rf2{background:url(https://cdn.addevent.com/web/images/calx-ref-2.png) no-repeat 50% 50%;background-size:38% auto}.frtrefslist .rf31{background:url(https://cdn.addevent.com/web/images/calx-ref-31.png) no-repeat 50% 50%;background-size:26% auto}.frtrefslist .rf32{background:url(https://cdn.addevent.com/web/images/calx-ref-40.png) no-repeat 50% 50%;background-size:62% auto}.footer{display:block;width:100%;background-image:url(https://cdn.addevent.com/web/images/mountains.webp);background-position:center top;background-repeat:repeat-x;padding-top:334px}.footer .ft-cnt{display:flex;max-width:984px;width:100%;margin:0 auto;padding:60px 20px}.footer .s1{display:flex;align-items:flex-start;flex-wrap:wrap}.footer .s1 .k-main{display:flex;flex-direction:column;align-items:flex-start;margin-right:120px}.footer .s1 .k-main a{margin:17px 0 25px;max-width:50px;max-height:51px}.footer .s1 .k-main img{display:block;max-width:100%;object-fit:contain}.footer .s1 .k-main h5{font-weight:400;font-size:17px;line-height:24px;color:#1c212b}.footer .s1 .menu{display:flex;align-items:flex-start;flex-wrap:wrap}.footer .s1 .k1{min-width:155px;margin-right:36px}.footer .s1 .k1:last-child{margin-right:0}.footer .s1 .k1 ul{list-style:none;padding:0;margin:0}.footer .s1 .k1 p{font-weight:600;font-size:17px;line-height:1.4;color:#1c212b;padding-bottom:27px;margin:0}.footer .k1 ul li{font-weight:400;font-size:16px;line-height:1.6;padding-bottom:16px}.footer .k1 ul li a{color:#585d69}.footer .social{width:100%;height:60px;clear:both;padding:25px 0 0 0}.footer .social ul{margin:0;padding:0;list-style-type:none}.footer .social ul li{float:left;margin:0 7px 0 0}.footer .social ul li a{margin:0!important;width:28px;height:28px;float:left;border-radius:50%}.footer .social ul li a span{display:none}.footer .social ul li .instagram{background:url(https://cdn.addevent.com/web/images/icon-web-instagram-t1.svg) no-repeat 50% 50%;background-size:100% auto}.footer .social ul li .twitter{background:url(https://cdn.addevent.com/web/images/icon-web-twitter-t1.svg) no-repeat 50% 50%;background-size:100% auto}.footer .social ul li .facebook{background:url(https://cdn.addevent.com/web/images/icon-web-facebook-t1.svg) no-repeat 50% 50%;background-size:100% auto}.footer .social ul li .youtube{background:url(https://cdn.addevent.com/web/images/icon-web-youtube-t1.svg) no-repeat 50% 50%;background-size:100% auto}.footer .social ul li .linkedin{background:url(https://cdn.addevent.com/web/images/icon-web-linkedin-t1.svg) no-repeat 50% 50%;background-size:100% auto}.footer .social ul li .github{background:url(https://cdn.addevent.com/web/images/icon-web-github-t1.svg) no-repeat 50% 50%;background-size:100% auto}#homepage-half-circle-green{position:absolute;top:100%;right:100%}#homepage-shape-grey-desktop{position:absolute;top:calc(100% - 200px);left:calc(100% + 35px)}#homepage-shape-grey-mobile{display:none;position:absolute;top:-277px;left:85%;transform:translateX(-50%);-webkit-transform:translateX(-50%)}#homepage-half-circle-purple{position:absolute;bottom:calc(100% - 125px);right:-122px}#homepage-half-circle-grey-with-ring{position:absolute;bottom:calc(100% - 155px);right:calc(100% - 205px)}#homepage-half-circle-grey{position:absolute;top:calc(100% - 165px);left:calc(100% - 155px)}.addeventatc{visibility:hidden}.addeventstc{visibility:hidden}.emoji{font-weight:400!important}.miu{font-weight:400}.miut{font-weight:600}@media all and (max-width:1280px){#homepage-half-circle-grey-with-ring{left:0}}@media all and (max-width:1160px){.top .menu-t1 ul li.exp .drop{max-width:900px;left:-250px}.top .drop .pad .color-grid .item{min-width:172px}.top .drop .pad .arr{position:absolute;left:380px;top:-9px}.bnr .bnr-cnt .lgscnt{bottom:22px;right:60px;width:360px}.connect .connect-cnt{grid-template-columns:1fr}.connect .connect-cnt .left{padding-bottom:30px}.color-grid{gap:8px}.color-grid .item{min-width:150px}.founders .founders-cnt .left{grid-area:1/3/1/1}.footer .s1 .k-main{margin-right:75px}.footer .s1 .k1{margin-right:30px}}@media all and (max-width:1020px){.top .menu-t1 ul li{position:relative;padding:0 15px}.top .menu-t1 ul li a{font-size:17px}}@media all and (max-width:920px){.bnr .bnr-cnt .lgscnt{display:none}.top .pdt{padding:20px 24px}.top .menu-t1{display:none}.top .logo-t1{max-width:172px}.top .menu-m{display:flex}.top .signinup{display:none}.color-grid .item p{font-size:16px}.color-grid .item .crc{background:0 0}.color-grid .item .main-top .arr i:before{font-size:25px;color:#7a818f}.color-grid .box .cards{padding:95px 45px 50px 52px}.engage-m .cards .lst li{font-size:18px;font-weight:500}.engage-m .cards .lst li:after{border:1px solid #ccc;font-size:17px;font-weight:600}.bnr{padding-top:90px;padding-bottom:80px}.bnr .bnr-cnt{flex-direction:column;justify-content:flex-start;padding:0 24px}.bnr .bnr-cnt .s1{padding-left:0}.bnr .bnr-cnt .s1.hp{max-width:100%;padding-left:0}.bnr .bnr-cnt .s1 .btn-plc{padding-top:16px}.color-grid .cards .lst{list-style-type:none;margin:0;padding:0}.engage{display:none}.engage-m{display:block}.engage-m .cards .lst{margin-bottom:32px}.use-case{padding-bottom:64px}.use-case .use-case-cnt{padding:0 24px}.use-case .use-case-cnt .title{font-size:32px;line-height:1.25;letter-spacing:0;padding-bottom:45px}.use-case .use-case-cnt .nav{display:none}.use-case .use-case-cnt .nav.-mobile{display:flex;flex-wrap:wrap;justify-content:flex-start;border:0;margin:0 -4px;width:calc(100% + 8px);padding-bottom:24px}.use-case .use-case-cnt .nav.-mobile .item{background:#f6f7f8;color:#585d69;font-weight:500;border-radius:4px;padding:4px 8px;margin:0 3px 6px 3px;border:0}.use-case .use-case-cnt .nav.-mobile .item.selected{color:#fff;border:0;background-color:#125ef8;height:100%}.use-case .use-case-cnt .box{flex-direction:column;align-items:center;background:#f9f9fa;width:calc(100% + 48px);margin-left:-24px;padding:0 24px;box-shadow:inset 0 1px 12px rgba(232,232,238,.57)}.use-case .use-case-cnt .box .inn{flex-direction:column;align-items:center;padding-top:24px;padding-bottom:32px}.use-case .use-case-cnt .box .inn .s1{display:none}.use-case .use-case-cnt .box .inn .s2{width:100%;max-width:100%;padding:15px 0 0 0}.trs{padding-bottom:0}.trs .trs-cnt{padding:0 24px}.trs .trs-cnt .title{padding-top:64px;padding-bottom:24px;line-height:1.25;font-size:32px}.trs .trs-cnt .text{font-size:16px}.trs .trs-cnt .text.fs-bg{font-size:16px}.trs .trs-cnt .text.pd{padding-bottom:40px}.pricing .mobile-pricing-slick .slick-slide:not(.slick-current) .item-box .item{box-shadow:none;border:1px solid #eef}.learn.slick .color-grid .slick-slide:not(.slick-current) .item.item-bdr{box-shadow:none}.connect .connect-cnt .left .title{font-size:40px}.connect{padding-bottom:80px}.connect .connect-cnt{padding-left:24px;padding-right:24px}.nws .nws-cnt{padding-left:24px;padding-right:24px}.nws .nws-cnt .nws-t{font-size:38px;padding-bottom:30px}.bnr .bnr-cnt .s1 .btn-plc .btn{width:100%}.footer .s1 .menu{padding:15px 0 0 0}.footer .s1 .k-main{width:100%;margin-right:0;margin-bottom:10px;flex-direction:row;align-items:center;flex-wrap:wrap}.footer .s1 .k-main a{margin:10px 20px 10px 0}.footer .s1 .k-main h5{font-size:16px}.footer .s1 .k1 p{font-size:17px;padding-bottom:16px;font-weight:500}.footer .s1 .k1 ul li{font-size:15px;padding-bottom:12px}.footer .s1 .k1:nth-child(2){padding-left:0}.footer .social{padding:15px 0 0 0}#homepage-half-circle-grey-with-ring{transform:scale(.5) translateX(-50%);-webkit-transform:scale(.5) translateX(-50%)}#homepage-half-circle-grey{display:none}#homepage-shape-grey-mobile{display:block}#homepage-shape-grey-desktop{display:none}#homepage-half-circle-green{position:absolute;top:100%;right:100%}#homepage-half-circle-purple{display:none}}@media all and (max-width:640px){.bnr .bnr-cnt .s1 .hdtxt .r1 .mot0{display:block}.bnr .bnr-cnt .s1 .hdtxt .r1 .mot1{display:inline-block}.bnr .bnr-cnt .s1 .hdtxt .r1 .mot2{display:block}h4:last-child,p:last-child{margin-bottom:0}.cms h1:not(:first-child){padding-top:16px}.cms h2:not(:first-child){padding-top:16px}.cms h3:not(:first-child){padding-top:16px}.cms h4:not(:first-child){padding-top:16px}.cms h5:not(:first-child){padding-top:16px}.cms h6:not(:first-child){padding-top:16px}.sp-blog .sp-blog-cnt .text-cnt .cms h4:not(:first-child){padding-top:0}.connect .connect-cnt .right{grid-template-columns:1fr;grid-row-gap:32px}.connect .connect-cnt .left .title{font-size:32px}.connect .connect-cnt .left .subtitle{font-size:17px}.connect .connect-cnt .left .item:last-of-type{padding-bottom:20px}.connect .connect-cnt .left .item .text{font-size:16px}.connect .connect-cnt .left .btn{display:none}.connect .connect-cnt .left .btn.-mobile{display:flex}.connect .connect-cnt .right{row-gap:16px}.connect .connect-cnt .right .item{padding:24px}.connect .connect-cnt .right .item .item-top{display:flex;align-items:center;margin-bottom:16px}.connect .connect-cnt .right .item .item-top img{padding:0;margin-right:24px}.connect .connect-cnt .right .item .item-top .title{padding:0}.connect .connect-cnt .right .item .text{padding-bottom:16px}.connect .connect-cnt .right .item .logos-place{width:100%;padding:0;min-height:0;margin-left:0;margin-bottom:24px;border-top:none}.connect .connect-cnt .right .item .btn{order:2;margin-bottom:0}.founders .founders-cnt .left{grid-area:auto}.engage-m .hdr{font-size:28px}.btn{font-size:16px;line-height:1.5}.btn-ls-bg{line-height:1.6}.btn-6-8{padding:6px 8px}.btn-20-40{padding:12px 20px}.btn-arr-right::after{transform:translateY(1px)}.mobile-12-33{padding:12px 33px}.color-grid .item .title{font-weight:600}.trs .trs-cnt .list{flex-direction:column;align-items:flex-start;justify-content:center}.trs .trs-cnt .list .list-item{padding:0 0 28px 0}.trs .trs-cnt .list .list-item.-last-on-mobile{order:1}.trs .trs-cnt .list{padding-bottom:32px;padding-left:20px}.trs .trs-cnt .list .list-item:before{margin-right:16px}.trs .trs-cnt .opinion .box .rew-t1 .hx{height:120px}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t1{top:90px;right:50%;margin:0 -60px 0 0}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t2{top:85px;right:50%;margin:0 -60px 0 0;background-position:center 0}.trs .trs-cnt .opinion .box .rew-t1 .hx .log-t3{top:90px;right:50%;margin:0 -60px 0 0}.trs .trs-cnt .opinion .box{min-height:400px}.trs .trs-cnt .text.pd br{display:none}.bnr{padding-bottom:64px;padding-top:64px}.bnr .bnr-cnt .s1 .subtitle{font-size:16px;line-height:1.6}.bnr .bnr-cnt .s2.hidden-on-mobile{display:none}.bnr .bnr-cnt .s1{padding-top:64px}.bnr .bnr-cnt .s1 .btn-plc{max-width:327px}.bnr .bnr-cnt .s1 .btn-plc.-desktop{display:none}.bnr .bnr-cnt .s1 .btn-plc.-mobile{display:flex;margin:0 auto;max-width:100%;justify-content:center}.bnr .bnr-cnt .s1 .subtitle p{display:inline}.bnr .bnr-cnt .s1 .subtitle h1{display:inline}.nws .btn{width:50%}.nws .nws-cnt .nws-fr{flex-direction:column}.nws .nws-cnt .nws-fr .nws-inp{width:100%;margin-bottom:16px;margin-right:0}.nws .nws-cnt .nws-fr .btn{align-self:flex-start}.nws .nws-cnt .btn{padding:13px 20px}.nws .nws-cnt .nws-t{font-size:32px;letter-spacing:-1px;padding-bottom:30px}.footer{background-size:auto 50%;background-position:left -50px top}.footer .ft-cnt{flex-direction:column;padding:0 24px}.footer .s1 .k-main{order:1;padding:32px 0;border-top:1px solid #e5eaf3;margin-bottom:0;align-items:center}.footer .s1 .k-main a{margin:0 16px 0 0;max-width:40px;max-height:40px}.footer .s1 .k-main h5{font-size:16px;margin:0}.footer .s1 .k1{padding:0 0 10px 0;margin-right:0}.footer .s1 .k1.k1-m1{order:1}.footer .s1 .k1.k1-m2{order:2}.footer .s1 .k1.k1-m3{order:3}.footer .s1 .k1 .mnu-ft{padding-bottom:12px}.footer .s1 .k1 ul li{font-size:15px}.validate-info{top:auto;left:50%;max-width:100%;white-space:normal;width:max-content}.validate-info:before{top:auto;bottom:-7px;left:50%;border:0;border-bottom:1px solid #e5eaf3;border-right:1px solid #e5eaf3}}@media all and (max-width:420px){.bnr .bnr-cnt .s1 .hdtxt .r1 p{font-size:30px;line-height:38px}.bnr .bnr-cnt .s1 .hdtxt .r1 .mot0{display:block}.bnr .bnr-cnt .s1 .hdtxt .r1 .mot1{display:inline-block}.bnr .bnr-cnt .s1 .hdtxt .r1 .mot2{display:block}.bnr .bnr-cnt .s1 .hdtxt .r1 .cc{height:38px;margin:0 0 -9px 3px}.bnr .bnr-cnt .s1 .hdtxt .r1 .cc .ul .lbl{height:38px;line-height:38px}}@media all and (max-width:374px){.bnr .bnr-cnt .s1 .btn-plc.-mobile{flex-direction:column}.bnr .bnr-cnt .s1 .btn-plc.-mobile .btn{width:100%;margin-bottom:8px}.bnr .bnr-cnt .s1 .btn-plc.-mobile .btn:last-child{margin-bottom:0}}.lazyelm{background:0 0!important}.lazyitm{background:0 0!important}}.top .menu-t1 ul li.exp .solexp {display:flex;align-items:center;background:none;border-style:none;padding:0;margin:0;font:inherit;color:#1c212b;font-size:18px;line-height:1.6;cursor:pointer;-webkit-appearance:none;appearance:none;}.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:#125ef8;color:#fff;padding:12px 20px;border-radius:0 0 6px 0;font-weight:600;font-size:16px;text-decoration:none;}</style>
+    <!-- CSS -->
+            <link rel="preload" href="https://cdn.addevent.com/web/css/style.1792680182.min.css" as="style" type="text/css" media="all" onload="this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://cdn.addevent.com/web/css/style.1792680182.min.css" type="text/css" media="all" /></noscript>
+    
+    <script type="text/javascript">
+        const apiKey = "7c83cdd9bbfa097ae9efd1ac2a5adc93";
+        const amplitudeIdentifier = "";
+        const stripeApiKey = "pk_live_51CXIGHFQZnNN5IkD9v3V5sPzP4rGlTFiwQvLUNeFqmDjobSbvvnWN8jLqbJIhy0kpxfXIbEtCC8qNJwKQGIqEl8z00IhsuKE5r";
+    </script>
+
+            <script>
+            (function(w){w.fpr=w.fpr||function(){w.fpr.q = w.fpr.q||[];w.fpr.q[arguments[0]=='set'?'unshift':'push'](arguments);};})(window);
+            fpr("init", {cid:'iv10gft5'});
+            fpr("click");
+        </script>
+        <script src="https://cdn.firstpromoter.com/fpr.js" async></script>
+    
+    <script src="https://cdn.addevent.com/libs/ref/aetrack.20240418.prod.js" crossorigin="anonymous" async></script>
+</head>
+
+<body id="doc" class="">
+<div class="overflow-x">
+    <header class="top">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <div class="pdt">
+            <div class="flex">
+                <div class="logo-t1">
+                    <a href="/" title="Home">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/logo-t1.svg" width="168" height="38" alt="AddEvent" />
+                        </picture>
+                    </a>
+                </div>
+                <nav class="menu-t1" aria-label="Primary">
+                    <div class="list">
+                        <ul>
+                            <li class="exp">
+                                <button type="button" class="solexp" aria-haspopup="true" aria-expanded="false" aria-controls="solutions-menu">Solutions <i class="icon-Chevron_Right" aria-hidden="true"></i></button>
+                                <div class="drop" id="solutions-menu" data-open="false" aria-hidden="true">
+                                    <div class="drop-ctn">
+                                        <div class="rl">
+                                            <div class="pad">
+                                                <div class="arr"></div>
+                                                <div class="hdr">
+                                                    Discover our solutions
+                                                </div>
+                                                <div class="color-grid">
+                                                    <a href="/solutions/share-events" title="Share events" class="link">
+                                                        <div class="item item-blue">
+                                                            <div class="crc crc-48">
+                                                                <i class="icon-share-event" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="title">
+                                                                Share <br />
+                                                                Events
+                                                            </div>
+                                                            <p>
+                                                                Get your events onto your users' calendars.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="/solutions/online-rsvp-form" title="Online RSVP form" class="link">
+                                                        <div class="item item-red">
+                                                            <div class="crc crc-48">
+                                                                <i class="icon-RSVP" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="title">
+                                                                Online <br />
+                                                                RSVP form
+                                                            </div>
+                                                            <p>
+                                                                Get RSVP details from your attendees with event registration
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="/solutions/subscription-calendars" title="Subscription calendars" class="link">
+                                                        <div class="item item-yellow">
+                                                            <div class="crc crc-48">
+                                                                <i class="icon-subscription" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="title">
+                                                                Subscription <br />
+                                                                Calendar
+                                                            </div>
+                                                            <p>
+                                                                Share multiple events at once with a calendar your users can subscribe to.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="/solutions/embeddable-calendar" title="Embeddable calendar" class="link">
+                                                        <div class="item item-green">
+                                                            <div class="crc crc-48">
+                                                                <i class="icon-embedable_new" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="title">
+                                                                Embeddable <br />
+                                                                Calendar
+                                                            </div>
+                                                            <p>
+                                                                Embed a calendar on your website to display and share your events.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="/solutions/automated-events" title="Dynamic Add to Calendar" class="link">
+                                                        <div class="item item-purple">
+                                                            <div class="crc crc-48">
+                                                                <i class="icon-automation_new" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="title">
+                                                                Dynamic <br />Add to Calendar
+                                                            </div>
+                                                            <p>
+                                                                Create personalized calendar events from your system's data.
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ft">
+                                                <div class="pf">
+                                                    <div class="pfi">
+                                                        <div class="flex">
+                                                            <ul>
+                                                                <li><a href="/c/documentation" title="Documentation"><i class="icon-document-2-2" aria-hidden="true"></i>Documentation</a></li>
+                                                                <li><a href="/integrations" title="Integrations"><i class="icon-infinite-1" aria-hidden="true"></i>Integrations</a></li>
+                                                                <li><a href="https://help.addevent.com/changelog" title="Updates" target="_blank"><i class="icon-Updates" aria-hidden="true"></i>Updates</a></li>
+                                                                <li><a href="/c/legal/security" title="Trust Center (Terms, Privacy, GDPR, CCPA, SOC 2 Type II)"><span class="material-icons-outlined miic" aria-hidden="true">gpp_good</span>Security</a></li>
+                                                            </ul>
+                                                            <div class="right">
+                                                                <a href="/solutions/analytics" title="Analytics" class="btn btn-6-8"><i class="icon-analytics" aria-hidden="true"></i>Analytics</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="/c/plans-and-pricing" title="Plans and pricing">Pricing</a></li>
+                            <li><a href="/blog" title="Blog">Blog</a></li>
+                            <li class="blk"><a href="/c/documentation" title="Documentation for developers">FOR DEVS</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right">
+
+                                            <div class="signinup">
+                            <a href="https://dashboard.addevent.com" title="Sign In" class="signin">Sign In</a>
+                            <span class="or">or</span>
+                            <a href="https://dashboard.addevent.com/signup?source=homepage&position=navigation&btn=signup" title="Sign Up" class="signup" id="btn-signup">Sign Up</a>
+                        </div>
+                    
+                    <div class="menu-m">
+                        <button type="button" class="menu-m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-drop">
+                            <i class="icon-menu" aria-hidden="true"></i>
+                        </button>
+                        <div class="drop" id="mobile-menu-drop" aria-hidden="true" inert>
+                            <button type="button" class="close" aria-label="Close menu">
+                                <i class="icon-close" aria-hidden="true"></i>
+                            </button>
+                            <div class="main">
+                                <div class="title solexp">Solutions</div>
+                                <ul class="lst">
+                                    <li><a href="/solutions/share-events" title="Share events"><i class="icon-share-event" aria-hidden="true"></i>Share events</a></li>
+                                    <li><a href="/solutions/online-rsvp-form" title="Online RSVP form"><i class="icon-RSVP" aria-hidden="true"></i>Online RSVP form</a></li>
+                                    <li><a href="/solutions/subscription-calendars" title="Subscription calendars"><i class="icon-subscription" aria-hidden="true"></i>Subscription calendar</a></li>
+                                    <li><a href="/solutions/embeddable-calendar" title="Embeddable calendar"><i class="icon-embedable_new" aria-hidden="true"></i>Embeddable calendar</a></li>
+                                    <li><a href="/solutions/automated-events" title="Dynamic Add to Calendar"><i class="icon-automation_new" aria-hidden="true"></i>Dynamic Add to Calendar</a></li>
+                                </ul>
+                                <ul class="lst">
+                                    <li><a href="/solutions/analytics" title="Analytics"><i class="icon-analytics" aria-hidden="true"></i>Analytics</a></li>
+                                    <li><a href="/integrations" title="Integrations"><i class="icon-Updates" aria-hidden="true"></i>Integrations</a></li>
+                                    <li><a href="https://help.addevent.com/changelog" title="Updates" target="_blank"><i class="icon-infinite-1" aria-hidden="true"></i>Updates</a></li>
+                                    <li><a href="/c/documentation" title="Documentation"><i class="icon-document-2-2" aria-hidden="true"></i>Documentation</a></li>
+                                </ul>
+                                <ul class="lst lst-rest">
+                                    <li><a href="/c/plans-and-pricing" title="Pricing">Pricing</a></li>
+                                    <li><a href="/blog" title="Blog">Blog</a></li>
+                                    <li class="blk"><a href="/c/documentation" title="Documentation for developers">FOR DEVS</a></li>
+                                </ul>
+                            </div>
+
+                                                            <div class="ft">
+                                    <a href="/signin" title="Go to app" class="btn btn-br">Go to app</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.addevent.com/#organization",
+                "name": "AddEvent",
+                "url": "https://www.addevent.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://cdn.addevent.com/web/images/logo-t1.webp"
+                },
+                "makesOffer": {
+                    "@type": "Offer",
+                    "name": "Free plan",
+                    "url": "https://www.addevent.com/pricing",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.4",
+                    "ratingCount": "52",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/addeventinc/",
+                    "https://twitter.com/AddEvent_Inc",
+                    "https://www.linkedin.com/company/addevent/",
+                    "https://www.instagram.com/addevent_inc",
+                    "https://www.youtube.com/channel/UC0qbG6tqVzcOBIxPYl8fo4g",
+                    "https://github.com/AddEventinc"
+                ],
+                "hasCredential": [
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "SOC 2 Type II",
+                        "description": "Independent audit certification covering security, availability, processing integrity, confidentiality, and privacy of customer data.",
+                        "url": "https://www.addevent.com/c/legal/security"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "SOC 3",
+                        "description": "Service Organization Controls report, publicly available.",
+                        "url": "https://www.addevent.com/c/legal/security"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "GDPR Compliant",
+                        "description": "AddEvent adheres to GDPR requirements through privacy-by-design practices, security controls, and documented processes to protect personal data.",
+                        "url": "https://www.addevent.com/c/legal/privacy#anchor-16"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "CCPA Compliant",
+                        "description": "AddEvent adheres to the California Consumer Privacy Act requirements.",
+                        "url": "https://www.addevent.com/c/legal/privacy/supplemental-privacy-notice-for-ca-residents"
+                    }
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.addevent.com/#website",
+                "url": "https://www.addevent.com",
+                "name": "AddEvent",
+                "publisher": {
+                    "@id": "https://www.addevent.com/#organization"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://www.addevent.com/#webpage",
+                "url": "https://www.addevent.com",
+                "name": "Add to Calendar & Calendar Marketing Tools to increase attendance, improve engagement and Reduce No-Shows",
+                "description": "Easily increase attendance and engagement by letting users add events to their calendars, embed calendars on your website, collect RSVPs, send reminders, and offer calendar subscriptions. Works with Google, Apple, Outlook, and more.",
+                "isPartOf": {
+                    "@id": "https://www.addevent.com/#website"
+                },
+                "publisher": {
+                    "@id": "https://www.addevent.com/#organization"
+                }
+            }
+        ]
+    }
+</script>
+
+<main id="main-content" tabindex="-1">
+
+    <div class="bnr -homepage">
+        <img id="homepage-shape-grey-mobile" src="https://cdn.addevent.com/web/images/decorators/homepage/shape-grey-mobile.svg" width="861" height="863" alt="" loading="lazy" />
+        <div class="bnr-cnt">
+            <div class="s1 hp">
+                <div class="hdtxt">
+                    <div class="r1">
+                        <p>
+                            <span class="mot0">Get your</span>
+                            <span class="cc">
+                            <span class="ul l1 x0">
+                                <span class="lbl i1"><span>events</span></span>
+                                <span class="lbl i2"><span>webinars</span></span>
+                                <span class="lbl i3"><span>community activities</span></span>
+                                <span class="lbl i4"><span>game schedule</span></span>
+                                <span class="lbl i5"><span>school schedule</span></span>
+                                <span class="lbl i6"><span>appointment</span></span>
+                                <span class="lbl i7"><span>booking</span></span>
+                            </span>
+                        </span>
+                            <br />
+                            <span class="mot1">on your</span>
+                            <span class="cc">
+                            <span class="ul l2 x0">
+                                <span class="lbl i1"><span>attendees’</span></span>
+                                <span class="lbl i2"><span>clients’</span></span>
+                                <span class="lbl i3"><span>members’</span></span>
+                                <span class="lbl i4"><span>teams’</span></span>
+                                <span class="lbl i5"><span>students’</span></span>
+                                <span class="lbl i6"><span>patients’</span></span>
+                                <span class="lbl i7"><span>customers’</span></span>
+                            </span>
+                        </span>
+                            <span class="mot2">calendars</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="subtitle">
+                    <p>Everything you need to share your events, schedules, calendars, and appointments—and easily </p>
+                    <h1>Add to Calendar</h1>
+                    <p>— so no important moment is ever missed.</p>
+                </div>
+
+                <div class="btn-plc -desktop">
+                    <a class="btn btn-blue btn-20-40 btn-arr-right btn-fs-bg" href="https://dashboard.addevent.com/signup?source=homepage&position=maincontent&btn=get-started">Get started</a>
+                    <button type="button" class="btn btn-white-blue btn-br btn-fs-bg button-examples-pop" data-show="frontpage" data-href="https://dashboard.addevent.com/signup?source=homepage&position=gallery&btn=get-started">
+                        <span class="material-icons-outlined ic" aria-hidden="true">web_stories</span> Browse demo gallery
+                    </button>
+                </div>
+                <div class="btn-plc -mobile">
+                    <a class="btn btn-blue btn-20-40 mobile-12-33 btn-fs-bg" href="https://dashboard.addevent.com/signup?source=homepage&position=maincontent&btn=get-started">Get started</a>
+                    <button type="button" class="btn btn-white-blue btn-br btn-fs-bg button-examples-pop" data-show="frontpage" data-href="https://dashboard.addevent.com/signup?source=homepage&position=gallery&btn=get-started">
+                        <span class="material-icons-outlined ic" aria-hidden="true">web_stories</span> Browse demo gallery
+                    </button>
+                </div>
+                <div class="coco">
+                    <p>
+                        AddEvent is the number one <strong class="miu">Add to Calendar</strong> service on the internet,
+                        trusted by over <span class="sp1">400,000 companies</span> of all sizes and industries.
+                    </p>
+                </div>
+                <div class="soco">
+                    <div class="inl">
+                        <a href="/c/legal/security" title=""><span class="material-icons-outlined miic" aria-hidden="true">gpp_good</span> SOC 2 Type II &nbsp;·&nbsp; GDPR &nbsp;·&nbsp; CCPA &nbsp;·&nbsp; WCAG 2.2 AA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="s2 hidden-on-mobile s2-564 lazyelm" id="slidesetma">
+
+                <div id="slideset">
+                    <div class="i1 isl lazyitm" title=""></div>
+                    <div class="i2 isl" title=""></div>
+                    <div class="i3 isl" title=""></div>
+                    <div class="i4 isl" title=""></div>
+                    <div class="i5 isl" title=""></div>
+                    <div class="i6 isl" title=""></div>
+                    <div class="i7 isl" title=""></div>
+                </div>
+
+                <!-- Tooltip -->
+                <div id="ttipctn"><span class="txi"><i class="material-icons">&#xE90F;</i></span><span class="txil">Embeddable calendar</span></div>
+
+                <!-- References -->
+                <div class="lgscnt">
+                    <img src="https://cdn.addevent.com/web/images/deco-frt-t3.webp" width="400" height="60" alt="References" loading="lazy" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="trs">
+        <div class="trs-cnt smallx xp">
+            <img id="homepage-half-circle-green" src="https://cdn.addevent.com/web/images/decorators/homepage/half-circle-green.svg" width="139" height="139" alt="" loading="lazy" />
+            <img id="homepage-shape-grey-desktop" src="https://cdn.addevent.com/web/images/decorators/homepage/shape-grey-desktop.svg" width="455" height="450" alt="" loading="lazy" />
+
+            <div class="list">
+                <p class="list-item"><a href="/solutions/share-events" title="">Increase attendance rates</a></p>
+                <p class="list-item -last-on-mobile"><a href="/solutions/subscription-calendars" title="">Drive community engagement</a></p>
+                <p class="list-item"><a href="/solutions/automated-events" title="">Reduce no-shows</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="engage">
+        <div class="engage-cnt">
+            <h2 class="hdr">How would you like to engage with your customers?</h2>
+            <div class="color-grid">
+                <div class="item item-bdr item-blue active">
+                    <div class="item-cover">
+                        <img src="https://cdn.addevent.com/web/images/item-arrow/item-blue-arrow.svg" width="38" height="11" class="arrow" alt="" loading="lazy" />
+                    </div>
+                    <div class="item-ol"></div>
+                    <div class="crc crc-48">
+                        <i class="icon-share-event" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="title">
+                        Share <br />
+                        Events
+                    </h3>
+                    <p>
+                        Get your events onto your users' calendars.
+                    </p>
+                    <button class="lrn lrn-na lrn-nh lrn-fs-13">
+                        Sharing options
+                    </button>
+                </div>
+                <div class="item item-bdr item-red">
+                    <div class="item-cover">
+                        <img src="https://cdn.addevent.com/web/images/item-arrow/item-red-arrow.svg" width="38" height="11" class="arrow" alt="" loading="lazy" />
+                    </div>
+                    <div class="item-ol"></div>
+                    <div class="crc crc-48">
+                        <i class="icon-RSVP" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="title">
+                        Online <br />
+                        RSVP form
+                    </h3>
+                    <p>
+                        Get RSVP details from your attendees with event registration
+                    </p>
+                    <button class="lrn lrn-na lrn-nh lrn-fs-13">
+                        Sharing options
+                    </button>
+                </div>
+                <div class="item item-bdr item-yellow">
+                    <div class="item-cover">
+                        <img src="https://cdn.addevent.com/web/images/item-arrow/item-yellow-arrow.svg" width="38" height="11" class="arrow" alt="" loading="lazy" />
+                    </div>
+                    <div class="item-ol"></div>
+                    <div class="crc crc-48">
+                        <i class="icon-subscription" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="title">
+                        Subscription <br />
+                        Calendar
+                    </h3>
+                    <p>
+                        Share multiple events at once with a calendar your users can subscribe to.
+                    </p>
+                    <button class="lrn lrn-na lrn-nh lrn-fs-13">
+                        Sharing options
+                    </button>
+                </div>
+                <div class="item item-bdr item-green">
+                    <div class="item-cover">
+                        <img src="https://cdn.addevent.com/web/images/item-arrow/item-green-arrow.svg" width="38" height="11" class="arrow" alt="" loading="lazy" />
+                    </div>
+                    <div class="item-ol"></div>
+                    <div class="crc crc-48">
+                        <i class="icon-embedable_new" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="title">
+                        Embeddable <br />
+                        Calendar
+                    </h3>
+                    <p>
+                        Embed a calendar on your website to display and share your events.
+                    </p>
+                    <button class="lrn lrn-na lrn-nh lrn-fs-13">
+                        Sharing options
+                    </button>
+                </div>
+                <div class="item item-bdr item-purple">
+                    <div class="item-cover">
+                        <img src="https://cdn.addevent.com/web/images/item-arrow/item-purple-arrow.svg" width="38" height="11" class="arrow" alt="" loading="lazy" />
+                    </div>
+                    <div class="item-ol"></div>
+                    <div class="crc crc-48">
+                        <i class="icon-automation_new" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="title">
+                        Dynamic <br />
+                        Add to Calendar
+                    </h3>
+                    <p>
+                        Create personalized calendar events from your system's data.
+                    </p>
+                    <button class="lrn lrn-na lrn-nh lrn-fs-13">
+                        Sharing options
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ftrs">
+            <div class="ftrs-cnt">
+                <div class="cards">
+                    <ol class="lst lst-blue active">
+                        <li class="active">
+                            <div class="text">
+                                Add to Calendar buttons
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Add to Calendar links
+                                <span>FOR EMAILS</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Event landing pages
+                                <span>FOR EVERYWHERE</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Embeddable events
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                    </ol>
+                    <ol class="lst lst-red">
+                        <li class="active">
+                            <div class="text">
+                                RSVP buttons
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                RSVP links
+                                <span>FOR EMAILS</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                RSVP landing pages
+                                <span>FOR EVERYWHERE</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Embeddable RSVP forms
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                    </ol>
+                    <ol class="lst lst-yellow">
+                        <li class="active">
+                            <div class="text">
+                                Add to Calendar buttons
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Add to Calendar links
+                                <span>FOR EMAILS</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Calendar landing pages
+                                <span>FOR EVERYWHERE</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Embeddable events list
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                    </ol>
+                    <ol class="lst lst-green"></ol>
+                    <ol class="lst lst-purple">
+                        <li class="active">
+                            <div class="text">
+                                Add to Calendar buttons
+                                <span>FOR WEBSITES</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                Add to Calendar links
+                                <span>FOR EMAILS</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="content">
+                    <ul class="lst lst-blue active">
+                        <li class="slide active">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        The most used and trusted Add to Calendar button on the internet since 2012.
+                                    </div>
+                                    <ul>
+                                        <li>Add a beautiful <strong class="miut">Add to Calendar</strong> button to your website</li>
+                                        <li>Give your users a simple way to save your event to their calendars</li>
+                                        <li>Increase attendance and make your event a success.</li>
+                                    </ul>
+                                    <a href="/solutions/share-events" title="Share events" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+
+                                    <div class="dem-fra-t2">
+                                        <div class="topi"></div>
+                                        <div class="midi">
+                                            <p>Your website</p>
+                                            <div class="fx">
+                                                <a title="" class="addeventatc" data-id="vA8984410" href="https://www.addevent.com/event/vA8984410" target="_blank" rel="nofollow" data-intel="false">Add to Calendar<span class="addeventatc_icon atc_node notranslate"></span></a>
+                                            </div>
+                                            <div class="tryit"></div>
+                                        </div>
+                                        <div class="boti"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Use <strong class="miut">Add to Calendar links</strong> in your email campaigns to increase conversions.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Easily copy and paste beautiful <strong class="miut">Add to Calendar links</strong> into your emails.
+                                        </li>
+                                        <li>
+                                            Make it effortless for your recipients to save the event to their calendars
+                                        </li>
+                                        <li>
+                                            Boost conversions and make sure everyone shows up.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/share-events" title="Share events" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/share-events-2.svg" alt="" width="464" height="424" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Send your users to a brilliant landing page to view and engage with your event.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            AddEvent automatically creates and hosts a customizable landing page for each of your events.
+                                        </li>
+                                        <li>
+                                            Easily share your landing page link on social media to send your followers
+                                            to a beautiful page where they can view
+                                            your event details and save your event to their calendars.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/share-events" title="Share events" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/share-events-3.svg" width="464" height="424" alt="" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Promote your event right on your website.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Add your event to your website in seconds. No coding experience required.
+                                        </li>
+                                        <li>
+                                            Increase attendance by making it effortless for your customers to save your event to their calendars.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/share-events" title="Share events" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/share-events-4.svg" width="464" height="424" alt="" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="lst lst-red">
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Online RSVPs for your event so you know who is going to attend.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Add an RSVP button to your website to send your users to a unique registration page for your event.
+                                        </li>
+                                        <li>
+                                            You can choose what information you want to collect, and send reminder and follow up emails automatically to your attendees.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/online-rsvp-form" title="Online RSVPs for your event" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+
+                                    <div class="dem-fra-t2">
+                                        <div class="topi"></div>
+                                        <div class="midi">
+                                            <p>Your website</p>
+                                            <div class="fx">
+                                                <a href="https://www.addevent.com/event/ty8688477" title="Demo: Event page" target="_blank"><img src="https://cdn.addevent.com/web/images/icon-emd-rsvp-t2.png" alt="" width="118" height="44" border="0" style="width:118px!important;" loading="lazy" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="boti"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Collect event registrations from your email newsletters and campaigns.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Add an RSVP link to your emails to make it simple for your recipients to register for your event.
+                                        </li>
+                                        <li>
+                                            Direct users to a unique event registration page where you can collect the information you need.
+                                        </li>
+                                        <li>
+                                            Automatically send reminder and follow-up emails to your attendees that are fully customizable.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/online-rsvp-form" title="Get RSVPs for your event" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/collect-rsvps-2.svg" width="464" height="424" alt="Collect RSVPs" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Run your event registration through a customizable RSVP landing page.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Share a unique link with your users to send them directly to your event registration page.
+                                        </li>
+                                        <li>
+                                            Customize your RSVP form and send reminder and follow up emails for a flawless event experience.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/online-rsvp-form" title="Get RSVPs for your event" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/collect-rsvps-3.svg" width="464" height="424" alt="Collect RSVPs" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Now your users can register for your event without ever leaving your website!
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Our beautiful RSVP form is easy for your attendees to use and can be added to your website in seconds.
+                                        </li>
+                                        <li>
+                                            Add additional questions to your RSVP form to collect the information you need, and send reminder and follow-up emails automatically.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/online-rsvp-form" title="Get RSVPs for your event" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/collect-rsvps-4.svg" width="464" height="424" alt="Collect RSVPs" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="lst lst-yellow">
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Get all of your events onto your users' calendars.
+                                    </div>
+                                    <ul>
+                                        <li>Create a calendar in AddEvent and add all your events.</li>
+                                        <li>Add an Add to Calendar button to your website that your users can click to subscribe to your AddEvent calendar.</li>
+                                        <li>When a user subscribes, all of the events on your subscription calendar will be added and synced to their own calendar.</li>
+                                    </ul>
+                                    <a href="/solutions/subscription-calendars" title="Subscription calendars" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+
+                                    <div class="dem-fra-t2">
+                                        <div class="topi"></div>
+                                        <div class="midi">
+                                            <p>Your website</p>
+                                            <div class="fx">
+                                                <a title="Add to Calendar" class="addeventstc" data-id="ih348885" href="https://www.addevent.com/calendar/ih348885" target="_blank" rel="nofollow" data-intel="false">Add to Calendar</a>
+                                            </div>
+                                        </div>
+                                        <div class="boti"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Share your Subscription Calendar in an email.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Simply copy and paste <strong class="miut">Add to Calendar links</strong> for your Subscription Calendar into your email.
+                                        </li>
+                                        <li>
+                                            Users can click the links to subscribe to your calendar, which saves all of your events to their own calendar.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/subscription-calendars" title="Subscription calendars" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/subscription-calendars-2.svg" width="464" height="424" alt="Subscription calendars" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Send your users to a beautiful landing page to view and engage with your calendar.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            AddEvent automatically creates and hosts a customizable landing page for each of your subscription calendars.
+                                        </li>
+                                        <li>
+                                            Share your landing page link with your users to send them to a beautiful page where they can view your upcoming events and subscribe to your calendar.
+                                        </li>
+                                        <li>
+                                            Add a form to your landing page to collect information from your subscribers.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/subscription-calendars" title="Subscription calendars" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/subscription-calendars-3.png" width="327" height="391" alt="Subscription calendars" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Showcase your upcoming events on your website.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Add a list of upcoming events to your website in seconds. No coding experience required.
+                                        </li>
+                                        <li>
+                                            Give your users a way to explore your events and save them to their calendars.
+                                        </li>
+                                        <li>
+                                            You can even add a countdown timer to build excitement and ensure no one misses out!
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/subscription-calendars" title="Subscription calendars" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/subscription-calendars-4.svg" width="464" height="424" alt="Subscription calendars" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="lst lst-green">
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Embed a beautiful, fully customizable calendar widget on your website so your users can view and engage with all your events.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Add a web and mobile-optimized calendar to your website in seconds. No coding experience required.
+                                        </li>
+                                        <li>
+                                            Give your users an easy way to subscribe to your calendar so they can stay up to date with all your events.
+                                        </li>
+                                    </ul>
+                                    <a href="/solutions/embeddable-calendar" title="Embeddable calendar" class="btn btn-blue btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/embeddable-calendar-1.svg" width="464" height="424" alt="Embeddable calendar" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="lst lst-purple">
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        The same Add to Calendar button you know and love, now dynamic.
+                                    </div>
+                                    <ul>
+                                        <li>Add an Add to Calendar button to your website to give your users a simple way to save events to their calendars</li>
+                                        <li>Dynamically update button parameters to change the event that is added to a user's calendar.</li>
+                                        <li>Perfect for booking confirmation pages or wherever you have many unique events that you need to update for individual users.</li>
+                                    </ul>
+                                    <a href="/solutions/automated-events" title="Dynamic 'Add to Calendar' functionality" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/automated-events-1.svg" width="464" height="424" alt="Dynamic events" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="box">
+                                <div class="left">
+                                    <div class="title">
+                                        Take your email campaigns to the next level with Dynamic Add to Calendar that update for each user.
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Embed Dynamic Add to Calendar links into your email campaigns to give recipients an easy way to save events to their calendars.
+                                        </li>
+                                        <li>
+                                            Dynamically update link parameters to customize the event for each unique recipient.
+                                        </li>
+                                    </ul>
+                                    <p class="text">
+                                        Works great with all email campaign tools like
+                                        <strong>Mailchimp</strong>, <strong>Marketo</strong>, <strong>Salesforce</strong>, <strong>Constant Contact</strong>, <strong>Hubspot</strong>, and more! 🥳
+                                    </p>
+                                    <a href="/solutions/automated-events" title="Dynamic 'Add to Calendar' functionality" class="btn btn-blue btn-arr-right btn-12-24">Learn More</a>
+                                </div>
+                                <div class="right">
+                                    <picture>
+                                        <img src="https://cdn.addevent.com/web/images/engage/automated-events-2.svg" width="464" height="424" alt="Dynamic Add to Calendar" loading="lazy" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="engage-m">
+        <div class="engage-m-cnt">
+            <h2 class="hdr">How would you like to engage with your customers?</h2>
+            <div class="color-grid color-grid-vert">
+                <div class="box">
+                    <div class="item item-blue">
+                        <div class="crc crc-32">
+                            <i class="icon-share-event" aria-hidden="true"></i>
+                        </div>
+                        <div class="main">
+                            <div class="main-top">
+                                <h3 class="title">Share Events</h3>
+                                <div class="arr">
+                                    <i class="icon-Chevron_Right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <p>
+                                Get your events onto your users' calendars.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <ul class="lst lst-blue">
+                            <li>
+                                <div class="text">
+                                    Add to Calendar buttons
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Add to Calendar links
+                                    <span>FOR EMAILS</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Event landing pages
+                                    <span>FOR EVERYWHERE</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Embeddable events
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="/solutions/share-events" title="Share events" class="btn btn-blue btn-arr-right">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item item-red">
+                        <div class="crc crc-32">
+                            <i class="icon-RSVP" aria-hidden="true"></i>
+                        </div>
+                        <div class="main">
+                            <div class="main-top">
+                                <h3 class="title">Online RSVP form</h3>
+                                <div class="arr">
+                                    <i class="icon-Chevron_Right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <p>
+                                Get RSVP details from your attendees with event registration
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <ul class="lst lst-red">
+                            <li>
+                                <div class="text">
+                                    RSVP buttons
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    RSVP links
+                                    <span>FOR EMAILS</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    RSVP landing pages
+                                    <span>FOR EVERYWHERE</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Embeddable RSVP forms
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="/solutions/online-rsvp-form" title="Get RSVPs for your event" class="btn btn-blue btn-arr-right">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item item-yellow">
+                        <div class="crc crc-32">
+                            <i class="icon-subscription" aria-hidden="true"></i>
+                        </div>
+                        <div class="main">
+                            <div class="main-top">
+                                <h3 class="title">Subscription calendar</h3>
+                                <div class="arr">
+                                    <i class="icon-Chevron_Right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <p>
+                                Share multiple events at once with a calendar your users can subscribe to.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <ul class="lst lst-yellow">
+                            <li>
+                                <div class="text">
+                                    Add to Calendar buttons
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Add to Calendar links
+                                    <span>FOR EMAILS</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Calendar landing pages
+                                    <span>FOR EVERYWHERE</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Embeddable events list
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="/solutions/subscription-calendars" title="Subscription calendars" class="btn btn-blue btn-arr-right">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item item-green">
+                        <div class="crc crc-32">
+                            <i class="icon-embedable_new" aria-hidden="true"></i>
+                        </div>
+                        <div class="main">
+                            <div class="main-top">
+                                <h3 class="title">Embeddable calendar</h3>
+                                <div class="arr">
+                                    <i class="icon-Chevron_Right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <p>
+                                Embed a calendar on your website to display and share your events.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="https://cdn.addevent.com/web/images/embeddableCalendar.svg" width="975" height="571" alt="Embeddable calendar" loading="lazy" />
+                        <a href="/solutions/embeddable-calendar" title="Embeddable calendar" class="btn btn-blue btn-arr-right">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="item item-purple">
+                        <div class="crc crc-32">
+                            <i class="icon-automation_new" aria-hidden="true"></i>
+                        </div>
+                        <div class="main">
+                            <div class="main-top">
+                                <h3 class="title">Dynamic Add to Calendar</h3>
+                                <div class="arr">
+                                    <i class="icon-Chevron_Right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <p>
+                                Share high volumes of events that can be dynamically updated.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <ul class="lst lst-purple">
+                            <li class="active">
+                                <div class="text">
+                                    Add to Calendar buttons
+                                    <span>FOR WEBSITES</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    Add to Calendar links
+                                    <span>FOR EMAILS</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="/solutions/automated-events" title="Dynamic 'Add to Calendar' functionality" class="btn btn-blue btn-arr-right">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="use-case">
+        <div class="use-case-cnt">
+            <img id="homepage-half-circle-purple" src="https://cdn.addevent.com/web/images/decorators/homepage/half-circle-purple.svg" width="312" height="503" alt="" loading="lazy" />
+            <h2 class="title">Use cases</h2>
+            <div class="nav -desktop">
+                <div class="item selected" data-rel="retailbrands">Retail Brands</div>
+                <div class="item" data-rel="small-business">Small Businesses & Coaches</div>
+                <div class="item" data-rel="health">Health & Wellness</div>
+                <div class="item" data-rel="software">Software Solutions</div>
+                <div class="item" data-rel="education">Education & Nonprofits</div>
+                <div class="item" data-rel="marketers">Marketers & Agencies</div>
+            </div>
+            <div class="nav -mobile">
+                <div class="item selected" data-rel="retailbrands">Retail Brands</div>
+                <div class="item" data-rel="small-business">Small Businesses & Coaches</div>
+                <div class="item" data-rel="health">Health & Wellness</div>
+                <div class="item" data-rel="software">Software Solutions</div>
+                <div class="item" data-rel="education">Education & Nonprofits</div>
+                <div class="item" data-rel="marketers">Marketers & Agencies</div>
+            </div>
+            <div class="box">
+                <div class="inn" data-rel="retailbrands">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-12.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Retail Brands</h3>
+                        <ul>
+                            <li>Retailers can turn social buzz into real attendance by using <a href="/solutions/share-events" title="Add to Calendar links">Add to Calendar links</a> in Instagram stories or bios, letting followers save events like new collection drops, store openings, and upcoming sales to their calendars with one tap and automatic reminders.</li>
+                            <li><a href="/solutions/subscription-calendars" title="Subscription calendars">Subscription calendars</a> allow shoppers to follow a brand’s calendar once and automatically receive all future pop-ups, seasonal sales, and product drops, building anticipation and loyalty.</li>
+                            <li><a href="/solutions/embeddable-calendar" title="Embeddable calendar widgets">Embeddable calendar widgets</a> allow retailers to showcase upcoming events and product drops without asking valuable customers to leave their website.</li>
+                            <li>Retailers can elevate the exclusivity of their events by setting up an <a href="/solutions/online-rsvp-form" title="Online RSVP event">online RSVP event</a> which lets customers sign up, receive a confirmation email, and automatically add the event to their calendar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inn hidden" data-rel="small-business">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-13.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Small Businesses & Coaches</h3>
+                        <ul>
+                            <li>Small businesses and <a href="/blog/how-peter-swain-uses-rsvp-and-subscription-calendars-to-double-show-rates" title="Coaches">coaches</a> use AddEvent to engage and grow their communities because they understand that getting events on their clients' calendars is key to boosting attendance rates and increasing LTV.</li>
+                            <li>Dynamic, embeddable <a href="/solutions/subscription-calendars" title="subscription calendars">subscription calendars</a> keep communities informed, connected, and showing up.</li>
+                            <li>By sharing events on their website, newsletters, and social media, small businesses and coaches expand their reach — and with <a href="/solutions/share-events" title="Add to Calendar buttons">Add to Calendar buttons</a> and links, they turn that visibility into real attendance by making it easy for followers to add events to their calendars.</li>
+                            <li>By collecting <a href="/solutions/online-rsvp-form" title="RSVPs">RSVPs</a> for webinars and other important events, these business owners are building a targeted, engaged list for future marketing efforts.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inn hidden" data-rel="health">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-15.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Health & Wellness</h3>
+                        <ul>
+                            <li>AddEvent helps organizations in the health and wellness space to get their events on people's calendars so they remember to show up, <a href="/blog/sono-bello-increases-initial-consultation-show-rate-by-upwards-of-7-with-addevent" title="Reducing no-show rates">reducing no-show rates</a> and increasing attendance.</li>
+                            <li>Whether it’s a weekly workout class or a one-off wellness workshop, <a href="/solutions/automated-events" title="Dynamic Add to Calendar">Dynamic Add to Calendar</a> links and buttons make it simple for your community to stay engaged by adding events to their calendars in one click.</li>
+                            <li>Embeddable calendars help wellness professionals display a polished, <a href="/blog/heres-how-punchpass-uses-addevent-to-help-wellness-studios-boost-attendance" title="Always-updated class schedule">always-updated class schedule</a> right on their website — no tech skills needed.</li>
+                            <li>Plus, <a href="/solutions/subscription-calendars" title="Subscription calendars">subscription calendars</a> also help health and wellness businesses keep their communities in sync — clients can follow a calendar once and stay updated as new events are added.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inn hidden" data-rel="software">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-14.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Software Solutions</h3>
+                        <ul>
+                            <li>Businesses in the tech space are able to <a href="/blog/ticket-tailor-and-addevent-work-together-to-improve-attendance-rates-for-event-creators-across-the-globe" title="Seamlessly integrate">seamlessly integrate</a> AddEvent's range of calendar and event tools into their existing processes, streamlining attendance communication and <a href="/blog/securevideo-reduces-no-show-rates-for-virtual-healthcare-appointments-with-add-to-calendar-reminders" title="Appointment reminders">appointment reminders</a>.</li>
+                            <li>Turn passive invoice emails into active reminders by embedding add to calendar links — so your customers know exactly when payment is due.</li>
+                            <li>By <a href="/solutions/automated-events" title="Dynamic Add to Calendar">Dynamic Add to Calendar</a> for scheduled appointments, companies can minimize missed calls, demos, or consultations — no extra coordination required.</li>
+                            <li>With AddEvent’s <a href="/c/documentation/calendar-events-api" title="Calendar API">Calendar API</a>, software providers can give their customers branded calendars that are easy to update and seamlessly embed on websites.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inn hidden" data-rel="education">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-16.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Education & Nonprofits</h3>
+                        <ul>
+                            <li><a href="/blog/how-addevent-helped-bay-state-community-services-optimize-event-scheduling-communication" title="Nonprofit organizations">Nonprofit organizations</a> leverage AddEvent to improve both internal and external communication with embeddable calendars and easy-to-use add to calendar tools.</li>
+                            <li>Nonprofit teams can easily <a href="/solutions/embeddable-calendar" title="Embed event calendars">embed event calendars</a> on their websites to increase visibility into upcoming events, fundraising opportunities, and volunteer needs without a ton of manpower required.</li>
+                            <li>Nonprofits use the <a href="/solutions/online-rsvp-form" title="RSVP tool">RSVP tool</a> to get a clear headcount in advance, personalize follow-up communication, and keep supporters engaged with automated confirmations, reminders, and calendar invites.</li>
+                            <li>Reduce email overload and increase turnout by letting students, teachers and supporters subscribe to a <a href="/solutions/subscription-calendars" title="Dynamic calendar">dynamic calendar</a> — eliminating the need to manually check for updates or reminders.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inn hidden" data-rel="marketers">
+                    <div class="s1">
+                        <picture>
+                            <img src="https://cdn.addevent.com/web/images/use.case-11.webp" width="500" height="500" alt="Use case image" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="s2">
+                        <h3 class="inn-title medium">Marketers & Agencies</h3>
+                        <ul>
+                            <li>AddEvent helps marketers and agencies of all shapes & sizes create branded event landing pages, share events easily across all marketing channels, <a href="/blog/achievers-boosts-event-attendance-by-5-and-streamlines-internal-processes-with-addevents-calendar-marketing-add-to-calendar-tools" title="Boost event attendance with calendar adds">boost event attendance with calendar adds</a>, and manage RSVPs for better event planning.</li>
+                            <li>Marketers love that they can customize the event landing pages to <a href="/blog/customizable-calendar-tools-that-match-your-brand-no-code-needed" title="Match their branding">match their branding</a> and include more information about their organization.</li>
+                            <li>They <a href="/solutions/share-events" title="Share events">share events</a> through their website, monthly newsletter, and social channels and thanks to add to calendar buttons and links, they see an increased attendance after enabling followers to add events straight to their calendars.</li>
+                            <li>And gathering <a href="/blog/scaling-virtual-experiences-how-host-events-streamlined-their-virtual-event-operations-with-addevent" title="RSVPs">RSVPs</a> for their in-person events helps them know who will attend and prepare accordingly for the expected number of guests.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connect">
+        <div class="connect-cnt">
+            <div class="left">
+                <h2 class="title">Integrate with your existing MarTech stack</h2>
+                <p class="subtitle">
+                    Use AddEvent with your CRM and marketing automation software, on your marketing website,
+                    with your appointment booking tool, and everywhere else.
+                </p>
+                <div class="item">
+                    <img src="https://cdn.addevent.com/web/images/zapier-icon-2022-t1.svg" width="32" height="32" alt="Integration" loading="lazy" />
+                    <p class="text">The AddEvent + Zapier integration allows you to connect with 6,000+ other apps and services</p>
+                </div>
+                <div class="item">
+                    <img src="https://cdn.addevent.com/web/images/code-icon.svg" width="28" height="28" alt="" loading="lazy" />
+                    <p class="text">
+                        Need a custom integration? Use our <a href="/c/documentation" title="Documentation">powerful API</a> to connect to whichever service you need.
+                    </p>
+                </div>
+                <a href="/integrations" title="See all integrations" class="btn btn-blue btn-arr-right btn-fs-bg btn-17-30">See all integrations</a>
+                <a href="/integrations" title="See all integrations" class="btn btn-blue btn-arr-right btn-fs-bg -mobile">All integrations</a>
+            </div>
+            <div class="right">
+                <div class="item">
+                    <div class="item-top">
+                        <img src="https://cdn.addevent.com/web/images/code-icon-2.svg" width="28" height="26" alt="Integration" loading="lazy" />
+                        <h3 class="title">CMS & Website Builders</h3>
+                    </div>
+                    <p class="text">
+                        Integrate our tools into your website, whether you use a CMS, website builder, or it's custom-built.
+                        Works perfectly with <strong>Wix</strong>, <strong>Webflow</strong>, <strong>Squarespace</strong>, <strong>WordPress</strong>, and more.
+                    </p>
+                    <a href="/blog/addevent-for-cms-website-builders" title="Find out more" class="btn btn-arr-right btn-ls-bg">Find out more</a>
+                    <div style="clear:both;">
+                        <img src="https://cdn.addevent.com/web/images/refs-1-t2.png" alt="WebFlow, WordPress, Wix, Squarespace" style="display:block;margin:0!important;max-width:100%!important;" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-top">
+                        <img src="https://cdn.addevent.com/web/images/mail-icon.svg" width="26" height="22" alt="Integration" loading="lazy" />
+                        <h3 class="title">Email Marketing Platforms</h3>
+                    </div>
+                    <p class="text">
+                        Integrate our tools into your email marketing campaigns and CRM platforms like
+                        <strong>Mailchimp</strong>, <strong>HubSpot</strong>, <strong>ActiveCampaign</strong>, <strong>Salesforce Marketing Cloud</strong>, <strong>Braze</strong>, and more.
+                    </p>
+                    <a href="/blog/addevent-for-email-marketing-platforms" title="Find out more" class="btn btn-arr-right btn-ls-bg">Find out more</a>
+                    <div style="clear:both;">
+                        <img src="https://cdn.addevent.com/web/images/refs-2-t2.png" alt="MailChimp, Salesforce Marketing Cloud, Marketo, Hubspot, ActiveCampaign, Braze" style="display:block;margin:0!important;max-width:100%!important;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="trs bg-t1 pd-bg">
+        <div class="trs-cnt">
+            <img id="homepage-half-circle-grey-with-ring" src="https://cdn.addevent.com/web/images/decorators/homepage/half-circle-grey-with-ring.svg" width="323" height="291" alt="" loading="lazy" />
+            <img id="homepage-half-circle-grey" src="https://cdn.addevent.com/web/images/decorators/homepage/half-circle-grey.svg" width="267" height="239" alt="" loading="lazy" />
+            <h2 class="title">You’re in good company.</h2>
+            <p class="text fs-bg pd">
+                Companies around the world trust AddEvent <br />
+                with their events and calendars every day.
+            </p>
+
+            <div class="frtrefslist lazyelm">
+                <div class="slrow">
+                    <div class="conts slick">
+                        <section class="logo-carousel slider" data-arrows="false">
+                            <div class="slide"><div class="cl lazyitm ex1 ex2 rf18"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex1 rf25"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex1 rf33"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex1 rf5"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex1 ex3 rf41"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 rf30"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf29"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf27"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf28"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 rf8"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 rf38"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf37"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf22"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf13"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 rf34"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 rf19"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf20"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf6"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf17"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 rf10"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 rf3"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf21"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf26"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf16"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 rf24"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 rf11"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf9"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf35"></div></div>
+                            <div class="slide"><div class="cl lazyitm rf14"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 rf15"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex2 ex4 rf12"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex4 rf23"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex4 rf2"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex4 rf31"></div></div>
+                            <div class="slide"><div class="cl lazyitm ex3 ex4 rf32"></div></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opinion slick">
+
+                <!-- Trustpilot -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0362837.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Brian Swichkow <span class="loc">United States</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.trustpilot.com/reviews/60bebe07f9f4870b701a2a98" title="Trustpilot review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/tp-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                The product is fantastically built, reliable, and robust with the support team always being an email away. They’re constantly adding new features as a result of feedback…
+                            </p>
+                        </div>
+
+                        <a class="rew-t1 tp" href="https://www.trustpilot.com/review/addevent.com" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>Trustpilot</span> &nbsp;⋅&nbsp; +50 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/tp-stars-4.5.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t1"></div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Capterra -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0362932.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Andrea <span class="loc">United States</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.capterra.com/p/230429/AddEvent/reviews/Capterra___6353264/" title="Capterra review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/ct-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                Customer service is top notch. I had lots of customization questions and support were really helpful and through with this explanations. Plus they are very open to feedback and ideas too.
+                            </p>
+                        </div>
+                        <a class="rew-t1 g2" href="https://www.capterra.com/p/230429/AddEvent/reviews/" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>Capterra</span> &nbsp;⋅&nbsp; +35 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/ct-stars-r45.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t3"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- G2 -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0362936.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Miles <span class="loc">USA</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.g2.com/products/addevent/reviews/addevent-review-6663996" title="G2 review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/g2-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                It is easy to get events and calendars setup quickly. Support took the time to send videos and had the best attitude about everything.
+                            </p>
+                        </div>
+                        <a class="rew-t1 g2" href="https://www.g2.com/products/addevent/reviews#reviews" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>G2</span> &nbsp;⋅&nbsp; +50 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/g2-stars-r45.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t2"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trustpilot -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0362939.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Pia Silva <span class="loc">United States</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.trustpilot.com/reviews/61a50e53bd63dda48268f7f9" title="Trustpilot review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/tp-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                Every time I need help with something the AddEvent team is quick and thorough about shooting me a video and walking me through to get what I need. Thanks guys!
+                            </p>
+                        </div>
+                        <a class="rew-t1 tp" href="https://www.trustpilot.com/review/addevent.com" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>Trustpilot</span> &nbsp;⋅&nbsp; +50 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/tp-stars-4.5.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t1"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- G2 -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0362935.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Kealy <span class="loc">USA</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.g2.com/products/addevent/reviews/addevent-review-10373812" title="G2 review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/g2-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                Easy to use, simple view for external members! Really helpful support team if any issues ever exist, or if we need support!
+                            </p>
+                        </div>
+                        <a class="rew-t1 g2" href="https://www.g2.com/products/addevent/reviews#reviews" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>G2</span> &nbsp;⋅&nbsp; +50 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/g2-stars-r45.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t2"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trustpilot -->
+                <div class="box">
+                    <div class="pox">
+                        <div class="hg">
+                            <div class="img">
+                                <img src="https://cdn.addevent.com/web/images/rev_0850236.webp" width="50" height="50" alt="Review author" loading="lazy" />
+                            </div>
+                            <div class="tx">
+                                <div class="nam">
+                                    <p>Ulan <span class="loc">Philippines</span></p>
+                                </div>
+                                <div class="strs">
+                                    <a href="https://www.trustpilot.com/reviews/60adf268f9f4870a94ad3d12" title="Trustpilot review" target="_blank" rel="nofollow"><img src="https://cdn.addevent.com/web/images/tp-stars-t1.svg" width="87" height="16" alt="" loading="lazy" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tix">
+                            <p class="ds">
+                                Great platform. Tech support team is also amazing. 10/10. Got back to me very promptly with a comprehensive solution and video tutorial.
+                            </p>
+                        </div>
+                        <a class="rew-t1 tp" href="https://www.trustpilot.com/review/addevent.com" target="_blank" rel="noopener">
+                            <div class="hx">
+                                <div class="nx">
+                                    <div class="no">
+                                        <p><span>Trustpilot</span> &nbsp;⋅&nbsp; +50 reviews</p>
+                                    </div>
+                                    <div class="lora">
+                                        <div class="st">
+                                            <img src="https://cdn.addevent.com/web/images/tp-stars-4.5.svg" width="" height="" alt="" loading="lazy" />
+                                        </div>
+                                        <div class="rn">
+                                            <p>+4.4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="log-t1"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="trs pd-bg">
+        <div class="trs-cnt">
+            <h2 class="title h2">Trust is foundational at AddEvent.</h2>
+            <p class="text fs-bg pd">
+                Trust and security are in our DNA. We build with security first, <br />
+                so your data stays protected and your customers’ confidence stays strong <br />- safeguarding your business and strengthening ours.
+            </p>
+            <div class="tstm-t1">
+                <div class="lf">
+                    <div class="rl">
+                        <div class="px">
+                            <div class="tx">We need all of our vendors who touch customer data to be certified - and compliant with GDPR and CCPA. <br>It’s company policy</div>
+                        </div>
+                        <div class="de"></div>
+                    </div>
+                </div>
+                <div class="rg">
+                    <div class="rl">
+                        <div class="px">
+                            <div class="tx">
+                                If a vendor isn’t certified.. what’s the security plan supposed to be? <div style="clear:both;padding: 20px 0px 0px 0px;">“Trust us”?</div>
+                            </div>
+                        </div>
+                        <div class="de"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+<div class="nws">
+    <div class="nws-cnt">
+
+        <h4 class="nws-t">Let's create events together <span class="emoji">😍</span></h4>
+        <form class="nws-fr" action="https://dashboard.addevent.com/signup" method="get">
+            <input type="email" name="email" class="nws-inp" placeholder="Email address" />
+            <input type="hidden" name="source" value="homepage" />
+                  <input type="hidden" name="position" value="bottom" />
+                  <input type="hidden" name="btn" value="signup" />            <div class="validate-info">
+                <img alt="" src="https://cdn.addevent.com/web/images/warning.svg" width="16" height="15" loading="lazy" />
+                Please fill out this field
+            </div>
+            <button type="submit" class="btn btn-blue btn-20-40 btn-fs-bg">Sign up</button>
+        </form>
+
+    </div>
+</div>
+
+</main>
+
+<footer class="footer lazyelm">
+    <div class="ft-cnt">
+        <div class="s1">
+            <div class="k-main">
+                <a href="/" title="Home">
+                    <img src="https://cdn.addevent.com/web/images/logo2.svg" width="40" height="40" alt="Home" loading="lazy" />
+                </a>
+                <p class="ft-credit">
+                    Carefully crafted by your friends at
+                    <br />
+                    &copy; 2026 AddEvent Inc
+                </p>
+                <!--
+                    <Header Country: >
+<Server Country: >
+                    -->
+                <div class="social">
+                    <ul>
+                        <li><a href="https://www.facebook.com/addeventinc/" title="Facebook" class="facebook" target="_blank"><span>Facebook</span></a></li>
+                        <li><a href="https://twitter.com/AddEvent_Inc" title="Twitter" class="twitter" target="_blank"><span>Twitter</span></a></li>
+                        <li><a href="https://www.linkedin.com/company/25076591" title="LinkedIn" class="linkedin" target="_blank"><span>LinkedIn</span></a></li>
+                        <li><a href="https://www.instagram.com/addevent_inc" title="Instagram" class="instagram" target="_blank"><span>Instagram</span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC0qbG6tqVzcOBIxPYl8fo4g" title="YouTube" class="youtube" target="_blank"><span>YouTube</span></a></li>
+                        <li><a href="https://github.com/AddEventinc" title="Github" class="github" target="_blank"><span>Github</span></a></li>
+                        <li><a href="https://www.calendarx.com" title="CalendarX" class="calendarx" target="_blank"><span>CalendarX</span></a></li>
+                    </ul>
+                </div>
+                <div class="trss">
+                    <div class="lb"><a href="/c/legal/security">Audited. Verified. Trusted.</a></div>
+                    <div class="ic-t1" role="img" aria-label="GDPR compliant"></div>
+                    <div class="ic-t2" role="img" aria-label="CCPA compliant"></div>
+                    <div class="ic-t3" role="img" aria-label="SOC 2 Type II certified"></div>
+                    <div class="ic-t4" role="img" aria-label="WCAG 2.2 AA compliant"></div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="k1 k1-m3">
+                    <p role="heading" aria-level="2">Solutions</p>
+                    <ul class="mnu-ft">
+                        <li><a href="/solutions/share-events" title="Share events">Share events</a></li>
+                        <li><a href="/solutions/online-rsvp-form" title="Online RSVP form">Online RSVP form</a></li>
+                        <li><a href="/solutions/subscription-calendars" title="Subscription calendars">Subscription calendars</a></li>
+                        <li><a href="/solutions/embeddable-calendar" title="Embeddable calendars">Embeddable calendar</a></li>
+                        <li><a href="/solutions/automated-events" title="Dynamic Add to Calendar">Dynamic Add to <br />Calendar</a></li>
+                        <li><a href="/solutions/analytics" title="Analytics">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="k1 k1-m2">
+                    <p role="heading" aria-level="2">Resources</p>
+                    <ul class="mnu-ft">
+                        <li><a href="https://help.addevent.com" title="Help Center" target="_blank">Help Center</a></li>
+                        <li><a href="/c/faq" title="FAQ">FAQ</a></li>
+                        <li><a href="/c/documentation" title="Documentation">Documentation</a></li>
+                        <li><a href="/blog" title="Blog">Blog</a></li>
+                        <li><a href="/integrations" title="Integrations">Integrations</a></li>
+                        <li><a href="https://help.addevent.com/changelog" title="Updates" target="_blank">Updates</a></li>
+                        <li><a href="/c/contact" title="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="k1 k1-m1">
+                    <p role="heading" aria-level="2">Company</p>
+                    <ul class="mnu-ft">
+                        <li><a href="/c/about" title="About Us">About Us</a></li>
+                        <li><a href="/c/in-the-news" title="In the News">In the News</a></li>
+                        <li><a href="https://jobs.addevent.com" title="Jobs" target="_blank">Jobs</a></li>
+                        <li><a href="/c/plans-and-pricing" title="Plans and pricing">Pricing</a></li>
+                        <li><a href="/c/legal/security" title="Trust Center & Legal">Trust Center &amp; Legal</a></li>
+                        <li><a href="https://pages.addevent.com/affiliate" title="Affiliate">Affiliate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- User information for internal tracking -->
+<div id="account-guid" data-uid=""></div>
+
+</div>
+
+    <!-- Intercom -->
+    <script>
+        window.intercomSettings = {
+            api_base: 'https://api-iam.intercom.io',
+            app_id: 'v86j5eyh',
+        };
+    </script>
+
+
+    <!-- Javascript (changed 06/20/2024) -->
+    <script src="https://cdn.addevent.com/web/js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.addevent.com/web/js/jquery-ui-1.13.2.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.addevent.com/web/scripts/build/js/script.bundle.1792680182.js"></script>
+
+
+</body>
+</html>
