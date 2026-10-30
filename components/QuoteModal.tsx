@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface QuoteModalProps {
 }
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -54,7 +56,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      setSubmitted(true);
+      router.push("/thank-you");
+      onClose();
     }
   };
 
