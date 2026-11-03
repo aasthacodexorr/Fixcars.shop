@@ -173,7 +173,7 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
       "The one-stop shop for precision wheel alignment & tire balancing!",
     subheading2:
       "We inspect, align and service wheels for cars, vans & 4x4s.",
-    imageSrc: "/images/wheel-hero.png",
+    imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Precision Wheel Alignment and Tire Balancing",
   },
   offers: {
