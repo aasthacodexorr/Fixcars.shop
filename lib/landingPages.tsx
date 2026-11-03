@@ -709,7 +709,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "The one-stop shop for all your Dodge repairs & servicing!",
     subheading2: "We supply and service Dodge cars, vans, trucks & 4x4s.",
-    imageSrc: "/images/brand/car-orange-truck.png",
+    imageSrc: "",
     imageAlt: "Dodge Auto Repair and Maintenance",
   },
   offers: {
@@ -815,7 +815,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "The one-stop shop for all your Toyota repairs & servicing!",
     subheading2: "We supply and service Toyota cars, vans, SUVs & hybrids.",
-    imageSrc: "/images/brand/car-white-suv.png",
+    imageSrc: "",
     imageAlt: "Toyota Auto Repair and Maintenance",
   },
   offers: {
@@ -923,7 +923,7 @@ export const VOLKSWAGEN_PAGE_DATA: LandingPageData = {
       "The one-stop shop for all your Volkswagen repairs & servicing!",
     subheading2:
       "We supply and service Volkswagen cars, wagons & SUVs.",
-    imageSrc: "/images/brand/car-yellow-suv.png",
+    imageSrc: "",
     imageAlt: "Volkswagen Auto Repair and Maintenance",
   },
   offers: {
@@ -1029,7 +1029,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "The one-stop shop for all your Hyundai repairs & servicing!",
     subheading2: "We supply and service Hyundai cars, SUVs & hybrids.",
-    imageSrc: "/images/brand/car-white-suv.png",
+    imageSrc: "",
     imageAlt: "Hyundai Auto Repair and Maintenance",
   },
   offers: {
@@ -1135,7 +1135,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "The one-stop shop for all your Honda repairs & servicing!",
     subheading2: "We supply and service Honda cars, SUVs, vans & hybrids.",
-    imageSrc: "/images/brand/car-yellow-suv.png",
+    imageSrc: "",
     imageAlt: "Honda Auto Repair and Maintenance",
   },
   offers: {

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import CtaButton from "./CtaButton";
 import { SITE_CONFIG } from "@/lib/constants";
+import fallbackImg from '@/public/images/tires-hero.png'
 
 interface HeroProps {
   onOpenQuote: () => void;
@@ -45,14 +46,23 @@ export default function Hero({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           {/* Rotor Graphic: order-1 on mobile, order-2 on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center my-2 lg:my-0">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={550}
-              height={450}
-              priority
-              className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain drop-shadow-xl"
-            />
+            {
+              imageSrc ? <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={550}
+                height={450}
+                priority
+                className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain drop-shadow-xl"
+              /> : <Image
+                src={fallbackImg}
+                alt={imageAlt}
+                width={550}
+                height={450}
+                priority
+                className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain drop-shadow-xl"
+              />
+            }
           </div>
 
           {/* Copy & CTAs: order-2 on mobile, order-1 on desktop */}
