@@ -130,37 +130,35 @@ export const WHEEL_STEPS = [
   },
 ];
 
-// The Volkswagen photo is "26 Volkswagen Atlas SE 4Motion.jpg" from Wikimedia
-// Commons, released under CC0.
 export const MAKES = [
   {
     name: "Dodge",
     model: "Durango",
-    image: "/images/makes/dodge-durango.webp",
+    image: "/images/makes/dodge-durango-side.webp",
     href: `${LANDING_PAGES}/dodge-mechanic-ontario-cda`,
   },
   {
     name: "Toyota",
     model: "RAV4",
-    image: "/images/makes/toyota-rav4.webp",
+    image: "/images/makes/toyota-rav4-side.webp",
     href: `${LANDING_PAGES}/toyota-mechanic-ontario-cda`,
   },
   {
     name: "Volkswagen",
     model: "Atlas",
-    image: "/images/makes/volkswagen-atlas.webp",
+    image: "/images/makes/volkswagen-atlas-side.webp",
     href: `${LANDING_PAGES}/volkswagen-mechanic-ontario-cda`,
   },
   {
     name: "Hyundai",
     model: "Tucson",
-    image: "/images/makes/hyundai-tucson.webp",
+    image: "/images/makes/hyundai-tucson-side.webp",
     href: `${LANDING_PAGES}/hyundai-mechanic-ontario-cda`,
   },
   {
     name: "Honda",
     model: "CR-V",
-    image: "/images/makes/honda-crv.webp",
+    image: "/images/makes/honda-crv-side.webp",
     href: `${LANDING_PAGES}/honda-mechanic-ontario-cda`,
   },
 ];

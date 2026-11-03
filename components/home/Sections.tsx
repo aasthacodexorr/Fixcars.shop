@@ -45,29 +45,40 @@ const H2 = "text-[28px] font-bold tracking-tight text-black lg:text-[44px]";
 const PAGE = "mx-auto max-w-[1240px] px-3.5 md:px-8";
 
 // Where each floating service card sits around the wheel, as % of the wheel area.
-const FLOATING_CARDS: Record<string, { left: string; top: string; delay: string }> =
-  {
-    "Brake Repairs": { left: "2%", top: "10%", delay: "0s" },
-    "Wheel Alignment": { left: "-1%", top: "42%", delay: "-2.4s" },
-    "Auto AC Repairs": { left: "4%", top: "72%", delay: "-4.2s" },
-    Tires: { left: "72%", top: "8%", delay: "-1.2s" },
-    "Oil Change": { left: "75%", top: "40%", delay: "-3.3s" },
-    "Check Engine Light": { left: "71%", top: "70%", delay: "-5.1s" },
-  };
+const FLOATING_CARDS: Record<
+  string,
+  { left: string; top: string; delay: string }
+> = {
+  "Brake Repairs": { left: "2%", top: "10%", delay: "0s" },
+  "Wheel Alignment": { left: "-1%", top: "42%", delay: "-2.4s" },
+  "Auto AC Repairs": { left: "4%", top: "72%", delay: "-4.2s" },
+  Tires: { left: "72%", top: "8%", delay: "-1.2s" },
+  "Oil Change": { left: "75%", top: "40%", delay: "-3.3s" },
+  "Check Engine Light": { left: "71%", top: "70%", delay: "-5.1s" },
+};
 
 function OfferSticker({ className = "" }: { className?: string }) {
   return (
     <div
       className={`relative size-[116px] shrink-0 rounded-full bg-brand text-white shadow-[0_14px_30px_rgba(0,175,102,0.45)] lg:size-[88px] 2xl:size-[124px] ${className}`}
     >
-      <svg viewBox="0 0 120 120" aria-hidden="true" className="spin-slow size-full">
+      <svg
+        viewBox="0 0 120 120"
+        aria-hidden="true"
+        className="spin-slow size-full"
+      >
         <defs>
           <path
             id="sticker-circle"
             d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"
           />
         </defs>
-        <text fill="currentColor" fontSize="10" fontWeight="700" textLength="292">
+        <text
+          fill="currentColor"
+          fontSize="10"
+          fontWeight="700"
+          textLength="292"
+        >
           <textPath href="#sticker-circle">
             NEW CUSTOMER OFFER • NEW CUSTOMER OFFER •
           </textPath>
@@ -218,7 +229,10 @@ function CheckList({ title, items }: { title: string; items: string[] }) {
       </p>
       <ul className="space-y-2">
         {items.map((item) => (
-          <li key={item} className="flex gap-2 text-[15px] leading-snug text-black">
+          <li
+            key={item}
+            className="flex gap-2 text-[15px] leading-snug text-black"
+          >
             <CheckIcon className="mt-0.5 size-4 shrink-0 text-brand" />
             {item}
           </li>
@@ -253,7 +267,13 @@ export function WheelJourney() {
               <path d="M100 8a92 92 0 0 1 79 46" strokeWidth="5" />
               <path d="M192 100a92 92 0 0 1-120 88" strokeWidth="5" />
               <path d="M27 155A92 92 0 0 1 56 19" strokeWidth="5" />
-              <circle cx="100" cy="100" r="86" strokeWidth="0.6" strokeDasharray="1.500 5" />
+              <circle
+                cx="100"
+                cy="100"
+                r="86"
+                strokeWidth="0.6"
+                strokeDasharray="1.500 5"
+              />
             </g>
           </svg>
         </div>
@@ -285,7 +305,9 @@ export function WheelJourney() {
                 <h2 className="mt-2 text-[28px] font-bold leading-tight tracking-tight text-black lg:text-[36px]">
                   {step.headline}
                 </h2>
-                <p className="mt-3 leading-relaxed text-gray-700">{step.text}</p>
+                <p className="mt-3 leading-relaxed text-gray-700">
+                  {step.text}
+                </p>
                 <div className="mt-5 grid gap-5 sm:grid-cols-2 sm:gap-6">
                   <CheckList title="What we do" items={service.includes} />
                   <CheckList title="Why Cardora" items={step.reasons} />
@@ -399,41 +421,51 @@ export function Services() {
 export function Makes() {
   return (
     <section className={`${PAGE} pt-16`}>
-      <h2 className={H2}>Get your car serviced by fully qualified technicians</h2>
+      <h2 className={H2}>
+        Get your car serviced by fully qualified technicians
+      </h2>
       <p className="mt-3 text-lg text-gray-700">{MAKE_SERVICES.join(" · ")}</p>
-      <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-        {MAKES.map((make, index) => (
-          <li
-            key={make.name}
-            className={`rise-3d ${index === MAKES.length - 1 ? "col-span-2 md:col-span-1" : ""}`}
-          >
-            <ServiceLink
-              href={make.href}
-              aria-label={`${make.name} ${make.model} mechanic`}
-              className="group flex h-full flex-col overflow-hidden rounded-[16px] bg-[#f4f5f7] p-4 transition-shadow hover:shadow-[0_18px_40px_rgba(9,65,80,0.14)] lg:p-5"
+      <ul className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5 lg:gap-4">
+        {MAKES.map((make, index) => {
+          // The odd card out spans both columns on phones, so it lies sideways.
+          const isWide = index === MAKES.length - 1;
+          return (
+            <li
+              key={make.name}
+              className={`rise-3d ${isWide ? "col-span-2 md:col-span-1" : ""}`}
             >
-              <span className="text-[15px] text-gray-600 lg:text-[16px]">
-                {make.name}
-              </span>
-              <span className="mt-0.5 text-[18px] font-bold text-[#111c2d] transition-colors group-hover:text-brand lg:text-[20px]">
-                {make.model}
-              </span>
-              <span className="relative mt-5 block aspect-[16/10] lg:mt-10">
+              <ServiceLink
+                href={make.href}
+                aria-label={`${make.name} ${make.model} mechanic`}
+                className={`group flex h-full flex-col overflow-hidden rounded-[14px] bg-[#f4f5f7] p-4 transition-shadow lg:p-5 hover:shadow-[0_18px_40px_rgba(9,65,80,0.14)] ${isWide ? "max-md:flex-row max-md:items-center max-md:justify-between" : ""}`}
+              >
+                <span className="block">
+                  <span className="block text-[13px] text-gray-600 lg:text-[14px]">
+                    {make.name}
+                  </span>
+                  <span className="block text-[16px] font-bold leading-snug text-[#111c2d] transition-colors group-hover:text-brand lg:text-[17px]">
+                    {make.model}
+                  </span>
+                </span>
                 <span
-                  aria-hidden="true"
-                  className="absolute inset-x-[2%] bottom-[-2%] h-[18%] rounded-[50%] bg-black/30 blur-md"
-                />
-                <Image
-                  src={make.image}
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 240px, (min-width: 768px) 33vw, 50vw"
-                  className="object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
-                />
-              </span>
-            </ServiceLink>
-          </li>
-        ))}
+                  className={`relative mx-auto mt-3 block aspect-[5/2] w-[80%] ${isWide ? "max-md:mx-0 max-md:mt-0 max-md:w-[38%]" : ""}`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-[6%] bottom-[-3%] h-[14%] rounded-[50%] bg-black/30 blur-sm"
+                  />
+                  <Image
+                    src={make.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 240px, (min-width: 768px) 33vw, 50vw"
+                    className="object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
+                  />
+                </span>
+              </ServiceLink>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
@@ -449,7 +481,10 @@ export function Offer() {
           </h2>
           <ul className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
             {PERKS.map((perk) => (
-              <li key={perk.text} className="flex items-center gap-3 text-black">
+              <li
+                key={perk.text}
+                className="flex items-center gap-3 text-black"
+              >
                 <CheckIcon className="size-5 shrink-0 text-brand" />
                 <span>
                   <strong>{perk.highlight}</strong> {perk.text}
@@ -530,7 +565,10 @@ export function WhyUs() {
             <TiltCard className="rounded-[14px]">
               <div className="flip-parent h-full rounded-[14px] bg-pale p-4 sm:p-6">
                 <span className="icon-coin tilt-pop grid size-[58px] place-items-center rounded-[14px] bg-white text-brand shadow-[0_6px_16px_rgba(0,0,0,0.08)]">
-                  <FaIcon icon={FEATURE_ICONS[feature.icon]} className="size-7" />
+                  <FaIcon
+                    icon={FEATURE_ICONS[feature.icon]}
+                    className="size-7"
+                  />
                 </span>
                 <p className="mt-3 text-[15px] leading-snug text-black sm:mt-4 sm:text-[18px] sm:leading-[26px]">
                   {feature.title}
@@ -648,7 +686,10 @@ export function Contact() {
             <CoinIcon icon={faEnvelope} />
           </a>
           <QuoteButton className={`${CONTACT_CARD} cursor-pointer`}>
-            <CardText title="Free quote" text="Plus 10% off for new customers*" />
+            <CardText
+              title="Free quote"
+              text="Plus 10% off for new customers*"
+            />
             <CoinIcon icon={faCalendarCheck} />
           </QuoteButton>
         </div>
@@ -657,7 +698,8 @@ export function Contact() {
   );
 }
 
-const FOOT_HEADING = "mb-5 text-[18px] font-bold uppercase tracking-[1px] text-white";
+const FOOT_HEADING =
+  "mb-5 text-[18px] font-bold uppercase tracking-[1px] text-white";
 const FOOT_LINK = "uppercase text-white hover:text-brand";
 
 export function SiteFooter() {
@@ -703,11 +745,7 @@ export function SiteFooter() {
           <br />
           <span className="flex items-center gap-2">
             All rights reserved. Powered by
-            <a
-              href={ZOP_DEALER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={ZOP_DEALER_URL} target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/brand/zop-dealer.png"
                 alt="Zop Dealer"
