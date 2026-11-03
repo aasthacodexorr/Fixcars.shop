@@ -199,7 +199,7 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/wheel-service.png",
+    imageSrc: "/images/Wheel-service.png",
     imageAlt: "Computerized Wheel Alignment by Certified Mechanics",
   },
   accentBar2Text: "We Restore Your Vehicle's Handling And Tire Life To Peak Performance! ",
