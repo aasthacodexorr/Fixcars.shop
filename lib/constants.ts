@@ -8,8 +8,8 @@ export const SITE_CONFIG = {
   companyTagline: "A Robinson Motor Company",
   
   // Contact Information
-  phone: "(647) 492-2636",
-  phoneHref: "tel:(647) 492-2636",
+  phone: "(905) 234-3313",
+  phoneHref: "tel:(905) 234-3313",
   address: "8050 Dixie Rd, Brampton, ON L6T 4W6",
   addressShort: "8050 Dixie Rd, Brampton, ON",
   

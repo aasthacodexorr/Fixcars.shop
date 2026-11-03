@@ -173,7 +173,7 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
       "The one-stop shop for precision wheel alignment & tire balancing!",
     subheading2:
       "We inspect, align and service wheels for cars, vans & 4x4s.",
-    imageSrc: "/images/services/alignment.webp",
+    imageSrc: "/images/wheel-hero.png",
     imageAlt: "Precision Wheel Alignment and Tire Balancing",
   },
   offers: {
@@ -187,22 +187,22 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
       { highlight: "FREE", text: "Exterior Wash (Value $50)" },
-      { highlight: "FREE", text: "15-min Alignment Check" },
-      { highlight: "FREE", text: "Multi-Point Suspension Check" },
+      { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
+      { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
     imageSrc: "/images/6_cda-Offers-v2-n-4-1-.png",
   },
   technicians: {
     title: (
       <>
-        GET YOUR WHEELS ALIGNED BY FULLY
+        Get Your Wheel Alignment Done By Fully
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/wheel-service.png",
     imageAlt: "Computerized Wheel Alignment by Certified Mechanics",
   },
-  accentBar2Text: "Specialized Wheel Alignment Technicians",
+  accentBar2Text: "We Restore Your Vehicle's Handling And Tire Life To Peak Performance! ",
   services: {
     title: "OUR WHEEL ALIGNMENT SERVICES",
     items: [
