@@ -13,8 +13,13 @@ export const HOURS = [
 // Landing pages still hosted on the existing site. Update this one value if
 // those pages move onto this app or to another domain.
 const LANDING_PAGES = "https://cardora.fixcars.shop";
-export const PRIVACY_URL = `${LANDING_PAGES}/privacy-policy1780854034495`;
-export const TERMS_URL = `${LANDING_PAGES}/terms-of-service1780854034930`;
+
+// Footer links, shared with the main Cardora site.
+const MAIN_SITE = "https://cardora-2-0.vercel.app";
+export const PRIVACY_URL = `${MAIN_SITE}/privacy-policy`;
+export const TERMS_URL = `${MAIN_SITE}/terms-conditions`;
+export const SITEMAP_URL = `${MAIN_SITE}/sitemap`;
+export const ZOP_DEALER_URL = "https://www.zopdealer.com/";
 
 export const FACEBOOK_URL = "https://www.facebook.com/cardorahq";
 export const INSTAGRAM_URL = "https://www.instagram.com/cardora.ca/";

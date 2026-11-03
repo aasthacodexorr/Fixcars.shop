@@ -228,7 +228,7 @@ function Rotor({
           color="#c6cdd0"
           metalness={1}
           roughness={0.34}
-          emissive="#ff2a00"
+          emissive="#c42800"
           emissiveIntensity={0}
         />
       </mesh>
@@ -504,7 +504,7 @@ function Wheel({ onReady }: { onReady: () => void }) {
     root.current.scale.setScalar(
       damp(
         root.current.scale.x,
-        1 + tire * 0.1 + brake * 0.42,
+        1 + tire * 0.1 + brake * 0.28,
         5,
         delta,
       ),
@@ -540,7 +540,7 @@ function Wheel({ onReady }: { onReady: () => void }) {
     if (heat.current) {
       heat.current.emissiveIntensity = damp(
         heat.current.emissiveIntensity,
-        brake * 0.22,
+        brake * 0.14,
         3,
         delta,
       );

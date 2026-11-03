@@ -19,8 +19,10 @@ import {
   PRIVACY_URL,
   REVIEWS,
   SERVICES,
+  SITEMAP_URL,
   TERMS_URL,
   WHEEL_STEPS,
+  ZOP_DEALER_URL,
 } from "@/lib/site";
 import HeroWheel from "./HeroWheel";
 import { QuoteButton } from "./QuoteContext";
@@ -42,54 +44,158 @@ const GREEN_BUTTON =
 const H2 = "text-[28px] font-bold tracking-tight text-black lg:text-[44px]";
 const PAGE = "mx-auto max-w-[1240px] px-3.5 md:px-8";
 
-function HeroCar({ src, height }: { src: string; height: number }) {
+// Where each floating service card sits around the wheel, as % of the wheel area.
+const FLOATING_CARDS: Record<string, { left: string; top: string; delay: string }> =
+  {
+    "Brake Repairs": { left: "2%", top: "10%", delay: "0s" },
+    "Wheel Alignment": { left: "-1%", top: "42%", delay: "-2.4s" },
+    "Auto AC Repairs": { left: "4%", top: "72%", delay: "-4.2s" },
+    Tires: { left: "72%", top: "8%", delay: "-1.2s" },
+    "Oil Change": { left: "75%", top: "40%", delay: "-3.3s" },
+    "Check Engine Light": { left: "71%", top: "70%", delay: "-5.1s" },
+  };
+
+function OfferSticker({ className = "" }: { className?: string }) {
   return (
-    <span className="car-3d mx-2 align-middle">
-      <Image
-        src={src}
-        alt=""
-        width={300}
-        height={height}
-        loading="eager"
-        className="inline-block h-auto w-[92px] sm:w-[170px] lg:w-[190px]"
-      />
-    </span>
+    <div
+      className={`relative size-[116px] shrink-0 rounded-full bg-brand text-white shadow-[0_14px_30px_rgba(0,175,102,0.45)] lg:size-[88px] 2xl:size-[124px] ${className}`}
+    >
+      <svg viewBox="0 0 120 120" aria-hidden="true" className="spin-slow size-full">
+        <defs>
+          <path
+            id="sticker-circle"
+            d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"
+          />
+        </defs>
+        <text fill="currentColor" fontSize="10" fontWeight="700" textLength="292">
+          <textPath href="#sticker-circle">
+            NEW CUSTOMER OFFER • NEW CUSTOMER OFFER •
+          </textPath>
+        </text>
+      </svg>
+      <p className="absolute inset-0 grid place-content-center text-center font-bold leading-none">
+        <span className="text-[26px] lg:text-[20px] 2xl:text-[28px]">10%</span>
+        <span className="mt-0.5 text-[12px] lg:text-[10px]">OFF*</span>
+      </p>
+    </div>
+  );
+}
+
+function Road({ className = "" }: { className?: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`overflow-hidden border-t-[6px] border-brand bg-[#20272b] ${className}`}
+    >
+      <div className="relative h-full">
+        <div className="road-lines absolute left-0 top-1/2 h-1 w-[calc(100%+112px)] -translate-y-1/2" />
+      </div>
+    </div>
   );
 }
 
 function Hero() {
   return (
-    <div className="px-3.5 pb-5 pt-5 md:px-8 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:py-8">
-      <div className="w-full lg:max-w-[46%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
-        <div>
-          <h1 className="text-[38px] font-semibold leading-[1.15] text-black sm:text-[60px] lg:text-[62px] xl:text-[70px] xl:leading-[1.1]">
-            Brampton’s
-            <HeroCar src="/images/brand/car-yellow-suv.png" height={138} />
-            <br />
-            <HeroCar src="/images/brand/car-white-suv.png" height={99} />
-            most trusted
-            <br />
-            auto repair
-            <HeroCar src="/images/brand/car-orange-truck.png" height={98} />
+    <div className="hero-rise relative lg:min-h-[calc(100svh-var(--header-h))]">
+      <div className="px-3.5 pb-8 pt-7 md:px-8 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[100px] lg:pt-6">
+        <div className="relative w-full lg:max-w-[44%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
+          <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[14px] font-bold text-black shadow-[0_4px_14px_rgba(9,65,80,0.1)]">
+            <span className="pulse-dot size-2.5 rounded-full bg-brand" />
+            Providing exceptional service in Brampton
+          </p>
+          <h1 className="mt-5 text-[46px] font-bold leading-[1.05] tracking-tight text-black sm:text-[64px] lg:text-[54px] xl:text-[64px] 2xl:text-[76px]">
+            Brampton’s most{" "}
+            <span className="inline-block -rotate-2 rounded-[12px] bg-brand px-3 pb-1 text-white shadow-[0_10px_24px_rgba(0,175,102,0.35)]">
+              trusted
+            </span>{" "}
+            auto repair shop.
           </h1>
-          <p className="mt-4 max-w-[500px] text-[20px] leading-snug text-black lg:text-[24px]">
-            Exceptional service and personalized attention.
+          <p className="mt-6 max-w-[500px] text-[18px] leading-snug text-black lg:text-[20px]">
+            One stop for brakes, tires, alignment, oil, AC and check engine
+            lights, on cars, vans and 4x4s.
           </p>
-        </div>
 
-        <div className="relative z-20 mt-6 max-w-[550px] rounded-[10px] bg-[#a7d4dc] p-6">
-          <ServicePicker />
-          <div className="my-3 flex items-center gap-4 text-black">
-            <span className="h-px flex-1 bg-black/25" />
-            or
-            <span className="h-px flex-1 bg-black/25" />
+          <div className="relative z-20 mt-7 flex max-w-[560px] flex-col gap-3 sm:flex-row">
+            <ServicePicker />
+            <QuoteButton className="btn-green h-[56px] shrink-0 cursor-pointer rounded-[12px] px-7 font-bold text-white shadow-[0_12px_26px_rgba(0,175,102,0.35)] transition-transform hover:-translate-y-0.5" />
           </div>
-          <QuoteButton className={GREEN_BUTTON} />
-          <p className="mt-3 text-center text-[15px] text-black">
-            Plus 10% off for new customers*
-          </p>
+
+          <div className="mt-5 flex max-w-[560px] items-center justify-between gap-4">
+            <p className="text-[16px] text-black">
+              Or call us at
+              <a
+                href={PHONE_HREF}
+                className="mt-0.5 block whitespace-nowrap text-[24px] font-bold lg:text-[26px]"
+              >
+                {PHONE_DISPLAY}
+              </a>
+            </p>
+            <OfferSticker />
+          </div>
         </div>
       </div>
+
+      {/* Desktop: the services float around the pinned wheel */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[56%] xl:block">
+        {SERVICES.map((service) => {
+          const place = FLOATING_CARDS[service.name];
+          return (
+            <div
+              key={service.name}
+              className="float-card absolute w-[186px]"
+              style={{
+                left: place.left,
+                top: place.top,
+                animationDelay: place.delay,
+              }}
+            >
+              <ServiceLink
+                href={service.href}
+                className="pointer-events-auto flex items-center gap-2.5 rounded-[16px] bg-white p-2 pr-3 shadow-[0_16px_34px_rgba(9,65,80,0.22)] transition-transform hover:-translate-y-1 hover:scale-105"
+              >
+                <span className="relative block size-[52px] shrink-0 overflow-hidden rounded-[10px] bg-pale">
+                  <Image
+                    src={`/images/services/${service.icon}.webp`}
+                    alt=""
+                    fill
+                    sizes="52px"
+                    className="object-cover"
+                  />
+                </span>
+                <span className="text-[14px] font-bold leading-tight text-black">
+                  {service.name}
+                </span>
+              </ServiceLink>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Phones: no wheel, so the services take its place */}
+      <ul className="grid grid-cols-3 gap-2.5 px-3.5 pb-7 md:px-8 lg:hidden">
+        {SERVICES.map((service) => (
+          <li key={service.name}>
+            <ServiceLink
+              href={service.href}
+              className="block h-full overflow-hidden rounded-[14px] bg-white shadow-[0_8px_20px_rgba(9,65,80,0.12)]"
+            >
+              <span className="relative block aspect-[8/5] bg-pale">
+                <Image
+                  src={`/images/services/${service.icon}.webp`}
+                  alt=""
+                  fill
+                  sizes="33vw"
+                  className="object-cover"
+                />
+              </span>
+              <span className="block px-2 py-2 text-center text-[12.5px] font-bold leading-tight text-black">
+                {service.name}
+              </span>
+            </ServiceLink>
+          </li>
+        ))}
+      </ul>
+      <Road className="h-[58px] lg:hidden" />
     </div>
   );
 }
@@ -130,11 +236,33 @@ export function WheelJourney() {
   return (
     <section className="relative bg-hero">
       <div className="pointer-events-none sticky top-[var(--header-h)] z-0 hidden h-[calc(100svh-var(--header-h))] overflow-hidden lg:block">
-        <div className="absolute inset-y-0 right-0 w-[56%]">
-          <div
+        <p
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[3%] select-none whitespace-nowrap text-center text-[19vw] font-black leading-none tracking-tighter text-white/45"
+        >
+          CARDORA
+        </p>
+        {/* Sized so the bottom of the wheel lands on the road */}
+        <div className="absolute right-0 top-0 h-[calc(117%-82px)] w-[56%]">
+          <svg
+            viewBox="0 0 200 200"
             aria-hidden="true"
-            className="absolute bottom-[9%] left-1/2 h-10 w-[62%] -translate-x-1/2 rounded-[50%] bg-[#094150]/25 blur-2xl"
-          />
+            className="spin-slower absolute inset-0 m-auto size-[92%] overflow-visible"
+          >
+            <g fill="none" stroke="#00af66" strokeLinecap="round">
+              <path d="M100 8a92 92 0 0 1 79 46" strokeWidth="5" />
+              <path d="M192 100a92 92 0 0 1-120 88" strokeWidth="5" />
+              <path d="M27 155A92 92 0 0 1 56 19" strokeWidth="5" />
+              <circle cx="100" cy="100" r="86" strokeWidth="0.6" strokeDasharray="1.500 5" />
+            </g>
+          </svg>
+        </div>
+        <Road className="absolute inset-x-0 bottom-0 h-[84px]" />
+        <div
+          aria-hidden="true"
+          className="absolute bottom-[34px] right-[28%] h-7 w-[28%] translate-x-1/2 rounded-[50%] bg-black/70 blur-xl"
+        />
+        <div className="absolute right-0 top-0 h-[calc(117%-82px)] w-[56%]">
           <HeroWheel />
         </div>
       </div>
@@ -143,7 +271,7 @@ export function WheelJourney() {
         <Hero />
         <div
           id="wheel-steps"
-          className="px-3.5 pb-2 md:px-8 lg:pb-12 lg:pl-[max(32px,calc((100vw-1600px)/2+32px))]"
+          className="px-3.5 pb-2 pt-4 md:px-8 lg:pb-12 lg:pl-[max(32px,calc((100vw-1600px)/2+32px))]"
         >
           {WHEEL_STEPS.map((step) => {
             const service = SERVICES.find((s) => s.name === step.service);
@@ -515,7 +643,7 @@ const FOOT_LINK = "uppercase text-white hover:text-brand";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-charcoal pb-8 text-white">
+    <footer className="bg-charcoal text-white">
       <div className="mx-auto grid max-w-[1600px] gap-10 px-5 pt-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-10">
         <div>
           <h3 className={FOOT_HEADING}>Our services</h3>
@@ -549,15 +677,44 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
-      <div className="mx-auto mt-10 flex max-w-[1600px] flex-col justify-between gap-3 border-t border-charcoal-line px-5 pt-6 text-sm uppercase sm:flex-row lg:px-10">
-        <p>© 2026 Cardora. All rights reserved.</p>
-        <p>
+      {/* Same bottom bar as the main Cardora site */}
+      <div className="mx-auto mt-10 flex max-w-[1600px] flex-col items-center justify-center gap-4 border-t border-charcoal-line px-5 pb-5 pt-6 md:flex-row md:items-start md:justify-between lg:px-10">
+        <div className="text-center text-[13px] uppercase text-white md:text-start">
+          © 2026 Cardora.
+          <br />
+          <span className="flex items-center gap-2">
+            All rights reserved. Powered by
+            <a
+              href={ZOP_DEALER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/brand/zop-dealer.png"
+                alt="Zop Dealer"
+                width={30}
+                height={28}
+                className="h-auto w-5"
+              />
+            </a>
+          </span>
+        </div>
+        <p className="text-center text-[12.5px] uppercase text-white">
           <a href={PRIVACY_URL} className="hover:text-brand">
             Privacy Policy
           </a>
           {" | "}
           <a href={TERMS_URL} className="hover:text-brand">
             Terms &amp; Conditions
+          </a>
+          {" | "}
+          <a
+            href={SITEMAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand"
+          >
+            Site Map
           </a>
         </p>
       </div>

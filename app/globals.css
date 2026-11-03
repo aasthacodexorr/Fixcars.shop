@@ -192,25 +192,76 @@
   transform: translateZ(40px);
 }
 
-/* Homepage: hero cars drive in, then turn in 3D on hover */
-.car-3d {
-  display: inline-block;
-  perspective: 600px;
+/* Homepage hero: moving road, floating cards, spinning sticker and logo arcs */
+.road-lines {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #ffffff 0 56px,
+    transparent 56px 112px
+  );
+  animation: roadMove 0.9s linear infinite;
+  will-change: transform;
 }
 
-.car-3d img {
-  animation: carDriveIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+/* The wheel rolls to the right, so the road moves left beneath it. */
+@keyframes roadMove {
+  from {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(-112px, -50%);
+  }
 }
 
-.car-3d:hover img {
-  transform: rotateY(-28deg) rotateX(6deg) scale(1.12);
+.float-card {
+  animation: floatCard 6s ease-in-out infinite;
 }
 
-@keyframes carDriveIn {
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1.5deg);
+  }
+}
+
+.spin-slow {
+  animation: spinAround 14s linear infinite;
+}
+
+.spin-slower {
+  animation: spinAround 36s linear infinite;
+}
+
+@keyframes spinAround {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pulse-dot {
+  animation: pulseDot 1.8s ease-out infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 175, 102, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 175, 102, 0);
+  }
+}
+
+.hero-rise {
+  animation: heroRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroRise {
   from {
     opacity: 0;
-    transform: translateX(-70px) rotateY(38deg);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -250,13 +301,17 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .car-3d img {
-    animation: none;
-  }
-
-  .car-3d:hover img,
   .flip-parent:hover .icon-coin {
     transform: none;
+  }
+
+  .road-lines,
+  .float-card,
+  .spin-slow,
+  .spin-slower,
+  .pulse-dot,
+  .hero-rise {
+    animation: none;
   }
 }
 

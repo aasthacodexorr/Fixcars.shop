@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ChevronIcon } from "./ServiceIcon";
+import { faWrench } from "@fortawesome/free-solid-svg-icons";
+import { ChevronIcon, FaIcon } from "./ServiceIcon";
 import { ServiceMenu } from "./ServiceMenu";
 import { useDismissable } from "./useDismissable";
 
@@ -15,26 +16,25 @@ export default function ServicePicker() {
   }, [isOpen]);
 
   return (
-    <div ref={ref} className="relative w-full">
+    <div ref={ref} className="relative min-w-0 flex-1">
       <button
         type="button"
         aria-expanded={isOpen}
         aria-controls="hero-services"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-[52px] w-full cursor-pointer items-center justify-between gap-3 rounded-[10px] bg-white pl-5 pr-3 text-left text-[16px] text-gray-600 shadow-[0_2px_10px_rgba(0,0,0,0.05)]"
+        className="flex h-[56px] w-full cursor-pointer items-center gap-3 rounded-[12px] bg-white px-4 text-left text-[16px] font-medium text-black shadow-[0_12px_26px_rgba(9,65,80,0.14)] transition-transform hover:-translate-y-0.5"
       >
-        What does your car need?
-        <span className="grid h-[34px] w-[60px] place-items-center rounded-[5px] bg-brand text-white">
-          <ChevronIcon
-            className={`size-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
-          />
-        </span>
+        <FaIcon icon={faWrench} className="size-[18px] shrink-0 text-brand" />
+        <span className="flex-1">What does your car need?</span>
+        <ChevronIcon
+          className={`size-5 shrink-0 text-brand transition-transform ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
       {isOpen && (
         <div
           id="hero-services"
           ref={panel}
-          className="absolute inset-x-0 top-full z-30 mt-2 max-h-[70vh] scroll-mb-4 overflow-y-auto rounded-[12px] bg-white p-3 shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
+          className="absolute inset-x-0 top-full z-30 mt-3 max-h-[70vh] sm:right-auto sm:w-[580px] scroll-mb-4 overflow-y-auto rounded-[12px] bg-white p-3 shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
         >
           <ServiceMenu onNavigate={() => setIsOpen(false)} />
         </div>
