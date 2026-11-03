@@ -281,7 +281,7 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
       "The one-stop shop for all your auto air conditioning & heating repairs!",
     subheading2:
       "We diagnose, recharge and service AC systems for cars, vans & 4x4s.",
-    imageSrc: "/images/services/ac.webp",
+    imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Car Air Conditioning and Climate Control Repair",
   },
   offers: {
@@ -307,7 +307,7 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/AC-service.png",
     imageAlt: "Auto Air Conditioning Repair by Certified Mechanics",
   },
   accentBar2Text: "Specialized Auto AC Technicians",
