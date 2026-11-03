@@ -19,7 +19,7 @@
     --font-anton: 'Anton', Impact, sans-serif;
     --font-lato: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-poppins: 'Poppins', sans-serif;
-    --header-h: 129px;
+    --header-h: 106px;
   }
 
   @media (min-width: 1024px) {

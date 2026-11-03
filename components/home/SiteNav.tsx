@@ -10,8 +10,12 @@ import {
   SERVICES,
 } from "@/lib/site";
 import { QuoteButton } from "./QuoteContext";
-import { FaIcon, ServiceIcon } from "./ServiceIcon";
+import { FaIcon } from "./ServiceIcon";
 import { ServiceLink } from "./ServiceMenu";
+
+// A short line between links, drawn separately so the whole link stays clickable.
+const DIVIDER =
+  "relative before:absolute before:left-0 before:top-1/2 before:h-5 before:w-px before:-translate-y-1/2 before:bg-gray-300 first:before:hidden";
 
 function Logo({ className }: { className: string }) {
   return (
@@ -36,14 +40,13 @@ export default function SiteNav() {
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 py-3">
           <Logo className="h-auto w-[165px]" />
 
-          {/* Icons sit above the labels until there's room for them side by side */}
           <nav aria-label="Services" className="flex items-center">
             {SERVICES.map((service) => (
               <ServiceLink
                 key={service.name}
                 href={service.href}
                 aria-label={service.name}
-                className="group flex flex-col items-center gap-1 rounded-[10px] px-2.5 py-1.5 text-[13px] font-bold text-black transition-colors hover:bg-pale hover:text-brand xl:flex-row xl:gap-2 xl:px-3 xl:text-[16px]"
+                className={`${DIVIDER} px-3 py-2 text-[15px] font-bold text-black transition-colors hover:text-brand xl:px-5 xl:text-[17px]`}
               >
                 {service.short}
               </ServiceLink>
@@ -110,19 +113,15 @@ export default function SiteNav() {
         </div>
         <nav
           aria-label="Services"
-          className="grid h-[67px] grid-cols-6 bg-white px-1 shadow-[0_2px_10px_rgba(0,0,0,0.05)]"
+          className="grid h-[44px] grid-cols-6 bg-white px-1 shadow-[0_2px_10px_rgba(0,0,0,0.05)]"
         >
           {SERVICES.map((service) => (
             <ServiceLink
               key={service.name}
               href={service.href}
               aria-label={service.name}
-              className="flex flex-col items-center justify-center gap-1.5 text-[12px] font-bold text-black active:text-brand"
+              className={`${DIVIDER} flex items-center justify-center text-[13px] font-bold text-black active:text-brand sm:text-[15px]`}
             >
-              <ServiceIcon
-                name={service.icon}
-                className="size-[22px] shrink-0 text-brand2"
-              />
               {service.short}
             </ServiceLink>
           ))}
