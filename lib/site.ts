@@ -35,6 +35,7 @@ export type ServiceIconName =
 
 export interface Service {
   name: string;
+  short: string;
   href: string;
   icon: ServiceIconName;
   blurb: string;
@@ -44,6 +45,7 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     name: "Brake Repairs",
+    short: "Brake",
     href: "/brakes-mechanic-ontario-cda",
     icon: "brakes",
     blurb: "The one-stop shop for all your brake repairs and replacements.",
@@ -51,6 +53,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Tires",
+    short: "Tires",
     href: `${LANDING_PAGES}/tires-ontario-cda`,
     icon: "tires",
     blurb: "We supply and repair tires for cars, vans and 4x4s.",
@@ -58,6 +61,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Wheel Alignment",
+    short: "Wheel",
     href: `${LANDING_PAGES}/wheel-alignment-experts-ontario-cda`,
     icon: "alignment",
     blurb: "Restore your vehicle’s handling and tire life to peak performance.",
@@ -65,6 +69,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Oil Change",
+    short: "Oil",
     href: `${LANDING_PAGES}/oil-change-service-ontario-cda`,
     icon: "oil",
     blurb: "Fast, professional, no-appointment oil changes with quality oils.",
@@ -72,6 +77,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Auto AC Repairs",
+    short: "AC",
     href: `${LANDING_PAGES}/auto-ac-mechanic-ontario-cda`,
     icon: "ac",
     blurb: "We service and repair AC systems for cars, vans and 4x4s.",
@@ -79,6 +85,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Check Engine Light",
+    short: "Engine",
     href: `${LANDING_PAGES}/check-engine-light-repairs-ontario-cda`,
     icon: "engine",
     blurb: "Expert auto repairs for “check engine” light warnings.",
