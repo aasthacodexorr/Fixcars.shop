@@ -490,12 +490,12 @@ export const TIRES_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED CAR
-        <br className="hidden sm:inline" /> TIRES REPAIR SHOP
+        <br className="hidden sm:inline" /> TIRE WORKSHOP 
       </>
     ),
     subheading1: "The one-stop shop for all your tire repairs & replacements!",
     subheading2: "We supply and service tires for cars, vans & 4x4s.",
-    imageSrc: "/images/services/tires.webp",
+    imageSrc: "/images/tires-hero.png",
     imageAlt: "Car Tire Sales and Puncture Repairs",
   },
   offers: {
@@ -509,7 +509,7 @@ export const TIRES_PAGE_DATA: LandingPageData = {
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
       { highlight: "FREE", text: "Exterior Wash (Value $50)" },
-      { highlight: "FREE", text: "Tire Pressure & Tread Check" },
+      { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
     imageSrc: "/images/6_cda-Offers-v2-n-4-1-.png",
@@ -517,14 +517,14 @@ export const TIRES_PAGE_DATA: LandingPageData = {
   technicians: {
     title: (
       <>
-        GET YOUR TIRES REPAIRED BY FULLY
-        <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
+        Get Your Tires Repaired, Replaced Or Aligned
+        <br className="hidden sm:inline" /> By Experienced And Fully Qualified Technicians 
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/tires-services.png",
     imageAlt: "Tire Repair and Installation by Certified Mechanics",
   },
-  accentBar2Text: "Specialized Tire Technicians",
+  accentBar2Text: "Experience The Excellence",
   services: {
     title: "OUR TIRES SERVICES",
     items: [

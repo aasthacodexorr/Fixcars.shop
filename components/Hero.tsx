@@ -56,7 +56,7 @@ export default function Hero({
           </div>
 
           {/* Copy & CTAs: order-2 on mobile, order-1 on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left -mt-0">
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left lg:-mt-16 -mt-0">
             <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed font-normal">
               {subheading1}
             </p>
