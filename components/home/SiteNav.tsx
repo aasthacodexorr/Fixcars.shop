@@ -45,10 +45,6 @@ export default function SiteNav() {
                 aria-label={service.name}
                 className="group flex flex-col items-center gap-1 rounded-[10px] px-2.5 py-1.5 text-[13px] font-bold text-black transition-colors hover:bg-pale hover:text-brand xl:flex-row xl:gap-2 xl:px-3 xl:text-[16px]"
               >
-                <ServiceIcon
-                  name={service.icon}
-                  className="size-[20px] shrink-0 text-brand2 transition-transform group-hover:scale-110"
-                />
                 {service.short}
               </ServiceLink>
             ))}

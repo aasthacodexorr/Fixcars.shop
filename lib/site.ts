@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Wheel Alignment",
-    short: "Wheel",
+    short: "Wheels",
     href: `/wheel-alignment-experts-ontario-cda`,
     icon: "alignment",
     blurb: "Restore your vehicle’s handling and tire life to peak performance.",
