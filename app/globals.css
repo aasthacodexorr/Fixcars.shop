@@ -1,10 +1,31 @@
 @import "tailwindcss";
 
+/* Colours from the main Cardora site */
+@theme {
+  --color-brand: #00af66;
+  --color-brand2: #00b074;
+  --color-hero: #c4eafa;
+  --color-panel: rgba(0, 87, 51, 0.15);
+  --color-pale: #e8f3fe;
+  --color-review: #eaeff5;
+  --color-review-name: #13316c;
+  --color-charcoal: #121319;
+  --color-charcoal-line: #2a2b30;
+  --color-estimate: #dbe6e3;
+}
+
 @layer base {
   :root {
     --font-anton: 'Anton', Impact, sans-serif;
     --font-lato: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+    --header-h: 129px;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --header-h: 93px;
+    }
   }
 
   html {
@@ -142,6 +163,103 @@
   touch-action: pan-y;
 }
 
+/* Homepage: same type treatment as the main Cardora site */
+.font-site {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-green {
+  background-image: linear-gradient(#00af66, rgba(0, 175, 102, 0.65));
+}
+
+/* Homepage: 3D tilt cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+
+.tilt-card > * {
+  transform-style: preserve-3d;
+}
+
+.tilt-pop {
+  transition: transform 0.25s ease-out;
+}
+
+/* Only lifted during a tilt: at rest, perspective would misalign the text. */
+.tilt-card:hover .tilt-pop {
+  transform: translateZ(40px);
+}
+
+/* Homepage: hero cars drive in, then turn in 3D on hover */
+.car-3d {
+  display: inline-block;
+  perspective: 600px;
+}
+
+.car-3d img {
+  animation: carDriveIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.car-3d:hover img {
+  transform: rotateY(-28deg) rotateX(6deg) scale(1.12);
+}
+
+@keyframes carDriveIn {
+  from {
+    opacity: 0;
+    transform: translateX(-70px) rotateY(38deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Homepage: icon coins flip in 3D when their card is hovered */
+.icon-coin {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flip-parent:hover .icon-coin {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Homepage: cards tip up into place as they scroll into view */
+  @supports (animation-timeline: view()) {
+    .rise-3d {
+      animation: rise3d linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+
+    @keyframes rise3d {
+      from {
+        opacity: 0;
+        transform: perspective(900px) rotateX(24deg) translateY(70px);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(900px) rotateX(0) translateY(0);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .car-3d img {
+    animation: none;
+  }
+
+  .car-3d:hover img,
+  .flip-parent:hover .icon-coin {
+    transform: none;
+  }
+}
+
 /* Hide Next.js dev indicator badge completely */
 nextjs-portal,
 [data-nextjs-dialog-overlay],
@@ -153,4 +271,8 @@ button[aria-label="Next.js Dev Tools"] {
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
 }

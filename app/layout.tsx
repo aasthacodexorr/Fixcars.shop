@@ -24,9 +24,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Brake Repairs Brampton, Ontario",
+  title: "Cardora | Auto Repair Shop in Brampton, Ontario",
   description:
-    "The one-stop shop for all your brake repairs & replacements in Brampton, ON. We supply and service brakes for cars, vans & 4x4s.",
+    "Brakes, tires, wheel alignment, oil changes, auto AC and check engine light repairs at 8050 Dixie Rd, Brampton. Get a free quote plus 10% off for new customers.",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",

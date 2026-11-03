@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { MAKES, SERVICES } from "@/lib/site";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -63,17 +63,17 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/95 backdrop-blur-sm overflow-y-auto animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#04242d]/85 backdrop-blur-sm overflow-y-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-[620px] bg-black text-white rounded-[25px] border-[3px] border-[#1cc76a] p-6 sm:p-10 shadow-2xl my-auto">
+      <div className="relative w-full max-w-[620px] bg-white text-black rounded-[16px] p-6 sm:p-10 shadow-2xl my-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-neutral-800 hover:bg-neutral-700 text-white flex items-center justify-center text-xl font-bold cursor-pointer transition z-10"
+          className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-black flex items-center justify-center text-xl font-bold cursor-pointer transition z-10"
         >
           &times;
         </button>
@@ -110,20 +110,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
           </div>
         ) : (
           <div>
-            <h2 className="font-anton text-3xl sm:text-5xl text-center text-white tracking-wide uppercase">
+            <h2 className="text-3xl sm:text-[40px] font-bold tracking-tight text-center text-black">
               Enter Your Details
             </h2>
-
-            <div className="flex justify-center my-3">
-              <Image
-                src="/images/0_arrow-down.gif"
-                alt="Scroll down indicator"
-                width={70}
-                height={70}
-                className="animate-bounce-arrow"
-                unoptimized
-              />
-            </div>
 
             <form onSubmit={handleSubmit} className="space-y-3.5 mt-4">
               <div>
@@ -134,7 +123,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className={`w-full bg-white text-gray-900 placeholder-gray-500 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#1cc76a] transition ${
+                  className={`w-full bg-white text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
                     errors.name ? "ring-2 ring-red-500" : ""
                   }`}
                 />
@@ -151,7 +140,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className={`w-full bg-white text-gray-900 placeholder-gray-500 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#1cc76a] transition ${
+                  className={`w-full bg-white text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
                     errors.email ? "ring-2 ring-red-500" : ""
                   }`}
                 />
@@ -168,7 +157,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  className={`w-full bg-white text-gray-900 placeholder-gray-500 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#1cc76a] transition ${
+                  className={`w-full bg-white text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
                     errors.phone ? "ring-2 ring-red-500" : ""
                   }`}
                 />
@@ -178,34 +167,49 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               </div>
 
               <div>
-                <input
-                  type="text"
-                  placeholder="How Can We Help?"
+                <select
+                  aria-label="How can we help?"
                   value={formData.service}
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
                   }
-                  className="w-full bg-white text-gray-900 placeholder-gray-500 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#1cc76a] transition"
-                />
+                  className={`w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
+                    formData.service ? "text-gray-900" : "text-gray-500"
+                  }`}
+                >
+                  <option value="">How Can We Help?</option>
+                  <optgroup label="Services">
+                    {SERVICES.map((service) => (
+                      <option key={service.name} value={service.name}>
+                        {service.name}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label="Mechanic for your make">
+                    {MAKES.map((make) => (
+                      <option key={make.name} value={`${make.name} Mechanic`}>
+                        {make.name} Mechanic
+                      </option>
+                    ))}
+                  </optgroup>
+                </select>
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full bg-[#1cc76a] hover:bg-[#17a858] text-white font-bold py-3.5 px-6 rounded-full text-xl sm:text-2xl flex items-center justify-center gap-2 btn-pulse-glow btn-glimmer shadow-lg cursor-pointer transition transform active:scale-[0.98]"
+                  className="w-full bg-[linear-gradient(#00AF66,rgba(0,175,102,0.65))] hover:opacity-90 text-white font-medium py-3.5 px-6 rounded-[12px] text-lg flex items-center justify-center cursor-pointer transition"
                 >
-                  <span>👉</span>
                   <span>Get A Free Quote</span>
-                  <span>👈</span>
                 </button>
               </div>
 
               <div className="text-center pt-3 pb-1">
-                <p className="text-gray-300 text-sm sm:text-base font-semibold">
+                <p className="text-gray-700 text-sm sm:text-base font-semibold">
                   Or Call Us At:{" "}
                   <a
                     href="tel:(647) 492-2636"
-                    className="text-[#1cc76a] font-bold hover:underline"
+                    className="text-[#00AF66] font-bold hover:underline"
                   >
                     (647) 492-2636
                   </a>
