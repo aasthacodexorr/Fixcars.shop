@@ -381,15 +381,15 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
   hero: {
     headline: (
       <>
-        BRAMPTON’S MOST TRUSTED OIL
-        <br className="hidden sm:inline" /> CHANGE SERVICE SHOP
+        NO APPOINTMENT OIL
+        <br className="hidden sm:inline" /> CHANGE IN Brampton 
       </>
     ),
     subheading1:
       "The one-stop shop for fast, professional oil & filter changes!",
     subheading2:
       "We supply and change motor oils & filters for cars, vans & 4x4s.",
-    imageSrc: "/images/services/oil.webp",
+    imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Professional Engine Oil Change & Filter Replacement",
   },
   offers: {
@@ -403,8 +403,8 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
       { highlight: "FREE", text: "Exterior Wash (Value $50)" },
-      { highlight: "FREE", text: "Multi-Point Engine Inspection" },
-      { highlight: "FREE", text: "Fluid Top-Up & Filter Check" },
+      { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
+      { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
     imageSrc: "/images/6_cda-Offers-v2-n-4-1-.png",
   },
@@ -444,35 +444,35 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
     features: [
       {
         img: "/images/11_Latest-Scanners-Machinery-Diagnostic-Tools2.png",
-        title: "Expert Oil & Lube Service",
+        title: "Latest Scanners, Machinery & Diagnostic Tools",
       },
       {
         img: "/images/12_15-Years-of-Experience.png",
-        title: "Premium Full-Synthetic Oil Options",
+        title: "Quality you Can Trust",
       },
       {
         img: "/images/13_Fully-Qualified-Technicians2.png",
-        title: "Certified Lube Technicians",
+        title: "Fully Qualified Technicians",
       },
       {
         img: "/images/14_Less-Expensive-Than-Dealerships3.png",
-        title: "Complete Fluid & Filter Maintenance",
+        title: "Affordable Oil Change Services",
       },
       {
         img: "/images/15_Genuine-Parts-Or-Equivalents.png",
-        title: "OEM Filters & Warranty-Approved Oils",
+        title: "Quality Oil & Filter",
       },
       {
         img: "/images/16_Maintain-Your-Warranty2.png",
-        title: "Customer Satisfaction Guaranteed",
+        title: "Satisfaction Guaranteed",
       },
       {
         img: "/images/17_Fast-Bookings-Service.png",
-        title: "Quick Turnaround Time",
+        title: "Fast Bookings And Services",
       },
       {
         img: "/images/18_Convenient-Location-Parking3.png",
-        title: "Convenient Location & Parking",
+        title: "Trusted Local Auto Repair Shop",
       },
     ],
   },
