@@ -33,7 +33,7 @@ export default function Hero({
         backgroundImage: `linear-gradient(rgba(248, 248, 247, 0.40), rgba(248, 248, 247, 0.40)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
-      <div className="relative max-w-[1200px] mx-auto z-10">
+      <div className="relative max-w-[1400px] mx-auto z-10">
         {/* Main H1 Headline */}
         <div className="text-center lg:text-left max-w-[1400px] mx-auto mb-4 lg:mb-0">
           <h1 className="font-anton text-3xl sm:text-5xl lg:text-[62px] leading-[1.08] tracking-wide uppercase text-black drop-shadow-sm">
