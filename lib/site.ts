@@ -123,15 +123,39 @@ export const WHEEL_STEPS = [
   },
 ];
 
+// The Volkswagen photo is "26 Volkswagen Atlas SE 4Motion.jpg" from Wikimedia
+// Commons, released under CC0.
 export const MAKES = [
-  { name: "Dodge", href: `${LANDING_PAGES}/dodge-mechanic-ontario-cda` },
-  { name: "Toyota", href: `${LANDING_PAGES}/toyota-mechanic-ontario-cda` },
+  {
+    name: "Dodge",
+    model: "Durango",
+    image: "/images/makes/dodge-durango.webp",
+    href: `${LANDING_PAGES}/dodge-mechanic-ontario-cda`,
+  },
+  {
+    name: "Toyota",
+    model: "RAV4",
+    image: "/images/makes/toyota-rav4.webp",
+    href: `${LANDING_PAGES}/toyota-mechanic-ontario-cda`,
+  },
   {
     name: "Volkswagen",
+    model: "Atlas",
+    image: "/images/makes/volkswagen-atlas.webp",
     href: `${LANDING_PAGES}/volkswagen-mechanic-ontario-cda`,
   },
-  { name: "Hyundai", href: `${LANDING_PAGES}/hyundai-mechanic-ontario-cda` },
-  { name: "Honda", href: `${LANDING_PAGES}/honda-mechanic-ontario-cda` },
+  {
+    name: "Hyundai",
+    model: "Tucson",
+    image: "/images/makes/hyundai-tucson.webp",
+    href: `${LANDING_PAGES}/hyundai-mechanic-ontario-cda`,
+  },
+  {
+    name: "Honda",
+    model: "CR-V",
+    image: "/images/makes/honda-crv.webp",
+    href: `${LANDING_PAGES}/honda-mechanic-ontario-cda`,
+  },
 ];
 
 export const MAKE_SERVICES = [

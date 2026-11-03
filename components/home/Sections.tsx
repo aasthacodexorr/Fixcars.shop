@@ -401,21 +401,40 @@ export function Makes() {
     <section className={`${PAGE} pt-16`}>
       <h2 className={H2}>Get your car serviced by fully qualified technicians</h2>
       <p className="mt-3 text-lg text-gray-700">{MAKE_SERVICES.join(" · ")}</p>
-      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-        {MAKES.map((make) => (
-          <div key={make.name} className="rise-3d">
-            <TiltCard className="rounded-[12px]">
-              <ServiceLink
-                href={make.href}
-                className="group flex h-full items-center justify-between rounded-[12px] border border-brand2 bg-white p-5 transition-colors hover:bg-brand hover:text-white"
-              >
-                <span className="tilt-pop text-lg font-bold">{make.name}</span>
-                <ArrowIcon className="size-5 shrink-0 text-brand group-hover:text-white" />
-              </ServiceLink>
-            </TiltCard>
-          </div>
+      <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
+        {MAKES.map((make, index) => (
+          <li
+            key={make.name}
+            className={`rise-3d ${index === MAKES.length - 1 ? "col-span-2 md:col-span-1" : ""}`}
+          >
+            <ServiceLink
+              href={make.href}
+              aria-label={`${make.name} ${make.model} mechanic`}
+              className="group flex h-full flex-col overflow-hidden rounded-[16px] bg-[#f4f5f7] p-4 transition-shadow hover:shadow-[0_18px_40px_rgba(9,65,80,0.14)] lg:p-5"
+            >
+              <span className="text-[15px] text-gray-600 lg:text-[16px]">
+                {make.name}
+              </span>
+              <span className="mt-0.5 text-[18px] font-bold text-[#111c2d] transition-colors group-hover:text-brand lg:text-[20px]">
+                {make.model}
+              </span>
+              <span className="relative mt-5 block aspect-[16/10] lg:mt-10">
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-[2%] bottom-[-2%] h-[18%] rounded-[50%] bg-black/30 blur-md"
+                />
+                <Image
+                  src={make.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 240px, (min-width: 768px) 33vw, 50vw"
+                  className="object-contain object-bottom transition-transform duration-300 group-hover:scale-105"
+                />
+              </span>
+            </ServiceLink>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

@@ -6,23 +6,30 @@ export function ServiceLink({
   href,
   className,
   onClick,
+  "aria-label": ariaLabel,
   children,
 }: {
   href: string;
   className?: string;
   onClick?: () => void;
+  "aria-label"?: string;
   children: React.ReactNode;
 }) {
   // Pages in this app use client navigation; the rest are on the landing site.
   if (href.startsWith("/")) {
     return (
-      <Link href={href} className={className} onClick={onClick}>
+      <Link
+        href={href}
+        className={className}
+        onClick={onClick}
+        aria-label={ariaLabel}
+      >
         {children}
       </Link>
     );
   }
   return (
-    <a href={href} className={className} onClick={onClick}>
+    <a href={href} className={className} onClick={onClick} aria-label={ariaLabel}>
       {children}
     </a>
   );
