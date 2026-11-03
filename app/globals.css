@@ -1,10 +1,31 @@
 @import "tailwindcss";
 
+/* Colours from the main Cardora site */
+@theme {
+  --color-brand: #00af66;
+  --color-brand2: #00b074;
+  --color-hero: #c4eafa;
+  --color-panel: rgba(0, 87, 51, 0.15);
+  --color-pale: #e8f3fe;
+  --color-review: #eaeff5;
+  --color-review-name: #13316c;
+  --color-charcoal: #121319;
+  --color-charcoal-line: #2a2b30;
+  --color-estimate: #dbe6e3;
+}
+
 @layer base {
   :root {
     --font-anton: 'Anton', Impact, sans-serif;
     --font-lato: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+    --header-h: 129px;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --header-h: 93px;
+    }
   }
 
   html {
@@ -142,6 +163,158 @@
   touch-action: pan-y;
 }
 
+/* Homepage: same type treatment as the main Cardora site */
+.font-site {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-green {
+  background-image: linear-gradient(#00af66, rgba(0, 175, 102, 0.65));
+}
+
+/* Homepage: 3D tilt cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+
+.tilt-card > * {
+  transform-style: preserve-3d;
+}
+
+.tilt-pop {
+  transition: transform 0.25s ease-out;
+}
+
+/* Only lifted during a tilt: at rest, perspective would misalign the text. */
+.tilt-card:hover .tilt-pop {
+  transform: translateZ(40px);
+}
+
+/* Homepage hero: moving road, floating cards, spinning sticker and logo arcs */
+.road-lines {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #ffffff 0 56px,
+    transparent 56px 112px
+  );
+  animation: roadMove 0.9s linear infinite;
+  will-change: transform;
+}
+
+/* The wheel rolls to the right, so the road moves left beneath it. */
+@keyframes roadMove {
+  from {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(-112px, -50%);
+  }
+}
+
+.float-card {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1.5deg);
+  }
+}
+
+.spin-slow {
+  animation: spinAround 14s linear infinite;
+}
+
+.spin-slower {
+  animation: spinAround 36s linear infinite;
+}
+
+@keyframes spinAround {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pulse-dot {
+  animation: pulseDot 1.8s ease-out infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 175, 102, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 175, 102, 0);
+  }
+}
+
+.hero-rise {
+  animation: heroRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Homepage: icon coins flip in 3D when their card is hovered */
+.icon-coin {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flip-parent:hover .icon-coin {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Homepage: cards tip up into place as they scroll into view */
+  @supports (animation-timeline: view()) {
+    .rise-3d {
+      animation: rise3d linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+
+    @keyframes rise3d {
+      from {
+        opacity: 0;
+        transform: perspective(900px) rotateX(24deg) translateY(70px);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(900px) rotateX(0) translateY(0);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-parent:hover .icon-coin {
+    transform: none;
+  }
+
+  .road-lines,
+  .float-card,
+  .spin-slow,
+  .spin-slower,
+  .pulse-dot,
+  .hero-rise {
+    animation: none;
+  }
+}
+
 /* Hide Next.js dev indicator badge completely */
 nextjs-portal,
 [data-nextjs-dialog-overlay],
@@ -153,4 +326,8 @@ button[aria-label="Next.js Dev Tools"] {
   visibility: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
 }

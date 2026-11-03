@@ -5,18 +5,38 @@ import Image from "next/image";
 import CtaButton from "./CtaButton";
 import CallNowCta from "./CallNowCta";
 
-interface CustomerOffersProps {
-  onOpenQuote: () => void;
+export interface OfferPerk {
+  highlight: string;
+  text: string;
 }
 
-export default function CustomerOffers({ onOpenQuote }: CustomerOffersProps) {
-  const perks = [
-    { highlight: "FREE", text: "Pick Up And Drop Off*" },
-    { highlight: "10% OFF", text: "For New Customers*" },
-    { highlight: "FREE", text: "Exterior Wash (Value $50)" },
-    { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
-    { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
-  ];
+interface CustomerOffersProps {
+  onOpenQuote: () => void;
+  title?: React.ReactNode;
+  perks?: OfferPerk[];
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+const DEFAULT_PERKS: OfferPerk[] = [
+  { highlight: "FREE", text: "Pick Up And Drop Off*" },
+  { highlight: "10% OFF", text: "For New Customers*" },
+  { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+  { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
+  { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
+];
+
+export default function CustomerOffers({
+  onOpenQuote,
+  title = (
+    <>
+      SAVE ON YOUR BRAKES REPAIR WITH<br className="hidden sm:inline" /> OUR NEW CUSTOMER OFFER
+    </>
+  ),
+  perks = DEFAULT_PERKS,
+  imageSrc = "/images/6_cda-Offers-v2-n-4-1-.png",
+  imageAlt = "Cardora Automotive Workshop Facility",
+}: CustomerOffersProps) {
 
   return (
     <section className="w-full bg-white py-12 sm:py-16 px-4 sm:px-8 border-b border-gray-100">
@@ -24,7 +44,7 @@ export default function CustomerOffers({ onOpenQuote }: CustomerOffersProps) {
         {/* Section Heading */}
         <div className="text-center max-w-[950px] mx-auto mb-12">
           <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] leading-tight uppercase text-black tracking-wide">
-            SAVE ON YOUR BRAKES REPAIR WITH<br className="hidden sm:inline" /> OUR NEW CUSTOMER OFFER
+            {title}
           </h2>
         </div>
 
@@ -33,8 +53,8 @@ export default function CustomerOffers({ onOpenQuote }: CustomerOffersProps) {
           {/* Circular dealership photo with green border: order-1 on mobile, order-2 on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center">
             <Image
-              src="/images/6_cda-Offers-v2-n-4-1-.png"
-              alt="Cardora Automotive Workshop Facility"
+              src={imageSrc}
+              alt={imageAlt}
               width={600}
               height={650}
               className="w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[560px] h-auto object-contain drop-shadow-xl"

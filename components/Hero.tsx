@@ -7,9 +7,25 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 interface HeroProps {
   onOpenQuote: () => void;
+  headline?: React.ReactNode;
+  subheading1?: string;
+  subheading2?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-export default function Hero({ onOpenQuote }: HeroProps) {
+export default function Hero({
+  onOpenQuote,
+  headline = (
+    <>
+      BRAMPTON’S MOST TRUSTED CAR<br className="hidden sm:inline" /> BRAKES REPAIR SHOP
+    </>
+  ),
+  subheading1 = "The one-stop shop for all your brake repairs & replacements!",
+  subheading2 = "We supply and service brakes for cars, vans & 4x4s.",
+  imageSrc = "/images/4_NL-Brakes-Subro.png",
+  imageAlt = "High Performance Car Brake System",
+}: HeroProps) {
   return (
     <section
       className="relative w-full text-gray-900 pt-8 pb-14 px-4 sm:px-8 border-b border-gray-200 bg-cover bg-center bg-no-repeat bg-fixed"
@@ -21,7 +37,7 @@ export default function Hero({ onOpenQuote }: HeroProps) {
         {/* Main H1 Headline */}
         <div className="text-center lg:text-left max-w-[1400px] mx-auto mb-4 lg:mb-0">
           <h1 className="font-anton text-3xl sm:text-5xl lg:text-[62px] leading-[1.08] tracking-wide uppercase text-black drop-shadow-sm">
-            BRAMPTON’S MOST TRUSTED CAR<br className="hidden sm:inline" /> BRAKES REPAIR SHOP
+            {headline}
           </h1>
         </div>
 
@@ -30,8 +46,8 @@ export default function Hero({ onOpenQuote }: HeroProps) {
           {/* Rotor Graphic: order-1 on mobile, order-2 on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center my-2 lg:my-0">
             <Image
-              src="/images/4_NL-Brakes-Subro.png"
-              alt="High Performance Car Brake System"
+              src={imageSrc}
+              alt={imageAlt}
               width={550}
               height={450}
               priority
@@ -40,13 +56,13 @@ export default function Hero({ onOpenQuote }: HeroProps) {
           </div>
 
           {/* Copy & CTAs: order-2 on mobile, order-1 on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left lg:-mt-32 -mt-0">
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left -mt-0">
             <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed font-normal">
-              The one-stop shop for all your brake repairs &amp; replacements!
+              {subheading1}
             </p>
 
             <p className="text-gray-900 text-sm sm:text-lg lg:text-[19px] leading-relaxed font-normal">
-              We supply and service brakes for cars, vans &amp; 4x4s.
+              {subheading2}
             </p>
 
             <div className="pt-1 sm:pt-2">

@@ -5,36 +5,46 @@ import Image from "next/image";
 import CtaButton from "./CtaButton";
 import CallNowCta from "./CallNowCta";
 
+export interface ServiceItem {
+  img: string;
+  title: string;
+  alt: string;
+}
+
 interface ServicesSectionProps {
   onOpenQuote: () => void;
+  title?: string;
+  services?: ServiceItem[];
 }
+
+const DEFAULT_SERVICES: ServiceItem[] = [
+  {
+    img: "/images/8_Minor-Major-Repairs.png",
+    title: "Brake Servicing",
+    alt: "Brake Servicing & Inspection",
+  },
+  {
+    img: "/images/9_Log-Book-Servicing.png",
+    title: "Brake Repairs",
+    alt: "Car Brake Repairs & Replacements",
+  },
+  {
+    img: "/images/10_General-Mechanics.png",
+    title: "Brake Changes",
+    alt: "Brake Pad and Rotor Changes",
+  },
+];
 
 export default function ServicesSection({
   onOpenQuote,
+  title = "OUR BRAKES SERVICES",
+  services = DEFAULT_SERVICES,
 }: ServicesSectionProps) {
-  const services = [
-    {
-      img: "/images/8_Minor-Major-Repairs.png",
-      title: "Brake Servicing",
-      alt: "Brake Servicing & Inspection",
-    },
-    {
-      img: "/images/9_Log-Book-Servicing.png",
-      title: "Brake Repairs",
-      alt: "Car Brake Repairs & Replacements",
-    },
-    {
-      img: "/images/10_General-Mechanics.png",
-      title: "Brake Changes",
-      alt: "Brake Pad and Rotor Changes",
-    },
-  ];
-
   return (
     <section id="services" className="w-full bg-black text-white pt-14 pb-12 px-4 sm:px-0 overflow-hidden">
       <div className="max-w-[1800px] mx-auto text-center">
         <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] uppercase text-white tracking-wide mb-12">
-          OUR BRAKES SERVICES
+          {title}
         </h2>
 
         {/* 3 Services Grid */}
