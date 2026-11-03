@@ -595,15 +595,15 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
   hero: {
     headline: (
       <>
-        BRAMPTON’S MOST TRUSTED CHECK ENGINE
-        <br className="hidden sm:inline" /> LIGHT REPAIR SHOP
+        Expert Auto Repairs for 'Check
+        <br className="hidden sm:inline" />Engine' Light Warnings in Brampton 
       </>
     ),
     subheading1:
       "The one-stop shop for all your engine diagnostic & repairs!",
     subheading2:
       "We diagnose and repair engines for cars, vans & 4x4s.",
-    imageSrc: "/images/services/engine.webp",
+    imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Car Check Engine Light Diagnostic Tool",
   },
   offers: {
