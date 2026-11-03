@@ -12,7 +12,7 @@ export const HOURS = [
 
 // Landing pages still hosted on the existing site. Update this one value if
 // those pages move onto this app or to another domain.
-const LANDING_PAGES = "https://cardora.fixcars.shop";
+const LANDING_PAGES = "http://localhost:3000";
 
 // Footer links, shared with the main Cardora site.
 const MAIN_SITE = "https://cardora-2-0.vercel.app";
@@ -35,6 +35,7 @@ export type ServiceIconName =
 
 export interface Service {
   name: string;
+  short: string;
   href: string;
   icon: ServiceIconName;
   blurb: string;
@@ -44,6 +45,7 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     name: "Brake Repairs",
+    short: "Brake",
     href: "/brakes-mechanic-ontario-cda",
     icon: "brakes",
     blurb: "The one-stop shop for all your brake repairs and replacements.",
@@ -51,35 +53,40 @@ export const SERVICES: Service[] = [
   },
   {
     name: "Tires",
-    href: "/tires-ontario-cda",
+    short: "Tires",
+    href: `/tires-ontario-cda`,
     icon: "tires",
     blurb: "We supply and repair tires for cars, vans and 4x4s.",
     includes: ["Wheel Alignments", "Tire Repairs", "Tire Changes"],
   },
   {
     name: "Wheel Alignment",
-    href: "/wheel-alignment-experts-ontario-cda",
+    short: "Wheel",
+    href: `/wheel-alignment-experts-ontario-cda`,
     icon: "alignment",
     blurb: "Restore your vehicle’s handling and tire life to peak performance.",
     includes: ["Wheel Alignment", "Tire Balancing", "Suspension Check"],
   },
   {
     name: "Oil Change",
-    href: "/oil-change-service-ontario-cda",
+    short: "Oil",
+    href: `/oil-change-service-ontario-cda`,
     icon: "oil",
     blurb: "Fast, professional, no-appointment oil changes with quality oils.",
     includes: ["Oil Change", "Routine Oil Change", "Oil Filter Replacement"],
   },
   {
     name: "Auto AC Repairs",
-    href: "/auto-ac-mechanic-ontario-cda",
+    short: "AC",
+    href: `/auto-ac-mechanic-ontario-cda`,
     icon: "ac",
     blurb: "We service and repair AC systems for cars, vans and 4x4s.",
     includes: ["A/C Servicing", "A/C Repairs", "A/C Regassing"],
   },
   {
     name: "Check Engine Light",
-    href: "/check-engine-light-repairs-ontario-cda",
+    short: "Engine",
+    href: `/check-engine-light-repairs-ontario-cda`,
     icon: "engine",
     blurb: "Expert auto repairs for “check engine” light warnings.",
     includes: ["Light Assessment", "Light Diagnostic", "Light Repairs"],
