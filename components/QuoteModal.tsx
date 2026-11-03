@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { MAKES, SERVICES } from "@/lib/site";
+import { MAKES, PHONE_DISPLAY, PHONE_HREF, SERVICES } from "@/lib/site";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -94,10 +94,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               Need immediate assistance? Call us right now:
             </p>
             <a
-              href="tel:(647) 492-2636"
+              href={PHONE_HREF}
               className="inline-block text-[#0fa958] font-bold text-2xl hover:underline"
             >
-              (647) 492-2636
+              {PHONE_DISPLAY}
             </a>
             <div className="pt-4">
               <button
@@ -208,10 +208,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <p className="text-gray-700 text-sm sm:text-base font-semibold">
                   Or Call Us At:{" "}
                   <a
-                    href="tel:(647) 492-2636"
+                    href={PHONE_HREF}
                     className="text-[#00AF66] font-bold hover:underline"
                   >
-                    (647) 492-2636
+                    {PHONE_DISPLAY}
                   </a>
                 </p>
               </div>

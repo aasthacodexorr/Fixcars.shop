@@ -1,7 +1,7 @@
 // Business details and homepage content, taken from the Cardora landing pages.
 
-export const PHONE_DISPLAY = "(647) 492-2636";
-export const PHONE_HREF = "tel:+16474922636";
+export const PHONE_DISPLAY = "(905) 234-3313";
+export const PHONE_HREF = "tel:+19052343313";
 export const ADDRESS = "8050 Dixie Rd, Brampton, ON L6T 4W6";
 export const DIRECTIONS_URL =
   "https://www.google.com/maps/search/?api=1&query=8050+Dixie+Rd%2C+Brampton%2C+ON+L6T+4W6";
