@@ -1,9 +1,11 @@
 import Image from "next/image";
 import {
   faCalendarCheck,
+  faCarSide,
   faEnvelope,
   faLocationDot,
   faPhone,
+  faTag,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   ADDRESS,
@@ -19,8 +21,10 @@ import {
   PRIVACY_URL,
   REVIEWS,
   SERVICES,
+  SITEMAP_URL,
   TERMS_URL,
   WHEEL_STEPS,
+  ZOP_DEALER_URL,
 } from "@/lib/site";
 import HeroWheel from "./HeroWheel";
 import { QuoteButton } from "./QuoteContext";
@@ -42,53 +46,55 @@ const GREEN_BUTTON =
 const H2 = "text-[28px] font-bold tracking-tight text-black lg:text-[44px]";
 const PAGE = "mx-auto max-w-[1240px] px-3.5 md:px-8";
 
-function HeroCar({ src, height }: { src: string; height: number }) {
-  return (
-    <span className="car-3d mx-2 align-middle">
-      <Image
-        src={src}
-        alt=""
-        width={300}
-        height={height}
-        loading="eager"
-        className="inline-block h-auto w-[92px] sm:w-[170px] lg:w-[190px]"
-      />
-    </span>
-  );
-}
+const HERO_POINTS = [
+  { icon: faTag, text: "10% off for new customers*" },
+  { icon: faCalendarCheck, text: "Next day appointment guarantee" },
+  { icon: faCarSide, text: "Free pick up and drop off*" },
+];
 
 function Hero() {
   return (
-    <div className="px-3.5 pb-5 pt-5 md:px-8 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:py-8">
-      <div className="w-full lg:max-w-[46%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
-        <div>
-          <h1 className="text-[38px] font-semibold leading-[1.15] text-black sm:text-[60px] lg:text-[62px] xl:text-[70px] xl:leading-[1.1]">
-            Brampton’s
-            <HeroCar src="/images/brand/car-yellow-suv.png" height={138} />
-            <br />
-            <HeroCar src="/images/brand/car-white-suv.png" height={99} />
-            most trusted
-            <br />
-            auto repair
-            <HeroCar src="/images/brand/car-orange-truck.png" height={98} />
-          </h1>
-          <p className="mt-4 max-w-[500px] text-[20px] leading-snug text-black lg:text-[24px]">
-            Exceptional service and personalized attention.
-          </p>
-        </div>
+    <div className="px-3.5 pb-8 pt-7 md:px-8 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:py-8">
+      <div className="w-full lg:max-w-[48%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
+        <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-[14px] font-bold text-black">
+          <FaIcon icon={faLocationDot} className="size-3.5 text-brand" />
+          8050 Dixie Rd, Brampton
+        </p>
+        <h1 className="mt-5 text-[44px] font-bold leading-[1.08] tracking-tight text-black sm:text-[60px] lg:text-[62px] xl:text-[76px]">
+          Brampton’s most{" "}
+          <span className="underline decoration-brand decoration-[6px] underline-offset-[8px] xl:decoration-[8px] xl:underline-offset-[10px]">
+            trusted
+          </span>{" "}
+          auto repair shop.
+        </h1>
+        <p className="mt-5 max-w-[540px] text-[18px] leading-snug text-black lg:text-[20px]">
+          Exceptional service and personalized attention, for cars, vans and
+          4x4s.
+        </p>
 
-        <div className="relative z-20 mt-6 max-w-[550px] rounded-[10px] bg-[#a7d4dc] p-6">
+        <div className="relative z-20 mt-7 flex max-w-[620px] flex-col gap-2 rounded-[16px] bg-white p-2 shadow-[0_16px_40px_rgba(9,65,80,0.16)] sm:flex-row sm:items-center">
           <ServicePicker />
-          <div className="my-3 flex items-center gap-4 text-black">
-            <span className="h-px flex-1 bg-black/25" />
-            or
-            <span className="h-px flex-1 bg-black/25" />
-          </div>
-          <QuoteButton className={GREEN_BUTTON} />
-          <p className="mt-3 text-center text-[15px] text-black">
-            Plus 10% off for new customers*
-          </p>
+          <QuoteButton className="btn-green h-[52px] shrink-0 cursor-pointer rounded-[12px] px-6 font-medium text-white transition-opacity hover:opacity-90" />
         </div>
+        <p className="mt-4 text-[15px] text-black">
+          Or call us at{" "}
+          <a href={PHONE_HREF} className="whitespace-nowrap font-bold underline">
+            {PHONE_DISPLAY}
+          </a>
+        </p>
+
+        <ul className="mt-7 grid max-w-[620px] gap-3 sm:grid-cols-3">
+          {HERO_POINTS.map((point) => (
+            <li key={point.text} className="flex items-center gap-3">
+              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-white text-brand">
+                <FaIcon icon={point.icon} className="size-[18px]" />
+              </span>
+              <span className="text-[14px] font-medium leading-tight text-black">
+                {point.text}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -515,7 +521,7 @@ const FOOT_LINK = "uppercase text-white hover:text-brand";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-charcoal pb-8 text-white">
+    <footer className="bg-charcoal text-white">
       <div className="mx-auto grid max-w-[1600px] gap-10 px-5 pt-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-10">
         <div>
           <h3 className={FOOT_HEADING}>Our services</h3>
@@ -549,15 +555,44 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
-      <div className="mx-auto mt-10 flex max-w-[1600px] flex-col justify-between gap-3 border-t border-charcoal-line px-5 pt-6 text-sm uppercase sm:flex-row lg:px-10">
-        <p>© 2026 Cardora. All rights reserved.</p>
-        <p>
+      {/* Same bottom bar as the main Cardora site */}
+      <div className="mx-auto mt-10 flex max-w-[1600px] flex-col items-center justify-center gap-4 border-t border-charcoal-line px-5 pb-5 pt-6 md:flex-row md:items-start md:justify-between lg:px-10">
+        <div className="text-center text-[13px] uppercase text-white md:text-start">
+          © 2026 Cardora.
+          <br />
+          <span className="flex items-center gap-2">
+            All rights reserved. Powered by
+            <a
+              href={ZOP_DEALER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/brand/zop-dealer.png"
+                alt="Zop Dealer"
+                width={30}
+                height={28}
+                className="h-auto w-5"
+              />
+            </a>
+          </span>
+        </div>
+        <p className="text-center text-[12.5px] uppercase text-white">
           <a href={PRIVACY_URL} className="hover:text-brand">
             Privacy Policy
           </a>
           {" | "}
           <a href={TERMS_URL} className="hover:text-brand">
             Terms &amp; Conditions
+          </a>
+          {" | "}
+          <a
+            href={SITEMAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand"
+          >
+            Site Map
           </a>
         </p>
       </div>
