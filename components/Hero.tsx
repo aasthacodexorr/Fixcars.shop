@@ -11,6 +11,7 @@ interface HeroProps {
   headline?: React.ReactNode;
   subheading1?: string;
   subheading2?: string;
+  subheading3?:string;
   imageSrc?: string;
   imageAlt?: string;
 }
@@ -25,6 +26,7 @@ export default function Hero({
   ),
   subheading1 = "We supply and service Honda cars, SUVs, vans & hybrids.",
   subheading2 = "",
+  subheading3="",
   imageSrc = "/images/honda-hero.png",
   imageAlt = "Honda vehicle",
 }: HeroProps) {
@@ -35,29 +37,30 @@ export default function Hero({
         backgroundImage: `linear-gradient(rgba(248,248,247,0.45), rgba(248,248,247,0.45)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
-      <div className="relative max-w-[1400px] mx-auto z-10">
+      <div className="relative max-w-[1400px] mx-auto z-10 flex gap-10">
 
         {/* Main Heading */}
         <div className="max-w-[850px] mb-5 text-center lg:text-left">
-          <h1 className="font-anton text-3xl sm:text-5xl lg:text-[40px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
+          <h1 className="font-anton text-3xl sm:text-5xl lg:text-[42px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
             {headline}
           </h1>
-        </div>
-
-        {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-
           {/* Content and CTA */}
           <div className="order-2 lg:order-1 lg:col-span-7 space-y-3 text-center lg:text-left">
 
             <div className="space-y-2">
-              <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed">
+              <p className="text-gray-900 text-base sm:text-xl lg:text-[28px] leading-[84px]">
                 {subheading1}
               </p>
 
               {subheading2 && (
-                <p className="text-gray-900 text-sm sm:text-lg lg:text-[19px] leading-relaxed">
+                <p className="text-gray-900 text-sm sm:text-lg lg:text-[29px] leading-relaxed">
                   {subheading2}
+                </p>
+              )}
+
+              {subheading3 && (
+                <p className="text-gray-900 text-sm sm:text-lg lg:text-[29px] leading-relaxed">
+                  {subheading3}
                 </p>
               )}
             </div>
@@ -90,9 +93,10 @@ export default function Hero({
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Honda Vehicle Image */}
-          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center">
+        {/* Honda Vehicle Image */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-end items-end">
             <Image
               src={imageSrc}
               alt={imageAlt}
@@ -102,8 +106,6 @@ export default function Hero({
               className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[520px] h-auto object-contain drop-shadow-xl"
             />
           </div>
-
-        </div>
       </div>
     </section>
   );

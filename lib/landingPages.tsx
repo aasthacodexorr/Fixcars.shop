@@ -24,6 +24,7 @@ export interface LandingPageData {
     headline: React.ReactNode;
     subheading1: string;
     subheading2: string;
+    subheading3:string;
     imageSrc: string;
     imageAlt: string;
   };
@@ -65,6 +66,7 @@ export const BRAKES_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "The one-stop shop for all your brake repairs & replacements!",
     subheading2: "We supply and service brakes for cars, vans & 4x4s.",
+    subheading3:"",
     imageSrc: "/images/4_NL-Brakes-Subro.png",
     imageAlt: "High Performance Car Brake System",
   },
@@ -170,9 +172,10 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
       </>
     ),
     subheading1:
-      "The one-stop shop for precision wheel alignment & tire balancing!",
+      "Your one-stop solution for precise wheel alignment! ",
     subheading2:
-      "We inspect, align and service wheels for cars, vans & 4x4s.",
+      "We service all vehicle types using cutting-edge technology and certified expertise.",
+    subheading3:"Get back on the road fast with our efficient service, manufacturer-approved adjustments, and satisfaction guarantee.",
     imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Precision Wheel Alignment and Tire Balancing",
   },
@@ -274,13 +277,14 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED AUTO AC
-        <br className="hidden sm:inline" /> MECHANIC & REPAIR SHOP
+         MECHANIC & REPAIR SHOP
       </>
     ),
     subheading1:
-      "The one-stop shop for all your auto air conditioning & heating repairs!",
+      "One-stop shop for all your auto air conditioning & heating repairs!",
     subheading2:
       "We diagnose, recharge and service AC systems for cars, vans & 4x4s.",
+      subheading3:"",
     imageSrc: "/images/Wheel-hero.png",
     imageAlt: "Car Air Conditioning and Climate Control Repair",
   },
@@ -389,7 +393,8 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
       "The one-stop shop for fast, professional oil & filter changes!",
     subheading2:
       "We supply and change motor oils & filters for cars, vans & 4x4s.",
-    imageSrc: "/images/Wheel-hero.png",
+    subheading3:"",
+    imageSrc: "/images/oil-hero.png",
     imageAlt: "Professional Engine Oil Change & Filter Replacement",
   },
   offers: {
@@ -415,7 +420,7 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Oil-service.png",
     imageAlt: "Certified Oil Change and Maintenance Mechanics",
   },
   accentBar2Text: "Specialized Oil & Lube Technicians",
@@ -493,8 +498,9 @@ export const TIRES_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> TIRE WORKSHOP 
       </>
     ),
-    subheading1: "",
+    subheading1: "The one-stop shop for all your Tire repairs & changes!",
     subheading2: "We supply and service tires for cars, vans & 4x4s.",
+    subheading3:"",
     imageSrc: "/images/tires-hero.png",
     imageAlt: "Car Tire Sales and Puncture Repairs",
   },
@@ -546,27 +552,27 @@ export const TIRES_PAGE_DATA: LandingPageData = {
     ],
   },
   whyUs: {
-    title: "WHY GET YOUR TIRES FIXED BY US?",
+    title: "WHY BRING YOUR car TO US?",
     features: [
       {
         img: "/images/11_Latest-Scanners-Machinery-Diagnostic-Tools2.png",
-        title: "Expert Tire Repairs",
-      },
-      {
-        img: "/images/12_15-Years-of-Experience.png",
         title: "Extensive Tire Selection",
       },
       {
+        img: "/images/12_15-Years-of-Experience.png",
+        title: "Quality Guaranteed",
+      },
+      {
         img: "/images/13_Fully-Qualified-Technicians2.png",
-        title: "Skilled Tire Technicians",
+        title: "Fully Qualified & skilled Technicians",
       },
       {
         img: "/images/14_Less-Expensive-Than-Dealerships3.png",
-        title: "Comprehensive Range Of Tire Services",
+        title: "Competitive Pricing",
       },
       {
         img: "/images/15_Genuine-Parts-Or-Equivalents.png",
-        title: "Quality Guaranteed",
+        title: "Genuine Parts Or better Equivalents",
       },
       {
         img: "/images/16_Maintain-Your-Warranty2.png",
@@ -574,11 +580,11 @@ export const TIRES_PAGE_DATA: LandingPageData = {
       },
       {
         img: "/images/17_Fast-Bookings-Service.png",
-        title: "Quick Turnaround Time",
+        title: "Fast Bookings & reliable Service",
       },
       {
         img: "/images/18_Convenient-Location-Parking3.png",
-        title: "Convenient Location & Parking",
+        title: "Trusted Local Auto Repair Shop",
       },
     ],
   },
@@ -603,7 +609,8 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
       "The one-stop shop for all your engine diagnostic & repairs!",
     subheading2:
       "We diagnose and repair engines for cars, vans & 4x4s.",
-    imageSrc: "/images/Wheel-hero.png",
+    subheading3:"",
+    imageSrc: "/images/Engine-hero.png",
     imageAlt: "Car Check Engine Light Diagnostic Tool",
   },
   offers: {
@@ -629,7 +636,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Engine-service.png",
     imageAlt: "Engine Diagnostics by Certified Mechanics",
   },
   accentBar2Text: "Specialized Engine Diagnostic Technicians",
@@ -709,6 +716,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
     ),
     subheading1: " ",
     subheading2: "We supply and service Dodge cars, vans, trucks & 4x4s.",
+    subheading3:"",
     imageSrc: "/images/A_durango (1).png",
     imageAlt: "Dodge Auto Repair and Maintenance",
   },
@@ -735,7 +743,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Dodge-service.png",
     imageAlt: "Dodge Maintenance by Certified Technicians",
   },
   accentBar2Text: "Specialized Dodge Technicians",
@@ -815,6 +823,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Toyota cars, vans, SUVs & hybrids.",
+    subheading3:"",
     imageSrc: "/images/A_toyota.png",
     imageAlt: "Toyota Auto Repair and Maintenance",
   },
@@ -841,7 +850,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Toyota-service.png",
     imageAlt: "Toyota Maintenance by Certified Technicians",
   },
   accentBar2Text: "Specialized Toyota Technicians",
@@ -922,6 +931,7 @@ export const VOLKSWAGEN_PAGE_DATA: LandingPageData = {
       "",
     subheading2:
       "We supply and service Volkswagen cars, wagons & SUVs.",
+    subheading3:'',
     imageSrc: "/images/A_Volkswagon.png",
     imageAlt: "Volkswagen Auto Repair and Maintenance",
   },
@@ -1028,6 +1038,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Hyundai cars, SUVs & hybrids.",
+    subheading3:"",
     imageSrc: "/images/A_Hyundai.png",
     imageAlt: "Hyundai Auto Repair and Maintenance",
   },
@@ -1054,7 +1065,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Hyundai-service.png",
     imageAlt: "Hyundai Maintenance by Certified Technicians",
   },
   accentBar2Text: "Specialized Hyundai Technicians",
@@ -1134,6 +1145,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Honda cars, SUVs, vans & hybrids.",
+    subheading3:"",
     imageSrc: "/images/A_Honda.png",
     imageAlt: "Honda Auto Repair and Maintenance",
   },
@@ -1160,7 +1172,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> QUALIFIED TECHNICIANS
       </>
     ),
-    imageSrc: "/images/7_Brakes-gen-nw.png",
+    imageSrc: "/images/Honda-service.png",
     imageAlt: "Honda Maintenance by Certified Technicians",
   },
   accentBar2Text: "Specialized Honda Technicians",

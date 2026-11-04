@@ -34,6 +34,7 @@ function ServiceLandingContent({ data }: ServiceLandingPageProps) {
           headline={data.hero.headline}
           subheading1={data.hero.subheading1}
           subheading2={data.hero.subheading2}
+          subheading3={data.hero.subheading3}
           imageSrc={data.hero.imageSrc}
           imageAlt={data.hero.imageAlt}
         />
