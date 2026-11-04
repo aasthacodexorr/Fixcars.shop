@@ -15,7 +15,7 @@ export default function GuaranteeSection({
   return (
     <section id="guarantee" className="w-full bg-white py-14 sm:py-16 px-4 sm:px-8 border-b border-gray-100">
       <div className="max-w-[1100px] mx-auto text-center space-y-8">
-        <h2 className="font-anton text-4xl sm:text-5xl lg:text-[43px] uppercase text-[rgba(0,0,0,0.95)] tracking-wide leading-tight max-w-[950px] mx-auto">
+        <h2 className="font-anton text-2xl sm:text-5xl lg:text-[43px] uppercase text-[rgba(0,0,0,0.95)] tracking-wide leading-tight max-w-[950px] mx-auto">
           FEEL AT EASE WITH OUR UNBEATABLE ‘PEACE OF MIND’ GUARANTEE
         </h2>
 

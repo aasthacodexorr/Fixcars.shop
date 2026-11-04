@@ -43,7 +43,7 @@ export default function Hero({
         </div>
 
         {/* 2-Column Content Grid: on mobile rotor is order-1 (between headline and copy) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center -mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center lg:-mt-10">
           {/* Rotor Graphic: order-1 on mobile, order-2 on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center my-2 lg:my-0">
             {
