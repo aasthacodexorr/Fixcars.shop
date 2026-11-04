@@ -43,7 +43,7 @@ export default function CustomerOffers({
       <div className="max-w-[1000px] mx-auto">
         {/* Section Heading */}
         <div className="text-center max-w-[950px] mx-auto mb-12">
-          <h2 className="font-anton text-2xl sm:text-5xl uppercase lg:text-[42px] leading-tight text-black tracking-wide">
+          <h2 className="font-anton text-2xl sm:text-5xl uppercase lg:text-[40px] leading-tight text-black tracking-wide">
             {title}
           </h2>
         </div>

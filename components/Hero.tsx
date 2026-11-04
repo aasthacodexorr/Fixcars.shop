@@ -1,10 +1,10 @@
+
 "use client";
 
 import React from "react";
 import Image from "next/image";
 import CtaButton from "./CtaButton";
 import { SITE_CONFIG } from "@/lib/constants";
-import fallbackImg from '@/public/images/tires-hero.png'
 
 interface HeroProps {
   onOpenQuote: () => void;
@@ -19,74 +19,61 @@ export default function Hero({
   onOpenQuote,
   headline = (
     <>
-      BRAMPTON’S MOST TRUSTED CAR<br className="hidden sm:inline" /> BRAKES REPAIR SHOP
+      BRAMPTON’S MOST TRUSTED HONDA
+      <br className="hidden sm:inline" /> REPAIR SHOP
     </>
   ),
-  subheading1 = "The one-stop shop for all your brake repairs & replacements!",
-  subheading2 = "We supply and service brakes for cars, vans & 4x4s.",
-  imageSrc = "/images/4_NL-Brakes-Subro.png",
-  imageAlt = "High Performance Car Brake System",
+  subheading1 = "We supply and service Honda cars, SUVs, vans & hybrids.",
+  subheading2 = "",
+  imageSrc = "/images/honda-hero.png",
+  imageAlt = "Honda vehicle",
 }: HeroProps) {
   return (
     <section
-      className="relative w-full text-gray-900 pt-8 pb-14 px-4 sm:px-8 border-b border-gray-200 bg-cover bg-center bg-no-repeat bg-fixed"
+      className="relative w-full text-gray-900 px-4 sm:px-8 py-8 sm:py-12 border-b border-gray-200 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(248, 248, 247, 0.40), rgba(248, 248, 247, 0.40)), url('/images/37_cda-bg-hero-2-1-.png')`,
+        backgroundImage: `linear-gradient(rgba(248,248,247,0.45), rgba(248,248,247,0.45)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
       <div className="relative max-w-[1400px] mx-auto z-10">
-        {/* Main H1 Headline */}
-        <div className="text-center lg:text-left max-w-[1400px] mx-auto mb-4 lg:mb-0">
-          <h1 className="font-anton text-3xl sm:text-5xl lg:text-[42px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
+
+        {/* Main Heading */}
+        <div className="max-w-[850px] mb-5 text-center lg:text-left">
+          <h1 className="font-anton text-3xl sm:text-5xl lg:text-[40px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
             {headline}
           </h1>
         </div>
 
-        {/* 2-Column Content Grid: on mobile rotor is order-1 (between headline and copy) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center lg:-mt-10">
-          {/* Rotor Graphic: order-1 on mobile, order-2 on desktop */}
-          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center my-2 lg:my-0">
-            {
-              imageSrc ? <Image
-                src={imageSrc}
-                alt={imageAlt}
-                width={550}
-                height={450}
-                priority
-                className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain drop-shadow-xl"
-              /> : <Image
-                src={fallbackImg}
-                alt={imageAlt}
-                width={550}
-                height={450}
-                priority
-                className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] h-auto object-contain drop-shadow-xl"
-              />
-            }
-          </div>
+        {/* Hero Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
 
-          {/* Copy & CTAs: order-2 on mobile, order-1 on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left lg:-mt-16 -mt-0">
-            <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed font-normal">
-              {subheading1}
-            </p>
+          {/* Content and CTA */}
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-3 text-center lg:text-left">
 
-            <p className="text-gray-900 text-sm sm:text-lg lg:text-[19px] leading-none font-normal">
-              {subheading2}
-            </p>
+            <div className="space-y-2">
+              <p className="text-gray-900 text-base sm:text-xl lg:text-[21px] leading-relaxed">
+                {subheading1}
+              </p>
 
-            <div className="pt-1 sm:pt-2">
-              <p className="text-base sm:text-2xl lg:text-[25px] font-bold text-black flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
+              {subheading2 && (
+                <p className="text-gray-900 text-sm sm:text-lg lg:text-[19px] leading-relaxed">
+                  {subheading2}
+                </p>
+              )}
+            </div>
+
+            {/* Location */}
+            <div className="pt-1">
+              <p className="text-base sm:text-2xl lg:text-[25px] font-bold text-black flex items-center justify-center lg:justify-start gap-2">
                 <span>📍</span>
                 <span>Located at {SITE_CONFIG.address}</span>
               </p>
             </div>
 
-            {/* Green Hero CTA Button & Google Rating */}
+            {/* CTA and Google Rating */}
             <div className="pt-2 sm:pt-3 flex flex-col items-center lg:items-start">
               <CtaButton onClick={onOpenQuote} />
 
-              {/* Google Rating Badge centered under button */}
               <div className="w-full max-w-[430px] flex items-center justify-center gap-2 pt-3 text-xl font-bold">
                 <span className="font-semibold text-2xl tracking-normal">
                   <span className="text-[#4285F4]">G</span>
@@ -96,12 +83,26 @@ export default function Hero({
                   <span className="text-[#34A853]">l</span>
                   <span className="text-[#EA4335]">e</span>
                 </span>
+
                 <span className="text-[#FBBC05] text-2xl tracking-wider">
                   ★★★★★
                 </span>
               </div>
             </div>
           </div>
+
+          {/* Honda Vehicle Image */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center">
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={600}
+              height={450}
+              priority
+              className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[520px] h-auto object-contain drop-shadow-xl"
+            />
+          </div>
+
         </div>
       </div>
     </section>

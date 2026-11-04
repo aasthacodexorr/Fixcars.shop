@@ -709,7 +709,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
     ),
     subheading1: " ",
     subheading2: "We supply and service Dodge cars, vans, trucks & 4x4s.",
-    imageSrc: "",
+    imageSrc: "/images/A_durango (1).png",
     imageAlt: "Dodge Auto Repair and Maintenance",
   },
   offers: {
@@ -815,7 +815,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Toyota cars, vans, SUVs & hybrids.",
-    imageSrc: "",
+    imageSrc: "/images/A_toyota.png",
     imageAlt: "Toyota Auto Repair and Maintenance",
   },
   offers: {
@@ -915,15 +915,14 @@ export const VOLKSWAGEN_PAGE_DATA: LandingPageData = {
   hero: {
     headline: (
       <>
-        BRAMPTON’S MOST TRUSTED VOLKSWAGEN
-        <br className="hidden sm:inline" /> REPAIR SHOP
+        BRAMPTON’S MOST TRUSTED VOLKSWAGEN REPAIR SHOP
       </>
     ),
     subheading1:
       "",
     subheading2:
       "We supply and service Volkswagen cars, wagons & SUVs.",
-    imageSrc: "",
+    imageSrc: "/images/A_Volkswagon.png",
     imageAlt: "Volkswagen Auto Repair and Maintenance",
   },
   offers: {
@@ -1029,7 +1028,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Hyundai cars, SUVs & hybrids.",
-    imageSrc: "",
+    imageSrc: "/images/A_Hyundai.png",
     imageAlt: "Hyundai Auto Repair and Maintenance",
   },
   offers: {
@@ -1135,7 +1134,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
     ),
     subheading1: "",
     subheading2: "We supply and service Honda cars, SUVs, vans & hybrids.",
-    imageSrc: "",
+    imageSrc: "/images/A_Honda.png",
     imageAlt: "Honda Auto Repair and Maintenance",
   },
   offers: {
