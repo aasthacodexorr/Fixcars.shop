@@ -35,7 +35,7 @@
   body {
     background-color: #ffffff;
     color: #000000;
-    font-family: var(--font-lato);
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -43,15 +43,15 @@
 }
 
 .font-anton {
-  font-family: var(--font-anton), Impact, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .font-lato {
-  font-family: var(--font-lato), -apple-system, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .font-poppins {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Green CTA Button Pulse Glow Animation */
@@ -104,6 +104,10 @@
   100% {
     left: 140%;
   }
+}
+
+h1,h2,h3{
+  font-weight: 700;
 }
 
 /* Bounce Animation for modal arrow */

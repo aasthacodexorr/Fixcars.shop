@@ -1,4 +1,6 @@
-import { QuoteProvider } from "@/components/home/QuoteContext";
+"use client"
+
+import { QuoteProvider, useQuote } from "@/components/home/QuoteContext";
 import {
   Contact,
   Guarantee,
@@ -12,8 +14,10 @@ import {
   WhyUs,
 } from "@/components/home/Sections";
 import SiteNav from "@/components/home/SiteNav";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
+  const handleOpenQuote = useQuote();
   return (
     <div className="font-site">
       <QuoteProvider>
@@ -25,7 +29,7 @@ export default function Home() {
           <Makes />
           <Offer />
           <WhyUs />
-          <Reviews />
+          <TestimonialsSection onOpenQuote={handleOpenQuote}/>
           <Guarantee />
         </main>
         <SiteFooter />

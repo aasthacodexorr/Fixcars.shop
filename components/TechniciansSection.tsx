@@ -21,7 +21,7 @@ export default function TechniciansSection({
   return (
     <section className="w-full bg-black text-white py-14 sm:py-18 px-4 sm:px-8 border-y border-neutral-800">
       <div className="max-w-[1400px] mx-auto text-center space-y-8">
-        <h2 className="font-anton text-2xl sm:text-5xl lg:text-[50px] uppercase text-white tracking-wide max-w-[1000px] mx-auto leading-tight">
+        <h2 className="font-anton text-2xl sm:text-5xl lg:text-[34px] uppercase text-white tracking-wide max-w-[1000px] mx-auto leading-tight">
           {title}
         </h2>
 

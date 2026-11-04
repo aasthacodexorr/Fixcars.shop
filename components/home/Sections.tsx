@@ -1,10 +1,13 @@
 import Image from "next/image";
 import {
+  faArrowUpRightFromSquare,
   faCalendarCheck,
+  faClock,
   faEnvelope,
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   ADDRESS,
   DIRECTIONS_URL,
@@ -114,7 +117,7 @@ function Hero() {
             <span className="pulse-dot size-2.5 rounded-full bg-brand" />
             Providing exceptional service in Brampton
           </p>
-          <h1 className="mt-5 text-[46px] font-bold leading-[1.05] tracking-tight text-black sm:text-[64px] lg:text-[54px] xl:text-[64px] 2xl:text-[76px]">
+          <h1 className="mt-5 text-[46px] uppercase font-bold leading-[1.05] tracking-tight text-black sm:text-[64px] lg:text-[54px] xl:text-[55px] 2xl:text-[76px]">
             Brampton’s most{" "}
             <span className="inline-block -rotate-2 rounded-[12px] bg-brand px-3 pb-1 text-white shadow-[0_10px_24px_rgba(0,175,102,0.35)]">
               trusted
@@ -646,55 +649,114 @@ function CardText({ title, text }: { title: string; text: string }) {
   );
 }
 
+
 export function Contact() {
   return (
     <section id="visit" className="scroll-mt-24 bg-charcoal py-14 text-white">
-      <div className="mx-auto grid max-w-[1600px] gap-10 px-5 lg:grid-cols-[440px_1fr] lg:px-10">
-        <div>
-          <h2 className="text-[28px] font-bold leading-[37px] lg:text-[32px]">
-            Get in touch with us, we’re here to help
-          </h2>
-          <dl className="mt-6 space-y-3 rounded-[12px] border border-charcoal-line p-4">
-            {HOURS.map((row) => (
-              <div key={row.days} className="flex justify-between gap-4">
-                <dt>{row.days}:</dt>
-                <dd>{row.time}</dd>
+      <div className="mx-auto max-w-[1600px] px-5 lg:px-10">
+        
+        {/* Bento Grid Container */}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          
+          {/* Card 1: Heading & Quick Contact Links (Spans 2 columns on lg) */}
+          <div className="flex flex-col justify-between rounded-2xl border border-charcoal-line bg-zinc-900/40 p-6 md:col-span-2">
+            <div>
+              <span className="inline-block rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-400">
+                Get in touch
+              </span>
+              <h2 className="mt-4 text-2xl font-bold leading-tight text-white lg:text-3xl">
+                Get in touch with us, we’re here to help
+              </h2>
+              <p className="mt-2 text-sm text-zinc-400">
+                Have questions or need assistance? Reach out directly by phone or email.
+              </p>
+            </div>
+
+            {/* Quick action buttons row */}
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <a
+                href={PHONE_HREF}
+                className="group flex items-center justify-between rounded-xl border border-charcoal-line bg-zinc-950/60 p-3.5 transition hover:border-zinc-700 hover:bg-zinc-900"
+              >
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-wider text-zinc-400">Call us</p>
+                  <p className="text-sm font-semibold text-white">{PHONE_DISPLAY}</p>
+                </div>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 transition-colors group-hover:bg-emerald-500 group-hover:text-zinc-950">
+                  <FontAwesomeIcon icon={faPhone} className="h-4 w-4" />
+                </div>
+              </a>
+
+              <a
+                href={`mailto:${EMAIL}`}
+                className="group flex items-center justify-between rounded-xl border border-charcoal-line bg-zinc-950/60 p-3.5 transition hover:border-zinc-700 hover:bg-zinc-900"
+              >
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-wider text-zinc-400">Email</p>
+                  <p className="text-sm font-semibold text-white">Send us an email</p>
+                </div>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 transition-colors group-hover:bg-emerald-500 group-hover:text-zinc-950">
+                  <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Card 2: Operating Hours & Showroom Address */}
+          <div className="flex flex-col justify-between rounded-2xl border border-charcoal-line bg-zinc-900/40 p-6">
+            <div>
+              <div className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
+                <FontAwesomeIcon icon={faClock} className="h-4 w-4 text-emerald-400" />
+                <span>Hours of Operation</span>
               </div>
-            ))}
-          </dl>
- 
-        </div>
-        <div className="grid gap-5 md:grid-cols-2">
-          <a href={PHONE_HREF} className={CONTACT_CARD}>
-            <CardText title="Call us" text={PHONE_DISPLAY} />
-            <CoinIcon icon={faPhone} />
-          </a>
-          <a
-            href={DIRECTIONS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={CONTACT_CARD}
-          >
-            <CardText title="Directions" text="8050 Dixie Rd, Brampton" />
-            <CoinIcon icon={faLocationDot} />
-          </a>
-          <a href={`mailto:${EMAIL}`} className={CONTACT_CARD}>
-            <CardText title="Email" text="Send us an email" />
-            <CoinIcon icon={faEnvelope} />
-          </a>
-          <QuoteButton className={`${CONTACT_CARD} cursor-pointer`}>
-            <CardText
-              title="Free quote"
-              text="Plus 10% off for new customers*"
-            />
-            <CoinIcon icon={faCalendarCheck} />
+
+              <dl className="mt-6 space-y-3 divide-y divide-charcoal-line/60 text-sm">
+                {HOURS.map((row) => (
+                  <div key={row.days} className="flex justify-between gap-4 pt-3 first:pt-0">
+                    <dt className="text-zinc-400">{row.days}</dt>
+                    <dd className="font-medium text-white">{row.time}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            <a
+              href={DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center justify-between rounded-xl border border-charcoal-line/70 bg-zinc-950/40 px-3.5 py-2.5 text-xs font-medium text-emerald-400 transition hover:border-zinc-700 hover:text-emerald-300"
+            >
+              <span className="flex items-center gap-2 truncate">
+                <FontAwesomeIcon icon={faLocationDot} className="h-3.5 w-3.5 shrink-0" />
+                <span className="truncate">8050 Dixie Rd, Brampton</span>
+              </span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2 h-3 w-3 shrink-0" />
+            </a>
+          </div>
+
+          {/* Card 3: Free Quote CTA */}
+          <QuoteButton className="group flex flex-col justify-between rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/40 via-zinc-900/60 to-zinc-900/80 p-6 text-left shadow-lg shadow-emerald-950/20 transition-all hover:border-emerald-500/60">
+            <div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-zinc-950 shadow-md shadow-emerald-500/30 transition-transform group-hover:scale-105">
+                <FontAwesomeIcon icon={faCalendarCheck} className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">Free quote</h3>
+              <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                Plus 10% off for new customers*
+              </p>
+            </div>
+
+            <div className="mt-6 flex w-full cursor-pointer items-center justify-center rounded-xl bg-emerald-500 py-2.5 text-center text-xs font-semibold text-zinc-950 transition hover:bg-emerald-400">
+              Claim 10% Discount
+            </div>
           </QuoteButton>
+
         </div>
+
       </div>
     </section>
   );
 }
-
 const FOOT_HEADING =
   "mb-5 text-[18px] font-bold uppercase tracking-[1px] text-white";
 const FOOT_LINK = "uppercase text-white hover:text-brand";

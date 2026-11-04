@@ -59,8 +59,8 @@ export const BRAKES_PAGE_DATA: LandingPageData = {
   hero: {
     headline: (
       <>
-        BRAMPTON’S MOST TRUSTED CAR
-        <br className="hidden sm:inline" /> BRAKES REPAIR SHOP
+        Brampton's most trusted car
+        <br className="hidden sm:inline" /> Brakes repair shop
       </>
     ),
     subheading1: "The one-stop shop for all your brake repairs & replacements!",
@@ -493,7 +493,7 @@ export const TIRES_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> TIRE WORKSHOP 
       </>
     ),
-    subheading1: "The one-stop shop for all your tire repairs & replacements!",
+    subheading1: "",
     subheading2: "We supply and service tires for cars, vans & 4x4s.",
     imageSrc: "/images/tires-hero.png",
     imageAlt: "Car Tire Sales and Puncture Repairs",
@@ -707,7 +707,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> REPAIR SHOP
       </>
     ),
-    subheading1: "The one-stop shop for all your Dodge repairs & servicing!",
+    subheading1: " ",
     subheading2: "We supply and service Dodge cars, vans, trucks & 4x4s.",
     imageSrc: "",
     imageAlt: "Dodge Auto Repair and Maintenance",
@@ -813,7 +813,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> REPAIR SHOP
       </>
     ),
-    subheading1: "The one-stop shop for all your Toyota repairs & servicing!",
+    subheading1: "",
     subheading2: "We supply and service Toyota cars, vans, SUVs & hybrids.",
     imageSrc: "",
     imageAlt: "Toyota Auto Repair and Maintenance",
@@ -920,7 +920,7 @@ export const VOLKSWAGEN_PAGE_DATA: LandingPageData = {
       </>
     ),
     subheading1:
-      "The one-stop shop for all your Volkswagen repairs & servicing!",
+      "",
     subheading2:
       "We supply and service Volkswagen cars, wagons & SUVs.",
     imageSrc: "",
@@ -1027,7 +1027,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> REPAIR SHOP
       </>
     ),
-    subheading1: "The one-stop shop for all your Hyundai repairs & servicing!",
+    subheading1: "",
     subheading2: "We supply and service Hyundai cars, SUVs & hybrids.",
     imageSrc: "",
     imageAlt: "Hyundai Auto Repair and Maintenance",
@@ -1133,7 +1133,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
         <br className="hidden sm:inline" /> REPAIR SHOP
       </>
     ),
-    subheading1: "The one-stop shop for all your Honda repairs & servicing!",
+    subheading1: "",
     subheading2: "We supply and service Honda cars, SUVs, vans & hybrids.",
     imageSrc: "",
     imageAlt: "Honda Auto Repair and Maintenance",

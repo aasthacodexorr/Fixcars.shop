@@ -30,7 +30,7 @@ export default function CustomerOffers({
   onOpenQuote,
   title = (
     <>
-      SAVE ON YOUR BRAKES REPAIR WITH<br className="hidden sm:inline" /> OUR NEW CUSTOMER OFFER
+      Save on your brakes repair with<br className="hidden sm:inline" /> our new customer offer
     </>
   ),
   perks = DEFAULT_PERKS,
@@ -43,7 +43,7 @@ export default function CustomerOffers({
       <div className="max-w-[1000px] mx-auto">
         {/* Section Heading */}
         <div className="text-center max-w-[950px] mx-auto mb-12">
-          <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] leading-tight uppercase text-black tracking-wide">
+          <h2 className="font-anton text-3xl sm:text-5xl uppercase lg:text-[42px] leading-tight text-black tracking-wide">
             {title}
           </h2>
         </div>
