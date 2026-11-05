@@ -14,6 +14,7 @@ interface HeroProps {
   subheading3?:string;
   imageSrc?: string;
   imageAlt?: string;
+  slug?: string;
 }
 
 export default function Hero({
@@ -29,7 +30,16 @@ export default function Hero({
   subheading3="",
   imageSrc = "/images/honda-hero.png",
   imageAlt = "Honda vehicle",
+  slug = "",
 }: HeroProps) {
+  // Check if this is an AC or Engine page
+  const isAcOrEnginePage = slug?.includes("auto-ac-mechanic") || slug?.includes("check-engine-light");
+  
+  // Set image dimensions based on page type
+  const imageWidth = isAcOrEnginePage ? 700 : 600;
+  const imageHeight = isAcOrEnginePage ? 550 : 450;
+  const maxWidth = isAcOrEnginePage ? "lg:max-w-[620px]" : "lg:max-w-[520px]";
+
   return (
     <section
       className="relative w-full text-gray-900 px-4 sm:px-8 py-8 sm:py-12 border-b border-gray-200 bg-cover bg-center bg-no-repeat"
@@ -100,10 +110,10 @@ export default function Hero({
             <Image
               src={imageSrc}
               alt={imageAlt}
-              width={600}
-              height={450}
+              width={imageWidth}
+              height={imageHeight}
               priority
-              className="w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[520px] h-auto object-contain drop-shadow-xl"
+              className={`w-full max-w-[280px] sm:max-w-[400px] ${maxWidth} h-auto object-contain drop-shadow-xl`}
             />
           </div>
       </div>

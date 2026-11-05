@@ -37,6 +37,7 @@ function ServiceLandingContent({ data }: ServiceLandingPageProps) {
           subheading3={data.hero.subheading3}
           imageSrc={data.hero.imageSrc}
           imageAlt={data.hero.imageAlt}
+          slug={data.slug}
         />
 
         {/* Blue Accent Bar 1 */}

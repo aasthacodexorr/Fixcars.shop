@@ -285,7 +285,7 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
     subheading2:
       "We diagnose, recharge and service AC systems for cars, vans & 4x4s.",
       subheading3:"",
-    imageSrc: "/images/Wheel-hero.png",
+    imageSrc: "/images/A_AC.png",
     imageAlt: "Car Air Conditioning and Climate Control Repair",
   },
   offers: {
@@ -610,7 +610,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
     subheading2:
       "We diagnose and repair engines for cars, vans & 4x4s.",
     subheading3:"",
-    imageSrc: "/images/Engine-hero.png",
+    imageSrc: "/images/a_Engine.png",
     imageAlt: "Car Check Engine Light Diagnostic Tool",
   },
   offers: {
