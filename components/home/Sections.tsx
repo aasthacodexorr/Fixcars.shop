@@ -446,9 +446,6 @@ export function Makes() {
                   <span className="block text-[13px] text-gray-600 lg:text-[14px]">
                     {make.name}
                   </span>
-                  <span className="block text-[16px] font-bold leading-snug text-[#111c2d] transition-colors group-hover:text-brand lg:text-[17px]">
-                    {make.model}
-                  </span>
                 </span>
                 <span
                   className={`relative mx-auto mt-3 block aspect-[5/2] w-[80%] ${isWide ? "max-md:mx-0 max-md:mt-0 max-md:w-[38%]" : ""}`}
