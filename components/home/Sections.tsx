@@ -761,7 +761,7 @@ const FOOT_LINK = "uppercase text-white hover:text-brand";
 export function SiteFooter() {
   return (
     <footer className="bg-charcoal text-white">
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start justify-start gap-10 px-5 pt-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-10">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start justify-start gap-10 px-5 pt-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-8">
         <div className="flex items-start">
           <img
             src="/images/logoo.png"
