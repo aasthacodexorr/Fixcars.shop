@@ -14,7 +14,6 @@ interface HeroProps {
   subheading3?:string;
   imageSrc?: string;
   imageAlt?: string;
-  slug?: string;
 }
 
 export default function Hero({
@@ -30,16 +29,7 @@ export default function Hero({
   subheading3="",
   imageSrc = "/images/honda-hero.png",
   imageAlt = "Honda vehicle",
-  slug = "",
 }: HeroProps) {
-  // Check if this is an AC or Engine page
-  const isAcOrEnginePage = slug?.includes("auto-ac-mechanic") || slug?.includes("check-engine-light");
-  
-  // Set image dimensions based on page type
-  const imageWidth = isAcOrEnginePage ? 700 : 600;
-  const imageHeight = isAcOrEnginePage ? 550 : 450;
-  const maxWidth = isAcOrEnginePage ? "lg:max-w-[620px]" : "lg:max-w-[520px]";
-
   return (
     <section
       className="relative w-full text-gray-900 px-4 sm:px-8 py-8 sm:py-12 border-b border-gray-200 bg-cover bg-center bg-no-repeat"
@@ -47,10 +37,10 @@ export default function Hero({
         backgroundImage: `linear-gradient(rgba(248,248,247,0.45), rgba(248,248,247,0.45)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
-      <div className="relative max-w-[1400px] mx-auto z-10 flex gap-10">
+      <div className="relative max-w-[1400px] mx-auto z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
 
         {/* Main Heading */}
-        <div className="max-w-[850px] mb-5 text-center lg:text-left">
+        <div className="min-w-0 lg:flex-1 max-w-[850px] mb-5 lg:mb-0 text-center lg:text-left">
           <h1 className="font-anton text-3xl sm:text-5xl lg:text-[42px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
             {headline}
           </h1>
@@ -58,7 +48,7 @@ export default function Hero({
           <div className="order-2 lg:order-1 lg:col-span-7 space-y-3 text-center lg:text-left">
 
             <div className="space-y-2">
-              <p className="text-gray-900 text-base sm:text-xl lg:text-[28px] leading-[84px]">
+              <p className="text-gray-900 text-base sm:text-xl lg:text-[28px] leading-relaxed pt-3">
                 {subheading1}
               </p>
 
@@ -105,17 +95,17 @@ export default function Hero({
           </div>
         </div>
 
-        {/* Honda Vehicle Image */}
-          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-end items-end">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={imageWidth}
-              height={imageHeight}
-              priority
-              className={`w-full max-w-[280px] sm:max-w-[400px] ${maxWidth} h-auto object-contain drop-shadow-xl`}
-            />
-          </div>
+        {/* Hero image: every page shares one box, so images match in size and stay centered */}
+        <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[480px] lg:w-[38%] aspect-[13/10] mx-auto lg:mx-0 shrink-0">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            preload
+            sizes="(min-width: 1024px) 480px, (min-width: 640px) 420px, 320px"
+            className="object-contain object-center drop-shadow-xl"
+          />
+        </div>
       </div>
     </section>
   );

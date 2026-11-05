@@ -610,7 +610,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
     subheading2:
       "We diagnose and repair engines for cars, vans & 4x4s.",
     subheading3:"",
-    imageSrc: "/images/a_Engine.png",
+    imageSrc: "/images/a_engine.png",
     imageAlt: "Car Check Engine Light Diagnostic Tool",
   },
   offers: {
