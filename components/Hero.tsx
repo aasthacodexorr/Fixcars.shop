@@ -37,7 +37,7 @@ export default function Hero({
         backgroundImage: `linear-gradient(rgba(248,248,247,0.45), rgba(248,248,247,0.45)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
-      <div className="relative max-w-[1150px] mx-auto z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
+      <div className="relative max-w-[1200px] mx-auto z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
 
         {/* Main Heading */}
         <div className="min-w-0 lg:flex-1 max-w-[850px] mb-5 lg:mb-0 text-center lg:text-left">

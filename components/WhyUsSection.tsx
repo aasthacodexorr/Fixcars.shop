@@ -60,7 +60,7 @@ export default function WhyUsSection({
         backgroundImage: `linear-gradient(rgba(5, 6, 10, 0.75), rgba(5, 6, 10, 0.75)), url('/images/blue-bg-4-prar.png')`,
       }}
     >
-      <div className="relative max-w-[1150px] mx-auto z-10 text-center">
+      <div className="relative max-w-[1200px] mx-auto z-10 text-center">
         <h2 className="font-anton text-3xl sm:text-5xl lg:text-[50px] uppercase text-white mb-14">
           {title}
         </h2>

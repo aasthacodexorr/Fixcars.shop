@@ -160,7 +160,7 @@ export default function TestimonialsSection({
 
   return (
     <section id="reviews" className="w-full bg-white py-14 px-4 sm:px-8 border-b border-gray-100">
-      <div className="max-w-[1150px] mx-auto text-center">
+      <div className="max-w-[1200px] mx-auto text-center">
         {/* Title */}
         <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] uppercase text-[rgba(0,0,0,0.95)] tracking-wide mb-3">
           Happy CUSTOMERS

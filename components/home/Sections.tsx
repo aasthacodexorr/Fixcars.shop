@@ -216,7 +216,7 @@ function Hero() {
 
 function StepCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-4 lg:mb-8 lg:px-16">
+    <div className="mb-4 lg:mb-8 lg:px-12">
       <div className="pointer-events-auto w-full rounded-[16px] bg-white p-6  shadow-[0_18px_50px_rgba(9,65,80,0.18)] lg:max-w-[min(580px,41vw)] lg:p-8">
         {children}
       </div>

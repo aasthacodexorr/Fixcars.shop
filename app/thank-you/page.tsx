@@ -11,7 +11,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden selection:bg-[#1cc76a] selection:text-white">
       {/* Top Header with Centered Cardora Logo */}
       <header className="w-full bg-white border-b border-gray-100 py-4 px-4 sm:px-8 shadow-sm">
-        <div className="max-w-[1150px] mx-auto flex items-center justify-center">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-center">
           <Link href="/" className="inline-block transition hover:opacity-95">
             <Image
               src="/images/3_imgi_1_Cardora-n.png"
