@@ -651,10 +651,10 @@ export function Contact() {
   return (
     <section id="visit" className="scroll-mt-24 bg-charcoal py-14 text-white">
       <div className="mx-auto max-w-[1600px] px-5 lg:px-10">
-        
+
         {/* Bento Grid Container */}
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-          
+
           {/* Card 1: Heading & Quick Contact Links (Spans 2 columns on lg) */}
           <div className="flex flex-col justify-between rounded-2xl border border-charcoal-line bg-zinc-900/40 p-6 md:col-span-2">
             <div>
@@ -755,14 +755,20 @@ export function Contact() {
   );
 }
 const FOOT_HEADING =
-  "mb-5 text-[18px] font-bold uppercase tracking-[1px] text-white";
+  "mb-5 mt-4 text-[18px] font-bold uppercase tracking-[1px] text-white";
 const FOOT_LINK = "uppercase text-white hover:text-brand";
 
 export function SiteFooter() {
   return (
     <footer className="bg-charcoal text-white">
-      <Contact />
-      <div className="mx-auto grid max-w-[1600px] gap-10 px-5 pt-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-10">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start justify-start gap-10 px-5 pt-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8 lg:px-10">
+        <div className="flex items-start">
+          <img
+            src="/images/logoo.png"
+            alt="Cardora"
+            className="h-auto w-[225px] object-contain"
+          />
+        </div>
         <div>
           <h3 className={FOOT_HEADING}>Our services</h3>
           <ul className="space-y-3">
@@ -794,6 +800,17 @@ export function SiteFooter() {
             {ADDRESS}
           </p>
         </div>
+        <div>
+          <h3 className={FOOT_HEADING}>Call us</h3>
+          <a
+            href={PHONE_HREF}
+            aria-label={`Call ${PHONE_DISPLAY}`}
+            className="flex justify-start items-center gap-1 text-white"
+          >
+            <FaIcon icon={faPhone} className="size-[16px]" />
+            {PHONE_DISPLAY}
+          </a>
+        </div>
       </div>
       {/* Same bottom bar as the main Cardora site */}
       <div className="mx-auto mt-10 flex max-w-[1600px] flex-col items-center justify-center gap-4 border-t border-charcoal-line px-5 pb-5 pt-6 lg:px-10">
@@ -813,7 +830,7 @@ export function SiteFooter() {
             </a>
           </span>
         </div>
-      
+
       </div>
     </footer>
   );
