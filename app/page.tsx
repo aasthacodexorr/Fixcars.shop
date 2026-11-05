@@ -16,23 +16,31 @@ import {
 import SiteNav from "@/components/home/SiteNav";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
-export default function Home() {
+function HomeContent() {
   const handleOpenQuote = useQuote();
+  return (
+    <>
+      <SiteNav />
+      <main className="overflow-x-clip pt-[var(--header-h)]">
+        <WheelJourney />
+        <ServicePills />
+        <Services />
+        <Makes />
+        <Offer />
+        <WhyUs />
+        <TestimonialsSection onOpenQuote={handleOpenQuote}/>
+        <Guarantee />
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
+
+export default function Home() {
   return (
     <div className="font-site">
       <QuoteProvider>
-        <SiteNav />
-        <main className="overflow-x-clip pt-[var(--header-h)]">
-          <WheelJourney />
-          <ServicePills />
-          <Services />
-          <Makes />
-          <Offer />
-          <WhyUs />
-          <TestimonialsSection onOpenQuote={handleOpenQuote}/>
-          <Guarantee />
-        </main>
-        <SiteFooter />
+        <HomeContent />
       </QuoteProvider>
     </div>
   );
