@@ -37,29 +37,29 @@ export default function Hero({
         backgroundImage: `linear-gradient(rgba(248,248,247,0.45), rgba(248,248,247,0.45)), url('/images/37_cda-bg-hero-2-1-.png')`,
       }}
     >
-      <div className="relative max-w-[1400px] mx-auto z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
+      <div className="relative max-w-[1150px] mx-auto z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
 
         {/* Main Heading */}
         <div className="min-w-0 lg:flex-1 max-w-[850px] mb-5 lg:mb-0 text-center lg:text-left">
-          <h1 className="font-anton text-3xl sm:text-5xl lg:text-[42px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
+          <h1 className="font-anton text-2xl sm:text-5xl max-w-[700px] lg:text-[42px] uppercase leading-[1.08] tracking-wide text-black drop-shadow-sm">
             {headline}
           </h1>
           {/* Content and CTA */}
           <div className="order-2 lg:order-1 lg:col-span-7 space-y-3 text-center lg:text-left">
 
             <div className="space-y-2">
-              <p className="text-gray-900 text-base sm:text-xl lg:text-[28px] leading-relaxed pt-3">
+              <p className="text-gray-900 text-base max-w-[650px] sm:text-xl lg:text-[22px] leading-relaxed pt-3">
                 {subheading1}
               </p>
 
               {subheading2 && (
-                <p className="text-gray-900 text-sm sm:text-lg lg:text-[29px] leading-relaxed">
+                <p className="text-gray-900 text-sm max-w-[650px] sm:text-xl lg:text-[22px] leading-relaxed">
                   {subheading2}
                 </p>
               )}
 
               {subheading3 && (
-                <p className="text-gray-900 text-sm sm:text-lg lg:text-[29px] leading-relaxed">
+                <p className="text-gray-900 text-sm sm:text-lg max-w-[650px] lg:text-[22px] leading-relaxed">
                   {subheading3}
                 </p>
               )}
@@ -67,9 +67,9 @@ export default function Hero({
 
             {/* Location */}
             <div className="pt-1">
-              <p className="text-base sm:text-2xl lg:text-[25px] font-bold text-black flex items-center justify-center lg:justify-start gap-2">
+              <p className="text-base sm:text-2xl max-w-[380px] lg:text-[25px] font-bold text-black flex items-start justify-start gap-2">
                 <span>📍</span>
-                <span>Located at {SITE_CONFIG.address}</span>
+                <span>{SITE_CONFIG.address}</span>
               </p>
             </div>
 

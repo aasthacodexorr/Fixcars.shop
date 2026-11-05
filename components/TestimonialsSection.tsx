@@ -160,21 +160,15 @@ export default function TestimonialsSection({
 
   return (
     <section id="reviews" className="w-full bg-white py-14 px-4 sm:px-8 border-b border-gray-100">
-      <div className="max-w-[1400px] mx-auto text-center">
+      <div className="max-w-[1150px] mx-auto text-center">
         {/* Title */}
         <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] uppercase text-[rgba(0,0,0,0.95)] tracking-wide mb-3">
           Happy CUSTOMERS
         </h2>
 
         {/* 5-Stars Badge */}
-        <div className="flex justify-center mb-8">
-          <Image
-            src="/images/19_Stars.png"
-            alt="5 Stars Rating"
-            width={240}
-            height={50}
-            className="h-9 w-auto object-contain"
-          />
+        <div className="flex justify-center mb-8 text-[#FFD700] text-[25px]">
+          ★★★★★
         </div>
 
         {/* Testimonials Slider Container matching live ClickFunnels styling */}

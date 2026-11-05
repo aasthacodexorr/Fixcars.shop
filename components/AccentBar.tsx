@@ -13,9 +13,9 @@ export default function AccentBar({
 }: AccentBarProps) {
   return (
     <div className="w-full bg-[#e6f4ff] py-6 sm:py-8 px-4 border-y border-[#d0e8fc]">
-      <div className="max-w-[1400px] mx-auto text-center">
+      <div className="max-w-[1150px] mx-auto text-center">
         <h2
-          className={`font-anton italic font-bold text-2xl sm:text-4xl lg:text-[46px] tracking-wide ${color}`}
+          className={`font-anton font-bold text-2xl sm:text-4xl lg:text-[46px] tracking-wide ${color}`}
         >
           {text}
         </h2>

@@ -20,7 +20,7 @@ export default function GuaranteeSection({
         </h2>
 
         {/* Guarantee bullet items matching screenshot */}
-        <div className="max-w-[480px] mx-auto space-y-4 text-left px-5">
+        <div className="max-w-[540px] mx-auto space-y-4 text-left lg:px-5">
           <div className="flex items-center gap-3.5 text-base sm:text-[21px] font-bold text-gray-900">
             <Image
               src="/images/crossed-tools.png"

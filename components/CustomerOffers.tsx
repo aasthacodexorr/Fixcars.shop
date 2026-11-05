@@ -63,7 +63,7 @@ export default function CustomerOffers({
 
           {/* Perks & CTA: order-2 on mobile, order-1 on desktop */}
           <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 text-center lg:text-left">
-            <ul className="space-y-4 max-w-[550px] mx-auto lg:mx-0 text-left px-8">
+            <ul className="space-y-4 max-w-[560px] mx-auto lg:mx-0 text-left lg:px-8">
               {perks.map((perk, index) => (
                 <li
                   key={index}

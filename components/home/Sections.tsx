@@ -111,7 +111,7 @@ function Road({ className = "" }: { className?: string }) {
 function Hero() {
   return (
     <div className="hero-rise relative lg:min-h-[calc(100svh-var(--header-h))]">
-      <div className="px-3.5 pb-8 pt-7 md:px-8 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[100px] lg:pt-6">
+      <div className="px-3.5 pb-8 pt-7 md:px-20 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[100px] lg:pt-6">
         <div className="relative w-full lg:max-w-[44%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
           <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[14px] font-bold text-black shadow-[0_4px_14px_rgba(9,65,80,0.1)]">
             <span className="pulse-dot size-2.5 rounded-full bg-brand" />
@@ -216,8 +216,8 @@ function Hero() {
 
 function StepCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-4 lg:mb-8">
-      <div className="pointer-events-auto w-full rounded-[16px] bg-white p-6 shadow-[0_18px_50px_rgba(9,65,80,0.18)] lg:max-w-[min(580px,41vw)] lg:p-8">
+    <div className="mb-4 lg:mb-8 lg:px-16">
+      <div className="pointer-events-auto w-full rounded-[16px] bg-white p-6  shadow-[0_18px_50px_rgba(9,65,80,0.18)] lg:max-w-[min(580px,41vw)] lg:p-8">
         {children}
       </div>
     </div>

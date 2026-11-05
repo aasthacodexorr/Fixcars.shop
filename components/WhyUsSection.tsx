@@ -60,8 +60,8 @@ export default function WhyUsSection({
         backgroundImage: `linear-gradient(rgba(5, 6, 10, 0.75), rgba(5, 6, 10, 0.75)), url('/images/blue-bg-4-prar.png')`,
       }}
     >
-      <div className="relative max-w-[1400px] mx-auto z-10 text-center">
-        <h2 className="font-anton text-3xl sm:text-5xl lg:text-[54px] uppercase text-white tracking-wide mb-14">
+      <div className="relative max-w-[1150px] mx-auto z-10 text-center">
+        <h2 className="font-anton text-3xl sm:text-5xl lg:text-[50px] uppercase text-white mb-14">
           {title}
         </h2>
 
@@ -72,13 +72,13 @@ export default function WhyUsSection({
               key={idx}
               className="flex flex-col items-center text-center p-3 rounded-xl transition"
             >
-              <div className="w-24 h-24 relative flex items-center justify-center mb-5">
+              <div className="w-44 h-44 relative flex items-center justify-center mb-5">
                 <Image
                   src={feat.img}
                   alt={feat.title}
                   width={100}
                   height={100}
-                  className="max-h-20 w-auto object-contain drop-shadow-md"
+                  className="max-h-44 w-auto object-contain drop-shadow-md"
                 />
               </div>
               <h3 className="font-lato text-lg sm:text-[21px] font-bold text-white max-w-[230px] leading-snug">

@@ -61,7 +61,7 @@ export const BRAKES_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         Brampton's most trusted car
-        <br className="hidden sm:inline" /> Brakes repair shop
+        Brakes repair shop
       </>
     ),
     subheading1: "The one-stop shop for all your brake repairs & replacements!",
@@ -168,7 +168,7 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED WHEEL
-        <br className="hidden sm:inline" /> ALIGNMENT EXPERTS
+          ALIGNMENT EXPERTS
       </>
     ),
     subheading1:
@@ -285,7 +285,7 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
     subheading2:
       "We diagnose, recharge and service AC systems for cars, vans & 4x4s.",
       subheading3:"",
-    imageSrc: "/images/A_AC.png",
+    imageSrc: "/images/A_ACC.png",
     imageAlt: "Car Air Conditioning and Climate Control Repair",
   },
   offers: {
@@ -386,7 +386,7 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         NO APPOINTMENT OIL
-        <br className="hidden sm:inline" /> CHANGE IN Brampton 
+        CHANGE IN Brampton 
       </>
     ),
     subheading1:
@@ -495,7 +495,7 @@ export const TIRES_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED CAR
-        <br className="hidden sm:inline" /> TIRE WORKSHOP 
+       TIRE WORKSHOP 
       </>
     ),
     subheading1: "The one-stop shop for all your Tire repairs & changes!",
@@ -602,7 +602,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         Expert Auto Repairs for 'Check
-        <br className="hidden sm:inline" />Engine' Light Warnings in Brampton 
+       Engine' Light Warnings in Brampton 
       </>
     ),
     subheading1:
@@ -610,7 +610,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
     subheading2:
       "We diagnose and repair engines for cars, vans & 4x4s.",
     subheading3:"",
-    imageSrc: "/images/a_engine.png",
+    imageSrc: "/images/a_engin.png",
     imageAlt: "Car Check Engine Light Diagnostic Tool",
   },
   offers: {
@@ -711,7 +711,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED DODGE
-        <br className="hidden sm:inline" /> REPAIR SHOP
+        REPAIR SHOP
       </>
     ),
     subheading1: " ",
@@ -818,7 +818,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED TOYOTA
-        <br className="hidden sm:inline" /> REPAIR SHOP
+         REPAIR SHOP
       </>
     ),
     subheading1: "",
@@ -1033,7 +1033,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED HYUNDAI
-        <br className="hidden sm:inline" /> REPAIR SHOP
+         REPAIR SHOP
       </>
     ),
     subheading1: "",
@@ -1140,7 +1140,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
     headline: (
       <>
         BRAMPTON’S MOST TRUSTED HONDA
-        <br className="hidden sm:inline" /> REPAIR SHOP
+        REPAIR SHOP
       </>
     ),
     subheading1: "",
