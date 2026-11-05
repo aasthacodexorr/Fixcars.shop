@@ -755,7 +755,7 @@ export function Contact() {
   );
 }
 const FOOT_HEADING =
-  "mb-5 mt-4 text-[18px] font-bold uppercase tracking-[1px] text-white";
+  "mb-5 mt-3 text-[18px] font-bold uppercase tracking-[1px] text-white";
 const FOOT_LINK = "uppercase text-white hover:text-brand";
 
 export function SiteFooter() {
