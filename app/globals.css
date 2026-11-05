@@ -28,8 +28,8 @@
     }
   }
 
-  html {
-    scroll-behavior: smooth;
+  html, body {
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -334,4 +334,9 @@ button[aria-label="Next.js Dev Tools"] {
 
 .no-scrollbar {
   scrollbar-width: none;
+}
+
+
+html, body {
+  scroll-behavior: auto !important;
 }

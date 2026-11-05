@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Lato, Poppins } from "next/font/google";
 import "./globals.css";
+import { ScrollToTop } from "./ScrollToTop";
 
 const anton = Anton({
   weight: "400",
@@ -41,9 +42,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${lato.variable} ${poppins.variable} scroll-smooth`}
+      className={`${anton.variable} ${lato.variable} ${poppins.variable}`}
     >
       <body className="min-h-screen bg-white text-black antialiased font-lato">
+        <ScrollToTop />
         {children}
       </body>
     </html>
