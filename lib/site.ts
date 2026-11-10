@@ -172,7 +172,6 @@ export const MAKE_SERVICES = [
 export const PERKS = [
   { highlight: "10% OFF", text: "For New Customers*" },
   { highlight: "FREE", text: "Pick Up And Drop Off*" },
-  { highlight: "FREE", text: "Exterior Wash (Value $50)" },
   { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
   { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
 ];

@@ -80,7 +80,7 @@ export const BRAKES_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
@@ -189,7 +189,7 @@ export const WHEEL_ALIGNMENT_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
@@ -298,7 +298,7 @@ export const AUTO_AC_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "AC Vent Temperature Check" },
       { highlight: "FREE", text: "15-min Leak Inspection & 2nd Opinion" },
     ],
@@ -407,7 +407,7 @@ export const OIL_CHANGE_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
@@ -514,7 +514,7 @@ export const TIRES_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "Tire Rotation With A Brake Job" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
@@ -623,7 +623,7 @@ export const CHECK_ENGINE_LIGHT_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "OBD2 Engine Code Scan" },
       { highlight: "FREE", text: "15-min Inspection & 2nd Opinion" },
     ],
@@ -730,7 +730,7 @@ export const DODGE_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "15-min Dodge Inspection & 2nd Opinion" },
       { highlight: "FREE", text: "Multi-Point Safety Check" },
     ],
@@ -837,7 +837,7 @@ export const TOYOTA_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "15-min Toyota Inspection & 2nd Opinion" },
       { highlight: "FREE", text: "Multi-Point Safety Check" },
     ],
@@ -945,7 +945,7 @@ export const VOLKSWAGEN_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "15-min Volkswagen Inspection & 2nd Opinion" },
       { highlight: "FREE", text: "Multi-Point Safety Check" },
     ],
@@ -1052,7 +1052,7 @@ export const HYUNDAI_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "15-min Hyundai Inspection & 2nd Opinion" },
       { highlight: "FREE", text: "Multi-Point Safety Check" },
     ],
@@ -1159,7 +1159,7 @@ export const HONDA_PAGE_DATA: LandingPageData = {
     perks: [
       { highlight: "FREE", text: "Pick Up And Drop Off*" },
       { highlight: "10% OFF", text: "For New Customers*" },
-      { highlight: "FREE", text: "Exterior Wash (Value $50)" },
+      
       { highlight: "FREE", text: "15-min Honda Inspection & 2nd Opinion" },
       { highlight: "FREE", text: "Multi-Point Safety Check" },
     ],

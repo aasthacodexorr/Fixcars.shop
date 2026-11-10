@@ -113,10 +113,6 @@ function Hero() {
     <div className="hero-rise relative lg:min-h-[calc(100svh-var(--header-h))]">
       <div className="px-3.5 pb-8 pt-7 md:px-20 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[100px] lg:pt-6">
         <div className="relative w-full lg:max-w-[44%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
-          <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[14px] font-bold text-black shadow-[0_4px_14px_rgba(9,65,80,0.1)]">
-            <span className="pulse-dot size-2.5 rounded-full bg-brand" />
-            Providing exceptional service in Brampton
-          </p>
           <h1 className="mt-5 text-[46px] uppercase font-bold leading-[1.05] tracking-tight text-black sm:text-[64px] lg:text-[54px] xl:text-[55px] 2xl:text-[76px]">
             Brampton’s most{" "}
             <span className="inline-block -rotate-2 rounded-[12px] bg-brand px-3 pb-1 text-white shadow-[0_10px_24px_rgba(0,175,102,0.35)]">
@@ -124,10 +120,6 @@ function Hero() {
             </span>{" "}
             auto repair shop.
           </h1>
-          <p className="mt-6 max-w-[500px] text-[18px] leading-snug text-black lg:text-[20px]">
-            One stop for brakes, tires, alignment, oil, AC and check engine
-            lights, on cars, vans and 4x4s.
-          </p>
 
           <div className="relative z-20 mt-7 flex max-w-[560px] flex-col gap-3 sm:flex-row">
             <ServicePicker />
