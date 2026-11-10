@@ -52,18 +52,18 @@ const FLOATING_CARDS: Record<
   string,
   { left: string; top: string; delay: string }
 > = {
-  "Brake Repairs": { left: "2%", top: "10%", delay: "0s" },
-  "Wheel Alignment": { left: "-1%", top: "42%", delay: "-2.4s" },
-  "Auto AC Repairs": { left: "4%", top: "72%", delay: "-4.2s" },
-  Tires: { left: "72%", top: "8%", delay: "-1.2s" },
-  "Oil Change": { left: "75%", top: "40%", delay: "-3.3s" },
-  "Check Engine Light": { left: "71%", top: "70%", delay: "-5.1s" },
+  "Brake Repairs": { left: "5%", top: "34%", delay: "0s" },
+  "Wheel Alignment": { left: "0%", top: "55%", delay: "-2.4s" },
+  "Auto AC Repairs": { left: "5%", top: "76%", delay: "-4.2s" },
+  Tires: { left: "67%", top: "31%", delay: "-1.2s" },
+  "Oil Change": { left: "75%", top: "53%", delay: "-3.3s" },
+  "Check Engine Light": { left: "71%", top: "74%", delay: "-5.1s" },
 };
 
 function OfferSticker({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative size-[116px] shrink-0 rounded-full bg-brand text-white shadow-[0_14px_30px_rgba(0,175,102,0.45)] lg:size-[88px] 2xl:size-[124px] ${className}`}
+      className={`relative size-[104px] shrink-0 rounded-full bg-brand text-white shadow-[0_14px_30px_rgba(0,175,102,0.45)] lg:size-[76px] 2xl:size-[108px] ${className}`}
     >
       <svg
         viewBox="0 0 120 120"
@@ -88,8 +88,8 @@ function OfferSticker({ className = "" }: { className?: string }) {
         </text>
       </svg>
       <p className="absolute inset-0 grid place-content-center text-center font-bold leading-none">
-        <span className="text-[26px] lg:text-[20px] 2xl:text-[28px]">10%</span>
-        <span className="mt-0.5 text-[12px] lg:text-[10px]">OFF*</span>
+        <span className="text-[23px] lg:text-[17px] 2xl:text-[24px]">10%</span>
+        <span className="mt-0.5 text-[11px] lg:text-[9px]">OFF*</span>
       </p>
     </div>
   );
@@ -111,7 +111,7 @@ function Road({ className = "" }: { className?: string }) {
 function Hero() {
   return (
     <div className="hero-rise relative lg:min-h-[calc(100svh-var(--header-h))]">
-      <div className="px-3.5 pb-8 pt-7 md:px-20 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[100px] lg:pt-6">
+      <div className="px-3.5 pb-8 pt-7 md:px-20 lg:flex lg:min-h-[calc(100svh-var(--header-h))] lg:items-center lg:pb-[190px] lg:pt-6 xl:pb-[140px]">
         <div className="relative w-full lg:max-w-[44%] lg:pl-[max(0px,calc((100vw-1600px)/2))]">
           <h1 className="mt-5 text-[46px] uppercase font-bold leading-[1.05] tracking-tight text-black sm:text-[64px] lg:text-[54px] xl:text-[55px] 2xl:text-[76px]">
             Brampton’s most{" "}
@@ -151,7 +151,7 @@ function Hero() {
               className="float-card absolute w-[186px]"
               style={{
                 left: place.left,
-                top: place.top,
+                top: `calc(${place.top} - var(--lift))`,
                 animationDelay: place.delay,
               }}
             >
@@ -243,7 +243,7 @@ const OUTLINE_BUTTON =
 // The wheel stays pinned on screen while the hero and captions scroll past it.
 export function WheelJourney() {
   return (
-    <section className="relative bg-hero">
+    <section className="relative bg-hero [--lift:max(0px,calc(min(120px,max(0px,calc((100svh-var(--header-h)-600px)/2)))-30px))]">
       <div className="pointer-events-none sticky top-[var(--header-h)] z-0 hidden h-[calc(100svh-var(--header-h))] overflow-hidden lg:block">
         <p
           aria-hidden="true"
@@ -252,7 +252,7 @@ export function WheelJourney() {
           CARDORA
         </p>
         {/* Sized so the bottom of the wheel lands on the road */}
-        <div className="absolute right-0 top-0 h-[calc(117%-82px)] w-[56%]">
+        <div className="absolute right-0 top-[calc((117%-82px)*0.22-var(--lift))] h-[calc((117%-82px)*0.78)] w-[56%]">
           <svg
             viewBox="0 0 200 200"
             aria-hidden="true"
@@ -272,12 +272,14 @@ export function WheelJourney() {
             </g>
           </svg>
         </div>
-        <Road className="absolute inset-x-0 bottom-0 h-[84px]" />
+        {/* Hides the logo arcs below the raised road */}
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[var(--lift)] bg-hero" />
+        <Road className="absolute inset-x-0 bottom-[var(--lift)] h-[84px]" />
         <div
           aria-hidden="true"
-          className="absolute bottom-[34px] right-[28%] h-7 w-[28%] translate-x-1/2 rounded-[50%] bg-black/70 blur-xl"
+          className="absolute bottom-[calc(var(--lift)+34px)] right-[28%] h-7 w-[28%] translate-x-1/2 rounded-[50%] bg-black/70 blur-xl"
         />
-        <div className="absolute right-0 top-0 h-[calc(117%-82px)] w-[56%]">
+        <div className="absolute right-0 top-[calc((117%-82px)*0.22-var(--lift))] h-[calc((117%-82px)*0.78)] w-[56%]">
           <HeroWheel />
         </div>
       </div>
