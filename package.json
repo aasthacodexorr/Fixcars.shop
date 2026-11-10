@@ -15,6 +15,7 @@
     "@fortawesome/react-fontawesome": "^3.5.0",
     "@react-three/fiber": "^9.8.2",
     "next": "16.4.3",
+    "nodemailer": "^10.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "three": "^0.187.0"
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.187.0",

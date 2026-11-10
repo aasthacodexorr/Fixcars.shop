@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useState } from "react";
 import QuoteModal from "@/components/QuoteModal";
+import { useExitIntent } from "@/components/useExitIntent";
 
 const QuoteContext = createContext<() => void>(() => {});
 
@@ -9,8 +10,22 @@ const QuoteContext = createContext<() => void>(() => {});
 // the quote form need to be client code.
 export function QuoteProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const open = useCallback(() => setIsOpen(true), []);
-  const close = useCallback(() => setIsOpen(false), []);
+
+  const open = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
+  const close = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  // Shows once per page visit:
+  // - after 5000ms (5 seconds)
+  // - or on exit-intent (cursor to top / back button)
+  useExitIntent({
+    onTrigger: open,
+    timerDelayMs: 5000,
+  });
 
   return (
     <QuoteContext.Provider value={open}>

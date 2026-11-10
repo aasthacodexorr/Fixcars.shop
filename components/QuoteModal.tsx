@@ -18,6 +18,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     service: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
@@ -53,11 +55,44 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit quote request.");
+      }
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+      });
+
+      // Navigate to thank you page
       router.push("/thank-you");
       onClose();
+    } catch (err: any) {
+      console.error("Quote submission error:", err);
+      setSubmitError(err?.message || "Something went wrong. Please call us directly.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -73,7 +108,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         <button
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute top-3 right-4 w-10 h-10 rounded-full text-gray-600 flex items-center justify-center text-4xl leading-none cursor-pointer transition z-10"
+          className="absolute top-3 right-4 w-10 h-10 rounded-full text-gray-600 flex items-center justify-center text-4xl leading-none cursor-pointer transition z-10 hover:text-black"
         >
           <span className="flex items-center justify-center h-full w-full">×</span>
         </button>
@@ -83,19 +118,19 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             <div className="w-16 h-16 bg-[#1cc76a] rounded-full flex items-center justify-center mx-auto text-white text-3xl font-bold">
               ✓
             </div>
-            <h2 className="font-anton text-3xl sm:text-4xl text-white tracking-wide uppercase">
+            <h2 className="font-anton text-3xl sm:text-4xl text-black tracking-wide uppercase">
               Thank You!
             </h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-700 text-lg">
               We received your details. One of our master mechanics will contact
               you shortly with your free quote.
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-600">
               Need immediate assistance? Call us right now:
             </p>
             <a
               href={PHONE_HREF}
-              className="inline-block text-[#0fa958] font-bold text-2xl hover:underline"
+              className="inline-block text-[#00AF66] font-bold text-2xl hover:underline"
             >
               {PHONE_DISPLAY}
             </a>
@@ -119,6 +154,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <input
                   type="text"
                   placeholder="Your Name"
+                  disabled={isSubmitting}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -128,7 +164,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.name && (
-                  <p className="text-red-400 text-xs mt-1 ml-1">{errors.name}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.name}</p>
                 )}
               </div>
 
@@ -136,6 +172,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <input
                   type="email"
                   placeholder="Your Email"
+                  disabled={isSubmitting}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -145,7 +182,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.email && (
-                  <p className="text-red-400 text-xs mt-1 ml-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.email}</p>
                 )}
               </div>
 
@@ -153,6 +190,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <input
                   type="tel"
                   placeholder="Your Phone No."
+                  disabled={isSubmitting}
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -162,13 +200,14 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.phone && (
-                  <p className="text-red-400 text-xs mt-1 ml-1">{errors.phone}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.phone}</p>
                 )}
               </div>
 
               <div>
                 <select
                   aria-label="How can we help?"
+                  disabled={isSubmitting}
                   value={formData.service}
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
@@ -195,12 +234,21 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 </select>
               </div>
 
+              {submitError && (
+                <div className="bg-red-50 border border-red-200 text-red-700 text-sm p-3 rounded-md">
+                  {submitError}
+                </div>
+              )}
+
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full bg-[linear-gradient(#00AF66,rgba(0,175,102,0.65))] hover:opacity-90 text-white font-medium py-3.5 px-6 rounded-[12px] text-lg flex items-center justify-center cursor-pointer transition"
+                  disabled={isSubmitting}
+                  className={`w-full bg-[linear-gradient(#00AF66,rgba(0,175,102,0.65))] hover:opacity-90 text-white font-medium py-3.5 px-6 rounded-[12px] text-lg flex items-center justify-center cursor-pointer transition ${
+                    isSubmitting ? "opacity-75 cursor-not-allowed" : ""
+                  }`}
                 >
-                  <span>Get A Free Quote</span>
+                  <span>{isSubmitting ? "Sending..." : "Get A Free Quote"}</span>
                 </button>
               </div>
 
