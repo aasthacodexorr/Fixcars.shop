@@ -29,8 +29,8 @@ export async function POST(req: Request) {
     const smtpUser = process.env.SMTP_USER  
     const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD  
     const toEmail = process.env.SMTP_TO;
-    const fromEmail = process.env.SMTP_FROM
-    const configSet = process.env.SMTP_CONFIGSET
+    const fromEmail = process.env.SMTP_FROM;
+    const configSet = process.env.SMTP_CONFIGSET;
 
     const formattedDate = new Date().toLocaleString("en-CA", {
       timeZone: "America/Toronto",
