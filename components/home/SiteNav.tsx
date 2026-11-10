@@ -93,22 +93,7 @@ export default function SiteNav() {
             >
               <FaIcon icon={faLocationDot} className="size-[16px]" />
             </a>
-            <a href={FACEBOOK_URL} aria-label="Cardora on Facebook">
-              <Image
-                src="/images/brand/facebook.png"
-                alt=""
-                width={30}
-                height={30}
-              />
-            </a>
-            <a href={INSTAGRAM_URL} aria-label="Cardora on Instagram">
-              <Image
-                src="/images/brand/instagram.png"
-                alt=""
-                width={30}
-                height={30}
-              />
-            </a>
+            
           </div>
         </div>
         <nav
