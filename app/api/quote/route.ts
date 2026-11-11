@@ -32,59 +32,33 @@ export async function POST(req: Request) {
     const fromEmail = process.env.SMTP_FROM;
     const configSet = process.env.SMTP_CONFIGSET;
 
-    const formattedDate = new Date().toLocaleString("en-CA", {
-      timeZone: "America/Toronto",
-      dateStyle: "full",
-      timeStyle: "short",
-    });
-
-    const emailSubject = `New Quote Request - ${name} (${service || "General Inquiry"})`;
+    const emailSubject = "New Service Enquiry Received";
 
     const htmlContent = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
-        <div style="background-color: #00AF66; padding: 16px; border-radius: 6px; text-align: center; color: white;">
-          <h2 style="margin: 0; font-size: 22px;">New Quote Request</h2>
-          <p style="margin: 4px 0 0; font-size: 14px;">Cardora Auto Repair Brampton</p>
-        </div>
-        <div style="padding: 20px 0;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 10px; font-weight: bold; width: 140px; color: #555; border-bottom: 1px solid #f0f0f0;">Customer Name:</td>
-              <td style="padding: 10px; color: #111; border-bottom: 1px solid #f0f0f0; font-size: 16px;"><strong>${name}</strong></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; font-weight: bold; color: #555; border-bottom: 1px solid #f0f0f0;">Email:</td>
-              <td style="padding: 10px; color: #111; border-bottom: 1px solid #f0f0f0;"><a href="mailto:${email}" style="color: #00AF66;">${email}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; font-weight: bold; color: #555; border-bottom: 1px solid #f0f0f0;">Phone Number:</td>
-              <td style="padding: 10px; color: #111; border-bottom: 1px solid #f0f0f0;"><a href="tel:${phone}" style="color: #00AF66; font-weight: bold;">${phone}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; font-weight: bold; color: #555; border-bottom: 1px solid #f0f0f0;">Requested Service:</td>
-              <td style="padding: 10px; color: #111; border-bottom: 1px solid #f0f0f0;"><strong>${service || "Not specified / General Inquiry"}</strong></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; font-weight: bold; color: #555;">Submission Time:</td>
-              <td style="padding: 10px; color: #777;">${formattedDate} (EST)</td>
-            </tr>
-          </table>
-        </div>
-        <div style="font-size: 12px; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 12px;">
-          Received from Cardora Website Quote Form.
-        </div>
+      <div style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #222;">
+        <p>Hi,</p>
+        <p>A new service enquiry has been submitted through <a href="http://CardoraService.com" style="color: #0066cc;">CardoraService.com</a></p>
+        <p>Please find the customer details below:<br />
+        Name: ${name}<br />
+        Email: ${email}<br />
+        Phone Number: ${phone}<br />
+        Service Requested: ${service || "General Inquiry"}</p>
+        <p>Thank you,<br />Cardora Service Team</p>
       </div>
     `;
 
-    const textContent = `
-New Free Quote Request Received:
---------------------------------
-Customer Name: ${name}
+    const textContent = `Hi,
+
+A new service enquiry has been submitted through CardoraService.com (http://CardoraService.com)
+
+Please find the customer details below:
+Name: ${name}
 Email: ${email}
-Phone: ${phone}
-Requested Service: ${service || "Not specified / General Inquiry"}
-Time: ${formattedDate} (EST)
-    `.trim();
+Phone Number: ${phone}
+Service Requested: ${service || "General Inquiry"}
+
+Thank you,
+Cardora Service Team`;
 
     // Resolve IP using system DNS lookup to prevent internal resolver timeouts
     const hostIp = await resolveHostIp(smtpHost);
