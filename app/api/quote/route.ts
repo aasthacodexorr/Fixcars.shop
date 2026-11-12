@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import dns from "dns";
+// import nodemailer from "nodemailer";
+// import dns from "dns";
 
-async function resolveHostIp(host: string): Promise<string> {
-  try {
-    const res = await dns.promises.lookup(host);
-    return res.address;
-  } catch {
-    return host;
-  }
-}
+// async function resolveHostIp(host: string): Promise<string> {
+//   try {
+//     const res = await dns.promises.lookup(host);
+//     return res.address;
+//   } catch {
+//     return host;
+//   }
+// }
 
 export async function POST(req: Request) {
   try {
@@ -23,11 +23,20 @@ export async function POST(req: Request) {
       );
     }
 
+    console.log("[Quote API] Lead submission received successfully:", {
+      name,
+      email,
+      phone,
+      service: service || "General Inquiry",
+    });
+
+    /*
+    // SMTP Email Sending - Uncomment once SMTP credentials are ready
     const smtpHost = process.env.SMTP_HOST || "";
     const smtpPort = Number(process.env.SMTP_PORT);
     const smtpSecure = process.env.SMTP_SECURE === "true";
-    const smtpUser = process.env.SMTP_USER  
-    const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD  
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS || process.env.SMTP_PASSWORD;
     const toEmail = process.env.SMTP_TO;
     const fromEmail = process.env.SMTP_FROM;
     const configSet = process.env.SMTP_CONFIGSET;
@@ -92,11 +101,11 @@ Cardora Service Team`;
     });
 
     console.log("[Quote API] Email successfully dispatched:", mailInfo.messageId);
+    */
 
     return NextResponse.json({
       success: true,
-      messageId: mailInfo.messageId,
-      message: "Quote request successfully emailed.",
+      message: "Quote request successfully processed.",
     });
   } catch (err: any) {
     console.error("[Quote API Error]:", err);
