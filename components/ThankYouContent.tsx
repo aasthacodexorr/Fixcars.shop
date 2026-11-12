@@ -18,7 +18,7 @@ export default function ThankYouContent({
 }: ThankYouContentProps) {
   const serviceInfo = getServiceInfo(initialSlug || initialName);
 
-  const headline = serviceInfo?.headline || "THANK YOU FOR YOUR ENQUIRY!";
+  const headline = serviceInfo?.headline || "THANK YOU FOR YOUR Inquiry!";
   const receivedText =
     serviceInfo?.receivedText || "Our team will reach out to you shortly.";
 

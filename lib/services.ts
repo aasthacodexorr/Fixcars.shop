@@ -11,7 +11,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "brakes-mechanic-ontario-cda": {
     slug: "brakes-mechanic-ontario-cda",
     name: "Brake Service",
-    headline: "Thank You for Your Brake Service Enquiry!",
+    headline: "Thank You for Your Brake Service Inquiry!",
     receivedText:
       "We’ve received your request for brake service. Our team will reach out to you shortly.",
     description: "Expert brake inspection, repair, pad and rotor replacements in Brampton, ON.",
@@ -19,7 +19,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "wheel-alignment-experts-ontario-cda": {
     slug: "wheel-alignment-experts-ontario-cda",
     name: "Wheel Service",
-    headline: "Thank You for Your Wheel Service Enquiry!",
+    headline: "Thank You for Your Wheel Service Inquiry!",
     receivedText:
       "We’ve received your request for wheel service. Our team will reach out to you shortly.",
     description: "Precision wheel alignment and suspension inspection in Brampton, ON.",
@@ -27,7 +27,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "tires-ontario-cda": {
     slug: "tires-ontario-cda",
     name: "Tire Service",
-    headline: "Thank You for Your Tire Service Enquiry!",
+    headline: "Thank You for Your Tire Service Inquiry!",
     receivedText:
       "We’ve received your request for tire service. Our team will reach out to you shortly.",
     description: "Quality tire supply, fitting, balancing, and repair services in Brampton, ON.",
@@ -35,7 +35,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "auto-ac-mechanic-ontario-cda": {
     slug: "auto-ac-mechanic-ontario-cda",
     name: "Auto AC Service",
-    headline: "Thank You for Your Auto AC Service Enquiry!",
+    headline: "Thank You for Your Auto AC Service Inquiry!",
     receivedText:
       "We’ve received your request for auto AC service. Our team will reach out to you shortly.",
     description: "Automotive air conditioning diagnostics and repair in Brampton, ON.",
@@ -43,7 +43,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "oil-change-service-ontario-cda": {
     slug: "oil-change-service-ontario-cda",
     name: "Oil Change",
-    headline: "Thank You for Your Oil Change Enquiry!",
+    headline: "Thank You for Your Oil Change Inquiry!",
     receivedText:
       "We’ve received your request for oil change service. Our team will reach out to you shortly.",
     description: "Fast, professional full-synthetic and conventional oil changes.",
@@ -51,7 +51,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "check-engine-light-repairs-ontario-cda": {
     slug: "check-engine-light-repairs-ontario-cda",
     name: "Engine Light",
-    headline: "Thank You for Your Engine Light Enquiry!",
+    headline: "Thank You for Your Engine Light Inquiry!",
     receivedText:
       "We’ve received your request for engine light service. Our team will reach out to you shortly.",
     description: "Advanced OBD-II computer diagnostics and check engine repairs.",
@@ -59,7 +59,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "toyota-mechanic-ontario-cda": {
     slug: "toyota-mechanic-ontario-cda",
     name: "Toyota Service",
-    headline: "Thank You for Your Toyota Service Enquiry!",
+    headline: "Thank You for Your Toyota Service Inquiry!",
     receivedText:
       "We’ve received your request for Toyota vehicle service. Our team will reach out to you shortly.",
     description: "Certified Toyota maintenance, diagnostics, and repairs in Brampton, ON.",
@@ -67,7 +67,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "honda-mechanic-ontario-cda": {
     slug: "honda-mechanic-ontario-cda",
     name: "Honda Service",
-    headline: "Thank You for Your Honda Service Enquiry!",
+    headline: "Thank You for Your Honda Service Inquiry!",
     receivedText:
       "We’ve received your request for Honda vehicle service. Our team will reach out to you shortly.",
     description: "Certified Honda maintenance, diagnostics, and repairs in Brampton, ON.",
@@ -75,7 +75,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "hyundai-mechanic-ontario-cda": {
     slug: "hyundai-mechanic-ontario-cda",
     name: "Hyundai Service",
-    headline: "Thank You for Your Hyundai Service Enquiry!",
+    headline: "Thank You for Your Hyundai Service Inquiry!",
     receivedText:
       "We’ve received your request for Hyundai vehicle service. Our team will reach out to you shortly.",
     description: "Certified Hyundai maintenance, diagnostics, and repairs in Brampton, ON.",
@@ -83,7 +83,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "dodge-mechanic-ontario-cda": {
     slug: "dodge-mechanic-ontario-cda",
     name: "Dodge Service",
-    headline: "Thank You for Your Dodge Service Enquiry!",
+    headline: "Thank You for Your Dodge Service Inquiry!",
     receivedText:
       "We’ve received your request for Dodge vehicle service. Our team will reach out to you shortly.",
     description: "Certified Dodge maintenance, diagnostics, and repairs in Brampton, ON.",
@@ -91,7 +91,7 @@ export const KNOWN_SERVICES: Record<string, ServiceMeta> = {
   "volkswagen-mechanic-ontario-cda": {
     slug: "volkswagen-mechanic-ontario-cda",
     name: "Volkswagen Service",
-    headline: "Thank You for Your Volkswagen Service Enquiry!",
+    headline: "Thank You for Your Volkswagen Service Inquiry!",
     receivedText:
       "We’ve received your request for Volkswagen vehicle service. Our team will reach out to you shortly.",
     description: "Certified Volkswagen maintenance, diagnostics, and repairs in Brampton, ON.",
@@ -177,7 +177,7 @@ export function getServiceInfo(input?: string | null): ServiceMeta | null {
     return {
       slug: clean,
       name: `${humanReadable} Service`,
-      headline: `Thank You for Your ${humanReadable} Service Enquiry!`,
+      headline: `Thank You for Your ${humanReadable} Service Inquiry!`,
       receivedText: `We’ve received your request for ${humanReadable.toLowerCase()} service. Our team will reach out to you shortly.`,
       description: `Professional ${humanReadable} services in Brampton, Ontario.`,
     };
