@@ -4,19 +4,32 @@ import { createContext, useCallback, useContext, useState } from "react";
 import QuoteModal from "@/components/QuoteModal";
 import { useExitIntent } from "@/components/useExitIntent";
 
-const QuoteContext = createContext<() => void>(() => {});
+const QuoteContext = createContext<(serviceOverride?: string) => void>(() => {});
 
 // Lets the homepage sections stay server components: only the buttons that open
 // the quote form need to be client code.
-export function QuoteProvider({ children }: { children: React.ReactNode }) {
+export function QuoteProvider({
+  children,
+  serviceSlug,
+}: {
+  children: React.ReactNode;
+  serviceSlug?: string;
+}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [serviceOverride, setServiceOverride] = useState<string | undefined>(
+    undefined
+  );
 
-  const open = useCallback(() => {
+  const open = useCallback((override?: string) => {
+    if (typeof override === "string") {
+      setServiceOverride(override);
+    }
     setIsOpen(true);
   }, []);
 
   const close = useCallback(() => {
     setIsOpen(false);
+    setServiceOverride(undefined);
   }, []);
 
   // Shows once per page visit:
@@ -30,7 +43,12 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
   return (
     <QuoteContext.Provider value={open}>
       {children}
-      <QuoteModal isOpen={isOpen} onClose={close} />
+      <QuoteModal
+        isOpen={isOpen}
+        onClose={close}
+        serviceSlug={serviceSlug}
+        serviceOverride={serviceOverride}
+      />
     </QuoteContext.Provider>
   );
 }
@@ -48,7 +66,7 @@ export function QuoteButton({
 }) {
   const open = useContext(QuoteContext);
   return (
-    <button type="button" onClick={open} className={className}>
+    <button type="button" onClick={() => open()} className={className}>
       {children}
     </button>
   );

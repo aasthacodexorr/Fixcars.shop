@@ -1,16 +1,31 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { MAKES, PHONE_DISPLAY, PHONE_HREF, SERVICES } from "@/lib/site";
+import React, { useState, useEffect, useMemo } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
+import { getServiceInfo } from "@/lib/services";
 
 interface QuoteModalProps {
   isOpen: boolean;
   onClose: () => void;
+  serviceSlug?: string;
+  serviceOverride?: string;
 }
 
-export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
+export default function QuoteModal({
+  isOpen,
+  onClose,
+  serviceSlug: propSlug,
+  serviceOverride,
+}: QuoteModalProps) {
   const router = useRouter();
+  const pathname = usePathname();
+
+  // Resolve active service dynamically from override, prop, or current URL pathname (null on homepage)
+  const activeService = useMemo(() => {
+    return getServiceInfo(serviceOverride || propSlug || pathname);
+  }, [serviceOverride, propSlug, pathname]);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -62,13 +77,19 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    const serviceToSubmit =
+      formData.service.trim() || activeService?.name || "General Inquiry";
+
     try {
       const response = await fetch("/api/quote", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          service: serviceToSubmit,
+        }),
       });
 
       const result = await response.json().catch(() => ({}));
@@ -85,12 +106,19 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         service: "",
       });
 
-      // Navigate to thank you page
-      router.push("/thank-you");
+      // If submitted from a service page, redirect to that service's dedicated thank you page.
+      // If submitted from home page, simply redirect to /thank-you with no query params.
+      const targetThankYou = activeService?.slug
+        ? `/${activeService.slug}/thank-you`
+        : "/thank-you";
+
+      router.push(targetThankYou);
       onClose();
     } catch (err: any) {
       console.error("Quote submission error:", err);
-      setSubmitError(err?.message || "Something went wrong. Please call us directly.");
+      setSubmitError(
+        err?.message || "Something went wrong. Please call us directly."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -164,7 +192,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.name}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">
+                    {errors.name}
+                  </p>
                 )}
               </div>
 
@@ -182,7 +212,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.email}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
@@ -200,7 +232,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.phone && (
-                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.phone}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">
+                    {errors.phone}
+                  </p>
                 )}
               </div>
 
@@ -218,7 +252,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   }`}
                 />
                 {errors.service && (
-                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.service}</p>
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">
+                    {errors.service}
+                  </p>
                 )}
               </div>
 

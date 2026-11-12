@@ -94,7 +94,7 @@ function ServiceLandingContent({ data }: ServiceLandingPageProps) {
 
 export default function ServiceLandingPage({ data }: ServiceLandingPageProps) {
   return (
-    <QuoteProvider>
+    <QuoteProvider serviceSlug={data.slug}>
       <ServiceLandingContent data={data} />
     </QuoteProvider>
   );
