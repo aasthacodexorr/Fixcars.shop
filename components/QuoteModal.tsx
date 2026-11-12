@@ -205,33 +205,21 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               </div>
 
               <div>
-                <select
-                  aria-label="How can we help?"
+                <input
+                  type="text"
+                  placeholder="How Can We Help?"
                   disabled={isSubmitting}
                   value={formData.service}
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
                   }
-                  className={`w-full bg-white border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
-                    formData.service ? "text-gray-900" : "text-gray-500"
+                  className={`w-full bg-white text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
+                    errors.service ? "ring-2 ring-red-500" : ""
                   }`}
-                >
-                  <option value="">How Can We Help?</option>
-                  <optgroup label="Services">
-                    {SERVICES.map((service) => (
-                      <option key={service.name} value={service.name}>
-                        {service.name}
-                      </option>
-                    ))}
-                  </optgroup>
-                  <optgroup label="Mechanic for your make">
-                    {MAKES.map((make) => (
-                      <option key={make.name} value={`${make.name} Mechanic`}>
-                        {make.name} Mechanic
-                      </option>
-                    ))}
-                  </optgroup>
-                </select>
+                />
+                {errors.service && (
+                  <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.service}</p>
+                )}
               </div>
 
               {submitError && (
