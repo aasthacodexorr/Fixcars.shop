@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
-// import dns from "dns";
+import nodemailer from "nodemailer";
+import dns from "dns";
 
-// async function resolveHostIp(host: string): Promise<string> {
-//   try {
-//     const res = await dns.promises.lookup(host);
-//     return res.address;
-//   } catch {
-//     return host;
-//   }
-// }
+async function resolveHostIp(host: string): Promise<string> {
+  try {
+    const res = await dns.promises.lookup(host);
+    return res.address;
+  } catch {
+    return host;
+  }
+}
 
 export async function POST(req: Request) {
   try {
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       service: service || "General Inquiry",
     });
 
-    /*
+    
     // SMTP Email Sending - Uncomment once SMTP credentials are ready
     const smtpHost = process.env.SMTP_HOST || "";
     const smtpPort = Number(process.env.SMTP_PORT);
@@ -101,7 +101,7 @@ Cardora Service Team`;
     });
 
     console.log("[Quote API] Email successfully dispatched:", mailInfo.messageId);
-    */
+    
 
     return NextResponse.json({
       success: true,
