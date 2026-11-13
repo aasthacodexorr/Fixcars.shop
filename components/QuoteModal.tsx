@@ -1,9 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { getServiceInfo } from "@/lib/services";
+import {
+  formatPhoneNumber,
+  validatePhoneNumber,
+  normalizePhoneNumber,
+  calculateCursorPosition,
+} from "@/lib/phone";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -37,6 +43,8 @@ export default function QuoteModal({
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
+  const phoneInputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -55,6 +63,104 @@ export default function QuoteModal({
 
   if (!isOpen) return null;
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawVal = e.target.value;
+    const rawCursorPos = e.target.selectionEnd ?? rawVal.length;
+
+    const { formatted, error } = formatPhoneNumber(rawVal);
+
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+
+    if (error) {
+      setErrors((prev) => ({ ...prev, phone: error }));
+    } else {
+      setErrors((prev) => {
+        if (!prev.phone) return prev;
+        const { phone, ...rest } = prev;
+        return rest;
+      });
+    }
+
+    requestAnimationFrame(() => {
+      if (phoneInputRef.current) {
+        const newCursorPos = calculateCursorPosition(
+          rawVal,
+          rawCursorPos,
+          formatted
+        );
+        phoneInputRef.current.setSelectionRange(newCursorPos, newCursorPos);
+      }
+    });
+  };
+
+  const handlePhoneKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Backspace") {
+      const input = e.currentTarget;
+      const { selectionStart, selectionEnd } = input;
+      if (selectionStart === selectionEnd && selectionStart !== null) {
+        const val = input.value;
+        const charBefore = val[selectionStart - 1];
+
+        // If backspacing on "+1 " or "+1"
+        if (val === "+1 " || val === "+1") {
+          e.preventDefault();
+          setFormData((prev) => ({ ...prev, phone: "" }));
+          setErrors((prev) => {
+            const { phone, ...rest } = prev;
+            return rest;
+          });
+          return;
+        }
+
+        // If backspacing directly on formatting characters: ")", " ", "-", "("
+        if (
+          charBefore === " " ||
+          charBefore === ")" ||
+          charBefore === "-" ||
+          charBefore === "("
+        ) {
+          e.preventDefault();
+          let idx = selectionStart - 1;
+          while (idx >= 0 && [" ", ")", "-", "("].includes(val[idx])) {
+            idx--;
+          }
+          if (idx >= 0) {
+            const nextRaw = val.slice(0, idx) + val.slice(selectionStart);
+            const { formatted, error } = formatPhoneNumber(nextRaw);
+            setFormData((prev) => ({ ...prev, phone: formatted }));
+            if (error) {
+              setErrors((prev) => ({ ...prev, phone: error }));
+            } else {
+              setErrors((prev) => {
+                const { phone, ...rest } = prev;
+                return rest;
+              });
+            }
+            requestAnimationFrame(() => {
+              if (phoneInputRef.current) {
+                const nextPos = calculateCursorPosition(
+                  nextRaw,
+                  idx,
+                  formatted
+                );
+                phoneInputRef.current.setSelectionRange(nextPos, nextPos);
+              }
+            });
+          }
+        }
+      }
+    }
+  };
+
+  const handlePhoneBlur = () => {
+    if (formData.phone.trim()) {
+      const phoneError = validatePhoneNumber(formData.phone);
+      if (phoneError) {
+        setErrors((prev) => ({ ...prev, phone: phoneError }));
+      }
+    }
+  };
+
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     if (!formData.name.trim()) newErrors.name = "Please enter your name";
@@ -63,9 +169,12 @@ export default function QuoteModal({
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Please enter your phone number";
+
+    const phoneError = validatePhoneNumber(formData.phone);
+    if (phoneError) {
+      newErrors.phone = phoneError;
     }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -79,6 +188,8 @@ export default function QuoteModal({
 
     const serviceToSubmit =
       formData.service.trim() || activeService?.name || "General Inquiry";
+    const phoneToSubmit =
+      normalizePhoneNumber(formData.phone) || formData.phone.trim();
 
     try {
       const response = await fetch("/api/quote", {
@@ -88,6 +199,7 @@ export default function QuoteModal({
         },
         body: JSON.stringify({
           ...formData,
+          phone: phoneToSubmit,
           service: serviceToSubmit,
         }),
       });
@@ -220,14 +332,17 @@ export default function QuoteModal({
 
               <div>
                 <input
+                  ref={phoneInputRef}
                   type="tel"
-                  placeholder="Your Phone No."
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="(905) 234-3313"
                   disabled={isSubmitting}
                   value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  className={`w-full bg-white text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
+                  onChange={handlePhoneChange}
+                  onKeyDown={handlePhoneKeyDown}
+                  onBlur={handlePhoneBlur}
+                  className={`w-full bg-white text-gray-900 placeholder-gray-400 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
                     errors.phone ? "ring-2 ring-red-500" : ""
                   }`}
                 />

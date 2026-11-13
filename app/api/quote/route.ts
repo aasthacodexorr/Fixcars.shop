@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import dns from "dns";
+import { validatePhoneNumber, normalizePhoneNumber } from "@/lib/phone";
 
 async function resolveHostIp(host: string): Promise<string> {
   try {
@@ -23,10 +24,21 @@ export async function POST(req: Request) {
       );
     }
 
+    // Validate Canadian & US phone number requirements
+    const phoneError = validatePhoneNumber(phone);
+    if (phoneError) {
+      return NextResponse.json(
+        { error: phoneError },
+        { status: 400 }
+      );
+    }
+
+    const cleanPhone = normalizePhoneNumber(phone) || phone;
+
     console.log("[Quote API] Lead submission received successfully:", {
       name,
       email,
-      phone,
+      phone: cleanPhone,
       service: service || "General Inquiry",
     });
 
@@ -50,7 +62,7 @@ export async function POST(req: Request) {
         <p>Please find the customer details below:<br />
         Name: ${name}<br />
         Email: ${email}<br />
-        Phone Number: ${phone}<br />
+        Phone Number: ${cleanPhone}<br />
         Service Requested: ${service || "General Inquiry"}</p>
         <p>Thank you,<br />Cardora Service Team</p>
       </div>
@@ -63,7 +75,7 @@ A new service enquiry has been submitted through CardoraService.com (http://Card
 Please find the customer details below:
 Name: ${name}
 Email: ${email}
-Phone Number: ${phone}
+Phone Number: ${cleanPhone}
 Service Requested: ${service || "General Inquiry"}
 
 Thank you,
