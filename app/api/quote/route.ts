@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Validate Canadian & US phone number requirements
+    // Validate phone number requirements (must be 10 digits)
     const phoneError = validatePhoneNumber(phone);
     if (phoneError) {
       return NextResponse.json(

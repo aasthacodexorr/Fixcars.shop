@@ -9,6 +9,7 @@ import {
   validatePhoneNumber,
   normalizePhoneNumber,
   calculateCursorPosition,
+  parsePhone,
 } from "@/lib/phone";
 
 interface QuoteModalProps {
@@ -94,6 +95,25 @@ export default function QuoteModal({
   };
 
   const handlePhoneKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Allow keyboard shortcuts (Ctrl+A, Cmd+C, etc.) and navigation keys
+    if (
+      e.ctrlKey ||
+      e.metaKey ||
+      [
+        "Tab",
+        "Enter",
+        "Escape",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowUp",
+        "ArrowDown",
+        "Home",
+        "End",
+      ].includes(e.key)
+    ) {
+      return;
+    }
+
     if (e.key === "Backspace") {
       const input = e.currentTarget;
       const { selectionStart, selectionEnd } = input;
@@ -104,7 +124,7 @@ export default function QuoteModal({
         // If backspacing on "+1 " or "+1"
         if (val === "+1 " || val === "+1") {
           e.preventDefault();
-          setFormData((prev) => ({ ...prev, phone: "" }));
+          setFormData((prev) => ({ ...prev, phone: "+" }));
           setErrors((prev) => {
             const { phone, ...rest } = prev;
             return rest;
@@ -146,10 +166,115 @@ export default function QuoteModal({
                 phoneInputRef.current.setSelectionRange(nextPos, nextPos);
               }
             });
+          } else {
+            setFormData((prev) => ({ ...prev, phone: "" }));
+            setErrors((prev) => {
+              const { phone, ...rest } = prev;
+              return rest;
+            });
           }
         }
       }
+      return;
     }
+
+    if (e.key === "Delete") {
+      const input = e.currentTarget;
+      const { selectionStart, selectionEnd } = input;
+      if (selectionStart === selectionEnd && selectionStart !== null) {
+        const val = input.value;
+        const charAfter = val[selectionStart];
+        if ([" ", ")", "-", "("].includes(charAfter)) {
+          e.preventDefault();
+          let idx = selectionStart;
+          while (idx < val.length && [" ", ")", "-", "("].includes(val[idx])) {
+            idx++;
+          }
+          if (idx < val.length) {
+            const nextRaw = val.slice(0, selectionStart) + val.slice(idx + 1);
+            const { formatted, error } = formatPhoneNumber(nextRaw);
+            setFormData((prev) => ({ ...prev, phone: formatted }));
+            if (error) {
+              setErrors((prev) => ({ ...prev, phone: error }));
+            } else {
+              setErrors((prev) => {
+                const { phone, ...rest } = prev;
+                return rest;
+              });
+            }
+            requestAnimationFrame(() => {
+              if (phoneInputRef.current) {
+                const nextPos = calculateCursorPosition(
+                  nextRaw,
+                  selectionStart,
+                  formatted
+                );
+                phoneInputRef.current.setSelectionRange(nextPos, nextPos);
+              }
+            });
+          }
+        }
+      }
+      return;
+    }
+
+    // Allow '+' at the beginning of the field
+    if (e.key === "+") {
+      const input = e.currentTarget;
+      const { selectionStart } = input;
+      if (selectionStart === 0 && !input.value.startsWith("+")) {
+        return;
+      }
+      e.preventDefault();
+      return;
+    }
+
+    // Allow digits
+    if (/^\d$/.test(e.key)) {
+      const input = e.currentTarget;
+      const { selectionStart, selectionEnd } = input;
+      const parsed = parsePhone(input.value);
+      // If no text is selected and we already have 10 national digits:
+      if (selectionStart === selectionEnd && parsed.nationalDigits.length >= 10) {
+        e.preventDefault();
+      }
+      return;
+    }
+
+    // Block non-digit, non-plus keys (letters, symbols like '@', etc.)
+    e.preventDefault();
+  };
+
+  const handlePhonePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const input = e.currentTarget;
+    const { selectionStart, selectionEnd } = input;
+    const pastedText = e.clipboardData.getData("text");
+    const currentVal = input.value;
+    const nextRaw =
+      selectionStart !== null && selectionEnd !== null
+        ? currentVal.slice(0, selectionStart) +
+          pastedText +
+          currentVal.slice(selectionEnd)
+        : pastedText;
+
+    const { formatted, error } = formatPhoneNumber(nextRaw);
+    setFormData((prev) => ({ ...prev, phone: formatted }));
+    if (error) {
+      setErrors((prev) => ({ ...prev, phone: error }));
+    } else {
+      setErrors((prev) => {
+        const { phone, ...rest } = prev;
+        return rest;
+      });
+    }
+
+    requestAnimationFrame(() => {
+      if (phoneInputRef.current) {
+        const nextPos = formatted.length;
+        phoneInputRef.current.setSelectionRange(nextPos, nextPos);
+      }
+    });
   };
 
   const handlePhoneBlur = () => {
@@ -334,6 +459,7 @@ export default function QuoteModal({
                 <input
                   ref={phoneInputRef}
                   type="tel"
+                  inputMode="tel"
                   name="phone"
                   autoComplete="tel"
                   placeholder="(905) 234-3313"
@@ -341,6 +467,7 @@ export default function QuoteModal({
                   value={formData.phone}
                   onChange={handlePhoneChange}
                   onKeyDown={handlePhoneKeyDown}
+                  onPaste={handlePhonePaste}
                   onBlur={handlePhoneBlur}
                   className={`w-full bg-white text-gray-900 placeholder-gray-400 border border-gray-300 rounded-md px-4 py-3 text-base font-medium outline-none focus:ring-2 focus:ring-[#00AF66] transition ${
                     errors.phone ? "ring-2 ring-red-500" : ""

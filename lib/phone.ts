@@ -1,10 +1,8 @@
 /**
- * Utilities for Canadian and US phone number formatting and validation.
- * Standard North American Numbering Plan (NANP):
- * - Country Code: +1
- * - Display format: (XXX) XXX-XXXX (e.g. (905) 234-3313)
- * - Area code cannot begin with 0 or 1
- * - Central office / exchange code cannot begin with 0 or 1
+ * Utilities for phone number formatting and validation.
+ * Displays numbers in Canada/US standard format: (XXX) XXX-XXXX
+ * Optionally accepts international country code prefix (e.g. +1, +44, +91).
+ * Accepts exactly 10 national digits.
  */
 
 export interface PhoneFormatResult {
@@ -12,160 +10,163 @@ export interface PhoneFormatResult {
   error: string | null;
 }
 
+export interface ParsedPhone {
+  countryCode: string | null;
+  nationalDigits: string;
+  isPlusOnly: boolean;
+}
+
 /**
- * Formats an incoming string as a Canada/US phone number while the user types or pastes.
- * Gracefully handles leading '+', '+1', and domestic '1' prefix.
- * Rejects non-US/Canada country codes (+44, +91, etc.).
+ * Parses any phone string into country code and up to 10 national digits.
  */
-export function formatPhoneNumber(val: string): PhoneFormatResult {
+export function parsePhone(val: string): ParsedPhone {
   const raw = val.trim();
-
-  // Empty input
   if (!raw) {
-    return { formatted: "", error: null };
+    return { countryCode: null, nationalDigits: "", isPlusOnly: false };
   }
 
-  // Handle international prefix '+'
+  if (raw === "+") {
+    return { countryCode: "", nationalDigits: "", isPlusOnly: true };
+  }
+
   if (raw.startsWith("+")) {
-    if (raw === "+") {
-      return { formatted: "+", error: null };
+    const afterPlus = raw.slice(1);
+
+    // North American country code +1
+    if (afterPlus.startsWith("1")) {
+      const rest = afterPlus.slice(1);
+      const digits = rest.replace(/\D/g, "").slice(0, 10);
+      return { countryCode: "1", nationalDigits: digits, isPlusOnly: false };
     }
-    if (raw === "+1" || raw === "+1 ") {
-      return { formatted: "+1 ", error: null };
+
+    // Check if user separated country code with space, hyphen, or paren (e.g. +44 123..., +91-...)
+    const sepMatch = afterPlus.match(/^(\d{1,4})[\s\-().]/);
+    if (sepMatch) {
+      const cc = sepMatch[1];
+      const rest = afterPlus.slice(cc.length);
+      const digits = rest.replace(/\D/g, "").slice(0, 10);
+      return { countryCode: cc, nationalDigits: digits, isPlusOnly: false };
     }
-    // If it starts with + followed by anything other than 1, it's an unsupported foreign country code
-    if (!raw.startsWith("+1")) {
-      return {
-        formatted: raw,
-        error: "Only Canadian and US phone numbers (+1) are accepted.",
-      };
+
+    // No separator yet: user is typing digits right after '+'
+    const allDigits = afterPlus.replace(/\D/g, "");
+    if (allDigits.length <= 3) {
+      return { countryCode: allDigits, nationalDigits: "", isPlusOnly: false };
     }
-    // Has +1 prefix: extract local portion after '+1'
-    const afterCountryCode = raw.slice(2).trimStart();
-    const localDigits = afterCountryCode.replace(/\D/g, "");
-    if (localDigits.length === 0) {
-      return { formatted: "+1 ", error: null };
-    }
-    return formatDigits(localDigits);
+
+    // Default to 2-digit country code when 4+ digits typed without separator
+    const cc = allDigits.slice(0, 2);
+    const digits = allDigits.slice(2).slice(0, 10);
+    return { countryCode: cc, nationalDigits: digits, isPlusOnly: false };
   }
 
-  // Handle standard number input without '+'
+  // No leading '+'
   const cleanDigits = raw.replace(/\D/g, "");
 
-  // If user entered 11 digits starting with 1, or just typed domestic trunk '1'
+  // If 11 digits starting with domestic trunk '1' (e.g. 19052343313)
   if (cleanDigits.length === 11 && cleanDigits.startsWith("1")) {
-    return formatDigits(cleanDigits.slice(1));
-  }
-  if (cleanDigits === "1" && raw.startsWith("1")) {
-    return { formatted: "+1 ", error: null };
-  }
-  if (cleanDigits.length > 10 && cleanDigits.startsWith("1")) {
-    return formatDigits(cleanDigits.slice(1));
+    return {
+      countryCode: "1",
+      nationalDigits: cleanDigits.slice(1, 11),
+      isPlusOnly: false,
+    };
   }
 
-  return formatDigits(cleanDigits);
+  // Standard domestic 10 digits max
+  return {
+    countryCode: null,
+    nationalDigits: cleanDigits.slice(0, 10),
+    isPlusOnly: false,
+  };
 }
 
 /**
- * Helper to format 10 or fewer digits into NANP format (XXX) XXX-XXXX
+ * Formats an incoming string with optional +country code and Canada/US style (XXX) XXX-XXXX.
  */
-function formatDigits(digits: string): PhoneFormatResult {
-  if (!digits) {
+export function formatPhoneNumber(val: string): PhoneFormatResult {
+  if (!val) {
     return { formatted: "", error: null };
   }
 
-  let error: string | null = null;
+  const { countryCode, nationalDigits, isPlusOnly } = parsePhone(val);
 
-  // In Canada and US, valid area codes cannot begin with 0 or 1
-  if (digits[0] === "0" || digits[0] === "1") {
-    error = `Canada and US area codes cannot start with ${digits[0]}.`;
+  if (isPlusOnly) {
+    return { formatted: "+", error: null };
   }
 
-  // Limit to 10 digits
-  const trimmed = digits.slice(0, 10);
+  // Build national formatted portion: (XXX) XXX-XXXX
+  const formattedNational = formatNationalDigits(nationalDigits);
 
-  let formatted = "";
-  if (trimmed.length < 3) {
-    formatted = `(${trimmed}`;
-  } else if (trimmed.length === 3) {
-    formatted = `(${trimmed}) `;
-  } else if (trimmed.length < 6) {
-    formatted = `(${trimmed.slice(0, 3)}) ${trimmed.slice(3)}`;
-  } else if (trimmed.length === 6) {
-    formatted = `(${trimmed.slice(0, 3)}) ${trimmed.slice(3)}-`;
-  } else {
-    formatted = `(${trimmed.slice(0, 3)}) ${trimmed.slice(3, 6)}-${trimmed.slice(6)}`;
+  if (countryCode !== null) {
+    if (!nationalDigits) {
+      return { formatted: `+${countryCode} `, error: null };
+    }
+    return { formatted: `+${countryCode} ${formattedNational}`, error: null };
   }
 
-  return { formatted, error };
+  return { formatted: formattedNational, error: null };
 }
 
 /**
- * Validates a Canada / US phone number for form submission.
- * Returns null if valid, or a user-friendly error message if invalid.
+ * Formats up to 10 national digits into (XXX) XXX-XXXX format
+ */
+function formatNationalDigits(trimmed: string): string {
+  if (!trimmed) {
+    return "";
+  }
+
+  if (trimmed.length < 3) {
+    return `(${trimmed}`;
+  } else if (trimmed.length === 3) {
+    return `(${trimmed}) `;
+  } else if (trimmed.length < 6) {
+    return `(${trimmed.slice(0, 3)}) ${trimmed.slice(3)}`;
+  } else if (trimmed.length === 6) {
+    return `(${trimmed.slice(0, 3)}) ${trimmed.slice(3, 6)}-`;
+  } else {
+    return `(${trimmed.slice(0, 3)}) ${trimmed.slice(3, 6)}-${trimmed.slice(6)}`;
+  }
+}
+
+/**
+ * Validates a phone number for form submission.
+ * Requires exactly 10 national digits.
  */
 export function validatePhoneNumber(val: string): string | null {
-  if (!val || !val.trim()) {
+  if (!val || !val.trim() || val.trim() === "+") {
     return "Please enter your phone number";
   }
 
-  const raw = val.trim();
+  const { nationalDigits } = parsePhone(val);
 
-  // Rejection of foreign country codes
-  if (raw.startsWith("+") && !raw.startsWith("+1")) {
-    return "Only Canadian and US phone numbers (+1) are accepted.";
+  if (nationalDigits.length < 10) {
+    return "Please enter a valid 10-digit phone number";
   }
 
-  // Extract clean digits (stripping leading country code 1 if present)
-  let clean = raw;
-  if (clean.startsWith("+1")) {
-    clean = clean.slice(2);
-  }
-  let digits = clean.replace(/\D/g, "");
-  if (digits.length === 11 && digits.startsWith("1")) {
-    digits = digits.slice(1);
-  }
-
-  if (digits.length < 10) {
-    return "Please enter a complete 10-digit phone number: (XXX) XXX-XXXX";
-  }
-
-  if (digits.length > 10) {
-    return "Phone number cannot exceed 10 digits.";
-  }
-
-  // NANP Area Code validation: first digit cannot be 0 or 1
-  if (digits[0] === "0" || digits[0] === "1") {
-    return "Invalid area code. Canada and US area codes cannot start with 0 or 1.";
-  }
-
-  // NANP Central Office (exchange) code: first digit cannot be 0 or 1
-  if (digits[3] === "0" || digits[3] === "1") {
-    return "Please enter a valid Canada or US phone number.";
+  if (nationalDigits.length > 10) {
+    return "Phone number cannot exceed 10 digits";
   }
 
   return null;
 }
 
 /**
- * Normalizes any phone number into canonical (XXX) XXX-XXXX format.
- * Returns null if the phone number is not a valid Canada/US 10-digit number.
+ * Normalizes any phone number into canonical format:
+ * `+<CC> (XXX) XXX-XXXX` or `(XXX) XXX-XXXX`
  */
 export function normalizePhoneNumber(val: string): string | null {
   if (validatePhoneNumber(val) !== null) {
     return null;
   }
 
-  let raw = val.trim();
-  if (raw.startsWith("+1")) {
-    raw = raw.slice(2);
-  }
-  let digits = raw.replace(/\D/g, "");
-  if (digits.length === 11 && digits.startsWith("1")) {
-    digits = digits.slice(1);
+  const { countryCode, nationalDigits } = parsePhone(val);
+  const formattedNational = `(${nationalDigits.slice(0, 3)}) ${nationalDigits.slice(3, 6)}-${nationalDigits.slice(6, 10)}`;
+
+  if (countryCode) {
+    return `+${countryCode} ${formattedNational}`;
   }
 
-  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+  return formattedNational;
 }
 
 /**
@@ -176,32 +177,25 @@ export function calculateCursorPosition(
   rawCursorPos: number,
   formattedValue: string
 ): number {
-  let isLeadingCountryCode = false;
-  const rawTrimmed = rawInputValue.trim();
-  const digitsOnly = rawTrimmed.replace(/\D/g, "");
+  if (!formattedValue) return 0;
+  if (formattedValue === "+") return 1;
 
-  if (
-    rawTrimmed.startsWith("+1") ||
-    (digitsOnly.length === 11 && digitsOnly.startsWith("1"))
-  ) {
-    isLeadingCountryCode = true;
-  }
-
+  let hadPlusBefore = false;
   let digitsBefore = 0;
+
   for (let i = 0; i < rawCursorPos && i < rawInputValue.length; i++) {
-    if (/\d/.test(rawInputValue[i])) {
+    if (rawInputValue[i] === "+") {
+      hadPlusBefore = true;
+    } else if (/\d/.test(rawInputValue[i])) {
       digitsBefore++;
     }
   }
 
-  if (isLeadingCountryCode && digitsBefore > 0) {
-    digitsBefore -= 1;
-  }
-
   if (digitsBefore === 0) {
-    if (formattedValue.startsWith("+1 ")) return 3;
-    if (formattedValue.startsWith("+")) return 1;
-    return formattedValue.startsWith("(") ? 2 : 0;
+    if (hadPlusBefore && formattedValue.startsWith("+")) {
+      return 1;
+    }
+    return formattedValue.startsWith("(") ? 1 : 0;
   }
 
   let digitCount = 0;
@@ -213,6 +207,8 @@ export function calculateCursorPosition(
         if (formattedValue.slice(nextPos).startsWith(") ")) {
           nextPos += 2;
         } else if (formattedValue.slice(nextPos).startsWith("-")) {
+          nextPos += 1;
+        } else if (formattedValue.slice(nextPos).startsWith(" ")) {
           nextPos += 1;
         }
         return nextPos;
